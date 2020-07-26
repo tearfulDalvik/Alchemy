@@ -1,0 +1,39 @@
+// Color system
+$white: #fff;
+$black: #000;
+
+$theme-color-interval: 8%;
+
+$text-color: $black;
+$link-color: $black;
+$link-color-active: transparentize($link-color, .5);
+$background-color: white;
+
+@media (prefers-color-scheme: dark) {
+  $text-color: $white;
+  $link-color: $white;
+  $link-color-active: transparentize($link-color, .5);
+  $background-color: $black;
+}
+
+// Transions
+$transition-interactive-delay: .2s;
+
+// Typography
+$font-face-serif: 'Montserrat Light', Montserrat, sans-serif;
+
+$weight-minor: normal;
+$weight-major: bold;
+
+$line-height-discrete: 1.5;
+$line-height: 1;
+
+$line-spacing: .02rem;
+$line-spacing-discrete: .4rem;
+
+$font-size: 1rem;
+
+// Layout
+$spacing-titles-h: 4.4vmin;
+$spacing-titles-v: 4vmin;
+$spacing-header-content: 6vh;

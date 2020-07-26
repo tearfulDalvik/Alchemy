@@ -1,0 +1,67 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: $font-size;
+    font-weight: $weight-major;
+    color: var(--text-color)
+}
+
+p {
+    line-height: $line-height;
+    &.link {
+        margin-bottom: 4vh;
+        font-size: calc(.5rem + 3.6vmin);
+        transition: transform $transition-interactive-delay;
+        letter-spacing: $line-spacing-discrete;
+
+        &:hover {
+            transform: rotate3d(.2, .3, 0, 15deg);
+        }
+
+        & > a {
+            letter-spacing: $line-spacing-discrete;
+            margin-bottom: 4vh;
+            font-size: calc(.5rem + 3.6vmin);
+        }
+    }
+
+    &.spa {
+        margin-top: 6vh;
+    }
+}
+
+.content {
+    padding: 0 $spacing-titles-h;
+}
+
+.header {
+    @extend %titles;
+
+    h1 {
+        font-weight: $weight-minor;
+        font-size: calc(.7rem + .9vmin);
+        letter-spacing: $line-spacing-discrete;
+        line-height: $line-height;
+        @include m-v(1vh, $spacing-header-content);
+    }
+
+    p {
+        @include media("<small") {
+            font-size: 180% !important;
+        }
+    }
+}
+
+.copyright {
+    @extend %titles;
+}
+
+%titles {
+    padding: $spacing-titles-v $spacing-titles-h;
+    position: relative;
+    top: 0;
+    z-index: 100;
+}
