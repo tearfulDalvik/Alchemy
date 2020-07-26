@@ -10,3 +10,18 @@
     margin-top: $t;
     margin-bottom: $b;
 }
+
+@mixin m-h($l, $r) {
+    margin-left: $l;
+    margin-right: $r;
+}
+
+@mixin p-v($t, $b) {
+    padding-top: $t;
+    padding-bottom: $b;
+}
+
+@mixin p-h($l, $r) {
+    padding-left: $l;
+    padding-right: $r;
+}

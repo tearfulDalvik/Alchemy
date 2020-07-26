@@ -4,64 +4,32 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: $font-size-title;
+    @extend %titles;
     font-weight: $weight-major;
-    color: $text-color;
-}
-
-p {
-    line-height: $line-height;
-    &.link {
-        margin-bottom: 4vh;
-        font-size: calc(.5rem + 3.6vmin);
-        transition: transform $transition-interactive-delay;
-        letter-spacing: $line-spacing-discrete;
-
-        &:hover {
-            transform: rotate3d(.2, .3, 0, 15deg);
-        }
-
-        & > a {
-            letter-spacing: $line-spacing-discrete;
-            margin-bottom: 4vh;
-            font-size: calc(.5rem + 3.6vmin);
-        }
-    }
-
-    &.spa {
-        margin-top: 6vh;
-    }
 }
 
 .content {
-    padding: 0 $spacing-titles-h;
+    padding: 0 $spacing-before-page;
 }
 
 .header {
-    @extend %titles;
+    @include m-h($spacing-before-page, $spacing-after-page);
+    @include m-v($spacing-top-page, $spacing-bottom-page);
 
     h1 {
         font-weight: $weight-minor;
         font-size: calc(.7rem + .9vmin);
-        letter-spacing: $line-spacing-discrete;
+        letter-spacing: $letter-spacing-discrete;
         line-height: $line-height;
-        @include m-v(1vh, $spacing-header-content);
-    }
-
-    p {
-        @include media("<small") {
-            font-size: 180% !important;
-        }
     }
 }
 
 .copyright {
     @extend %titles;
+    padding: $spacing-elements-v $spacing-before-page;
 }
 
 %titles {
-    padding: $spacing-titles-v $spacing-titles-h;
-    position: relative;
-    top: 0;
-    z-index: 100;
+    font-family: $font-face-title;
+    font-size: $font-size-title;
 }

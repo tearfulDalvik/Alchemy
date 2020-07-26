@@ -1,8 +1,8 @@
 body {
     font-size: $font-size-base;
-    font-family: $font-face-serif;
-    letter-spacing: $line-spacing;
-    line-height: $line-height-discrete;
+    font-family: $font-face-content;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba($black, 0);
     -webkit-font-variant-ligatures: no-common-ligatures;
@@ -12,6 +12,15 @@ body {
     color: $text-color;
     margin: 0;
     padding: 0;
+}
+
+// Code
+pre,
+code,
+kbd,
+samp {
+  font-family: $font-face-code;
+  font-size: $font-size-content;
 }
 
 #background {
@@ -24,6 +33,7 @@ body {
     bottom: 0;
     right: 0;
     left: 0;
+    z-index: -1;
     position: fixed;
 
     @include media("<small") {

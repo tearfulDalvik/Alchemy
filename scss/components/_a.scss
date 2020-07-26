@@ -1,8 +1,9 @@
 a {
-    line-height: $line-height;
     transition: transform $transition-interactive-delay;
     color: $link-color;
     text-decoration: none;
+    font-family: $font-face-title;
+    transition: transform $transition-interactive-delay;
 
     &:hover {
         border-bottom: 1px dotted $link-color;

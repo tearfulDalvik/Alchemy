@@ -5,8 +5,8 @@ $black: #000;
 $theme-color-interval: 8%;
 
 $text-color: $black !default;
-$link-color: $black;
-$link-color-active: transparentize($link-color, .5);
+$link-color: $black !default;
+$link-color-active: transparentize($link-color, .5) !default;
 $background-color: white !default;
 
 @media (prefers-color-scheme: dark) {
@@ -20,21 +20,26 @@ $background-color: white !default;
 $transition-interactive-delay: .2s;
 
 // Typography
-$font-face-serif: 'Montserrat Light', Montserrat, sans-serif;
+$font-face-title: Montserrat, sans-serif; 
+$font-face-content: Montserrat, sans-serif;
+$font-face-code: "Montserrat Mono", monospace;
 
 $weight-minor: normal;
 $weight-major: bold;
 
-$line-height-discrete: 1.5;
-$line-height: 1;
+$line-height: 1.5em;
+$line-height-compat: 1em;
 
-$line-spacing: .02rem;
-$line-spacing-discrete: .4rem;
+$letter-spacing: .02rem;
+$letter-spacing-discrete: .4rem;
 
 $font-size-base: 1rem;
 $font-size-title: 1rem;
+$font-size-content: 1rem;
 
 // Layout
-$spacing-titles-h: 4.4vmin;
-$spacing-titles-v: 4vmin;
-$spacing-header-content: 6vh;
+$spacing-before-page: 3.4vw;
+$spacing-after-page: $spacing-before-page;
+$spacing-top-page: 5vh;
+$spacing-bottom-page: $spacing-top-page;
+$spacing-elements-v: 4vh;

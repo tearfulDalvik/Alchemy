@@ -3,7 +3,27 @@
     display: none;
 }
 
-.red {
-    $text-color: $white;
-    $background-color: red;
+.m-t-3 {
+    margin-top: 6vh;
+}
+
+.m-t-2 {
+    margin-top: 4vh;
+}
+
+.m-t-1 {
+    margin-top: 2vh;
+}
+
+.xxlarge {
+    letter-spacing: $letter-spacing-discrete;
+    font-size: 3.6vmin;
+    line-height: $line-height-compat;
+    margin-bottom: 4vh;
+}
+
+.large {
+    letter-spacing: $letter-spacing-discrete;
+    font-size: 2.6vmin;
+    margin-bottom: 2vh;
 }

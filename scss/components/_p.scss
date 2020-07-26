@@ -1,0 +1,11 @@
+p {
+    &.link {
+        &:hover {
+            transform: rotate3d(0.1, 0.15, 0, 7deg);
+        }
+
+        @include media("<small") {
+            font-size: 180%;
+        }
+    }
+}

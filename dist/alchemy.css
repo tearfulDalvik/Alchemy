@@ -3,11 +3,12 @@
 * Copyright 2020 Gufeng Shen
 * Licensed under MIT (https://github.com/tearfulDalvik/Alchemy/blob/main/LICENSE)
 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
 body {
   font-size: 1rem;
-  font-family: "Montserrat Light", Montserrat, sans-serif;
+  font-family: Montserrat, sans-serif;
   letter-spacing: 0.02rem;
-  line-height: 1.5;
+  line-height: 1.5em;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-variant-ligatures: no-common-ligatures;
@@ -17,6 +18,14 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: "Montserrat Mono", monospace;
+  font-size: 1rem;
 }
 
 #background {
@@ -29,6 +38,7 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
+  z-index: -1;
   position: fixed;
 }
 @media (max-width: 48em) {
@@ -41,11 +51,37 @@ body {
   display: none;
 }
 
+.m-t-3 {
+  margin-top: 6vh;
+}
+
+.m-t-2 {
+  margin-top: 4vh;
+}
+
+.m-t-1 {
+  margin-top: 2vh;
+}
+
+.xxlarge {
+  letter-spacing: 0.4rem;
+  font-size: 3.6vmin;
+  line-height: 1em;
+  margin-bottom: 4vh;
+}
+
+.large {
+  letter-spacing: 0.4rem;
+  font-size: 2.6vmin;
+  margin-bottom: 2vh;
+}
+
 a {
-  line-height: 1;
   transition: transform 0.2s;
   color: #000;
   text-decoration: none;
+  font-family: Montserrat, sans-serif;
+  transition: transform 0.2s;
 }
 a:hover {
   border-bottom: 1px dotted #000;
@@ -53,6 +89,15 @@ a:hover {
 a:active {
   color: rgba(0, 0, 0, 0.5);
   border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+}
+
+p.link:hover {
+  transform: rotate3d(0.1, 0.15, 0, 7deg);
+}
+@media (max-width: 48em) {
+  p.link {
+    font-size: 180%;
+  }
 }
 
 .grid {
@@ -85,55 +130,38 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 1rem;
   font-weight: bold;
-  color: #000;
-}
-
-p {
-  line-height: 1;
-}
-p.link {
-  margin-bottom: 4vh;
-  font-size: calc(.5rem + 3.6vmin);
-  transition: transform 0.2s;
-  letter-spacing: 0.4rem;
-}
-p.link:hover {
-  transform: rotate3d(0.2, 0.3, 0, 15deg);
-}
-p.link > a {
-  letter-spacing: 0.4rem;
-  margin-bottom: 4vh;
-  font-size: calc(.5rem + 3.6vmin);
-}
-p.spa {
-  margin-top: 6vh;
 }
 
 .content {
-  padding: 0 4.4vmin;
+  padding: 0 3.4vw;
 }
 
+.header {
+  margin-left: 3.4vw;
+  margin-right: 3.4vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
 .header h1 {
   font-weight: normal;
   font-size: calc(.7rem + .9vmin);
   letter-spacing: 0.4rem;
-  line-height: 1;
-  margin-top: 1vh;
-  margin-bottom: 6vh;
-}
-@media (max-width: 48em) {
-  .header p {
-    font-size: 180% !important;
-  }
+  line-height: 1.5em;
 }
 
-.header, .copyright {
-  padding: 4vmin 4.4vmin;
-  position: relative;
-  top: 0;
-  z-index: 100;
+.copyright {
+  padding: 4vh 3.4vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, .copyright {
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=alchemy.css.map */
