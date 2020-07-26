@@ -1,12 +1,13 @@
 body {
-    font-size: $font-size;
+    font-size: $font-size-base;
+    font-family: $font-face-serif;
     letter-spacing: $line-spacing;
     line-height: $line-height-discrete;
     -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba($black, 0);
     -webkit-font-variant-ligatures: no-common-ligatures;
     font-variant-ligatures: no-common-ligatures;
     font-weight: lighter;
-    font-family: $font-face-serif;
     background-color: $background-color;
     color: $text-color;
     margin: 0;

@@ -4,10 +4,10 @@ $black: #000;
 
 $theme-color-interval: 8%;
 
-$text-color: $black;
+$text-color: $black !default;
 $link-color: $black;
 $link-color-active: transparentize($link-color, .5);
-$background-color: white;
+$background-color: white !default;
 
 @media (prefers-color-scheme: dark) {
   $text-color: $white;
@@ -31,7 +31,8 @@ $line-height: 1;
 $line-spacing: .02rem;
 $line-spacing-discrete: .4rem;
 
-$font-size: 1rem;
+$font-size-base: 1rem;
+$font-size-title: 1rem;
 
 // Layout
 $spacing-titles-h: 4.4vmin;

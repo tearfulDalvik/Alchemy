@@ -9,7 +9,9 @@
 'include/variables',
 'include/media';
 
-@import 'components/general';
+@import 'reboot';
+
+@import 'components/utilities';
 @import 'components/a';
 @import 'components/grid';
 @import 'components/typography';
