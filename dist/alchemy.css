@@ -23,8 +23,8 @@
   --white-a80: hsla(0, 100%, 100%, .8);
   --color-primary: #f07f24;
   --color-primary-aux: #db6b0f;
-  --color-success: #68d6d4;
-  --color-success-aux: #48cdcb;
+  --color-success: #10aaa8;
+  --color-success-aux: #0c8583;
   --color-error: #f05a24;
   --color-error-aux: #c8400e;
   --color-warn: #107dd0;
@@ -44,8 +44,8 @@
   :root {
     --color-primary: #c8620e;
     --color-primary-aux: #b5580d;
-    --color-success: #36c6c4;
-    --color-success-aux: #2ca19f;
+    --color-success: #0b7a78;
+    --color-success-aux: #096261;
     --color-error: #c8400e;
     --color-error-aux: #a2330b;
     --color-warn: #0c5d9b;
