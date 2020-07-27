@@ -25,7 +25,7 @@
     @include m-v($spacing-top-page, $spacing-top-page);
 
     h1 {
-        font-weight: $weight-minor;
+        font-weight: $weight-normal;
         font-size: calc(.7rem + .9vmin);
         letter-spacing: $letter-spacing-discrete;
         line-height: $line-height;

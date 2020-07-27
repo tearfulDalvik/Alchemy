@@ -83,7 +83,8 @@ $transition-interactive-delay: .2s;
   --font-face-code: "Montserrat Mono", monospace;
 }
 
-$weight-minor: normal;
+$weight-minor: lighter;
+$weight-normal: normal;
 $weight-major: bold;
 
 $line-height: 1.5;
