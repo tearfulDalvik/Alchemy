@@ -1,14 +1,12 @@
 // Color system
 $theme-color-interval: 8%;
 
-$orange: hsl(39, 100%, 50%);
+$orange: hsl(27, 87%, 50%);
 $red: hsl(16, 87%, 50%);
 $yellow: hsl(59, 100%, 48%);
-$green: hsl(179, 100%, 50%);
+$green: hsl(179, 83%, 31%);
 $blue: hsl(206, 86%, 39%);
 $purple: hsl(233, 64%, 53%);
-$black: hsl(0, 0%, 0%);
-$white: hsl(0, 100%, 100%);
 $black: hsl(0, 0%, 0%);
 $white: hsl(0, 100%, 100%);
 
@@ -30,19 +28,20 @@ $white: hsl(0, 100%, 100%);
   --white-a60: hsla(0, 100%, 100%, .6);
   --white-a80: hsla(0, 100%, 100%, .8);
 
-  --orange-100: #{tint-color($orange, 4)};
-  --orange-200: #{tint-color($orange, 3)};
-  --orange-300: #{tint-color($orange, 2)};
-  --orange-400: #{tint-color($orange, 1)};
-  --orange-500: #{$orange};
-  --orange-600: #{shade-color($orange, 1)};
-  --orange-700: #{shade-color($orange, 2)};
-  --orange-800: #{shade-color($orange, 3)};
-  --orange-900: #{shade-color($orange, 4)};
+  --color-primary: #{tint-color($orange, 600)};
+  --color-primary-aux: #{tint-color($orange, 400)};
+  --color-success: #{tint-color($green, 600)};
+  --color-success-aux: #{tint-color($green, 400)};
+  --color-error: #{tint-color($red, 600)};
+  --color-error-aux: #{tint-color($red, 300)};
+  --color-warn: #{tint-color($blue, 600)};
+  --color-warn-aux: #{tint-color($blue, 300)};
 
-  --primary-color: var(--orange-600);
-  --primary-color-accent: var(--orange-400);
-  --on-primary-text-color: var(--white);
+  --color-on-primary-text: var(--white);
+  --color-on-success-text: var(--white);
+  --color-on-error-text: var(--white);
+  --color-on-warn-text: var(--white);
+
   --background-color: var(--white);
   --background-second-color: var(--black-a5);
   --background-third-color: var(--black-a10);
@@ -51,15 +50,26 @@ $white: hsl(0, 100%, 100%);
   --link-color-active: var(--black-a50);
 
   @include dark() {
-    --primary-color: var(--orange-400);
-    --primary-color-accent: var(--orange-500);
-    --on-primary-text-color: var(--white);
-    --on-background-text-color: var(--white);
-    --link-color: var(--white);
-    --link-color-active: var(--white-a50);
+    --color-primary: #{tint-color($orange, 300)};
+    --color-primary-aux: #{tint-color($orange, 200)};
+    --color-success: #{tint-color($green, 300)};
+    --color-success-aux: #{tint-color($green, 100)};
+    --color-error: #{tint-color($red, 300)};
+    --color-error-aux: #{tint-color($red, 100)};
+    --color-warn: #{tint-color($blue, 300)};
+    --color-warn-aux: #{tint-color($blue, 100)};
+
+    --color-on-primary-text: var(--white-a80);
+    --color-on-success-text: var(--white);
+    --color-on-error-text: var(--white-a40);
+    --color-on-warn-text: var(--white);
+
     --background-color: var(--black);
     --background-second-color: var(--white-a20);
     --background-third-color: var(--white-a10);
+    --on-background-text-color: var(--white-a80);
+    --link-color: var(--white-a80);
+    --link-color-active: var(--white-a40);
   }
 }
 
@@ -68,7 +78,7 @@ $transition-interactive-delay: .2s;
 
 // Typography
 :root {
-  --font-face-title: Montserrat, sans-serif; 
+  --font-face-title: Montserrat, sans-serif;
   --font-face-content: Montserrat, sans-serif;
   --font-face-code: "Montserrat Mono", monospace;
 }
@@ -94,10 +104,17 @@ $spacing-elements-v-major: 2vh;
 $spacing-elements-v-minor: 1vh;
 $spacing-elements-h-major: 2vw;
 
-$border-radius: 2px;
+$padding-v-content: .4rem;
+$padding-h-content: .8rem;
+
+$components-height-content: $padding-v-content * 2+$line-height;
+
+$components-border-width: 1px;
+$components-border-radius: 2px;
 
 :root {
   --container-max-width: 55vmin;
+
   @include media("<small") {
     --container-max-width: 86vmin;
   }

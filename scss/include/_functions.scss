@@ -1,9 +1,6 @@
-@function tint-color($color, $level) {
-    @return scale-color($color, $lightness: - $level * $theme-color-interval);
-}
-
-@function shade-color($color, $level) {
-    @return scale-color($color, $lightness: $level * $theme-color-interval);
+@function tint-color($base-color, $level) {
+    $level: $level / 100 - 5;
+    @return scale-color($base-color, $lightness: $level * $theme-color-interval);
 }
 
 @mixin m-v($t, $b) {

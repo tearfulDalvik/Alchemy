@@ -21,18 +21,18 @@
   --white-a50: hsla(0, 100%, 100%, .5);
   --white-a60: hsla(0, 100%, 100%, .6);
   --white-a80: hsla(0, 100%, 100%, .8);
-  --orange-100: #a24f0b;
-  --orange-200: #b5580d;
-  --orange-300: #c8620e;
-  --orange-400: #db6b0f;
-  --orange-500: #ee7411;
-  --orange-600: #f07f24;
-  --orange-700: #f18b37;
-  --orange-800: #f2964a;
-  --orange-900: #f4a15d;
-  --primary-color: var(--orange-600);
-  --primary-color-accent: var(--orange-400);
-  --on-primary-text-color: var(--white);
+  --color-primary: #f07f24;
+  --color-primary-aux: #db6b0f;
+  --color-success: #10aaa8;
+  --color-success-aux: #0c8583;
+  --color-error: #f05a24;
+  --color-error-aux: #c8400e;
+  --color-warn: #107dd0;
+  --color-warn-aux: #0c5d9b;
+  --color-on-primary-text: var(--white);
+  --color-on-success-text: var(--white);
+  --color-on-error-text: var(--white);
+  --color-on-warn-text: var(--white);
   --background-color: var(--white);
   --background-second-color: var(--black-a5);
   --background-third-color: var(--black-a10);
@@ -42,15 +42,24 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary-color: var(--orange-400);
-    --primary-color-accent: var(--orange-500);
-    --on-primary-text-color: var(--white);
-    --on-background-text-color: var(--white);
-    --link-color: var(--white);
-    --link-color-active: var(--white-a50);
+    --color-primary: #c8620e;
+    --color-primary-aux: #b5580d;
+    --color-success: #0b7a78;
+    --color-success-aux: #096261;
+    --color-error: #c8400e;
+    --color-error-aux: #a2330b;
+    --color-warn: #0c5d9b;
+    --color-warn-aux: #094b7e;
+    --color-on-primary-text: var(--white-a80);
+    --color-on-success-text: var(--white);
+    --color-on-error-text: var(--white-a40);
+    --color-on-warn-text: var(--white);
     --background-color: var(--black);
     --background-second-color: var(--white-a20);
     --background-third-color: var(--white-a10);
+    --on-background-text-color: var(--white-a80);
+    --link-color: var(--white-a80);
+    --link-color-active: var(--white-a40);
   }
 }
 
@@ -93,14 +102,6 @@ body {
   color: var(--on-background-text-color);
   margin: 0;
   padding: 0;
-}
-
-pre,
-code,
-kbd,
-samp {
-  font-family: var(--font-face-code);
-  font-size: 1rem;
 }
 
 #background {
@@ -182,17 +183,18 @@ samp {
 input {
   margin-top: 1vh;
   margin-bottom: 1vh;
-  padding: 0.625rem;
+  padding: 0.4rem 0.8rem;
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 2px 2px 0 0;
-  font-size: 1em;
+  font-size: 1rem;
   outline: 0;
   border: none;
   color: var(--on-background-text-color);
   background-color: var(--background-second-color);
   border-bottom: 1px dashed var(--on-background-text-color);
+  height: 2.3rem;
 }
 input:hover {
   background-color: var(--background-third-color);
@@ -200,6 +202,18 @@ input:hover {
 input:focus {
   background-color: var(--background-third-color);
   border-bottom: 1px solid var(--on-background-text-color);
+}
+input.invalidated {
+  border-bottom: 1px solid var(--color-error);
+}
+input.invalidated::placeholder {
+  color: var(--color-error);
+}
+input.validated {
+  border-bottom: 1px solid var(--color-success);
+}
+input.validated::placeholder {
+  color: var(--color-success);
 }
 
 .content {
@@ -283,23 +297,66 @@ button,
   border-radius: 2px;
   outline: 0;
   border: 1px solid;
-  padding: .4rem .8rem;
+  padding: 0.4rem 0.8rem;
   font-weight: bold;
+  height: 2.3rem;
+  background: var(--background-color);
+  color: var(--on-background-text-color);
+  border-color: var(--background-second-color);
+}
+button:hover,
+.btn:hover {
+  background: var(--background-color);
+  border-color: var(--background-third-color);
+}
+button:active,
+.btn:active {
+  background: var(--background-third-color);
+}
+button.warn,
+.btn.warn {
+  background: var(--color-warn);
+  color: var(--color-on-warn-text);
+  border-color: var(--color-warn);
+}
+button.warn:hover,
+.btn.warn:hover {
+  background: var(--color-warn);
+  border-color: var(--color-warn-aux);
+}
+button.warn:active,
+.btn.warn:active {
+  background: var(--color-warn-aux);
+}
+button.success,
+.btn.success {
+  background: var(--color-success);
+  color: var(--color-on-success-text);
+  border-color: var(--color-success);
+}
+button.success:hover,
+.btn.success:hover {
+  background: var(--color-success);
+  border-color: var(--color-success-aux);
+}
+button.success:active,
+.btn.success:active {
+  background: var(--color-success-aux);
 }
 button.primary,
 .btn.primary {
-  background: var(--primary-color);
-  color: var(--on-primary-text-color);
-  border-color: var(--primary-color);
+  background: var(--color-primary);
+  color: var(--color-on-primary-text);
+  border-color: var(--color-primary);
 }
 button.primary:hover,
 .btn.primary:hover {
-  background: var(--primary-color);
-  border-color: var(--primary-color-accent);
+  background: var(--color-primary);
+  border-color: var(--color-primary-aux);
 }
 button.primary:active,
 .btn.primary:active {
-  background: var(--primary-color-accent);
+  background: var(--color-primary-aux);
 }
 
 .grid {
@@ -333,6 +390,15 @@ h4,
 h5,
 h6 {
   font-weight: bold;
+}
+
+pre,
+code,
+kbd,
+xmp,
+samp {
+  font-family: var(--font-face-code);
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=alchemy.css.map */
