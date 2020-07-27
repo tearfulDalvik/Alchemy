@@ -1,16 +1,17 @@
 input {
     @include m-v($spacing-elements-v-minor, $spacing-elements-v-minor);
-    padding: 2.5 * 0.25rem;
+    padding: $padding-v-content $padding-h-content;
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-radius: 2px 2px 0 0;
-    font-size: 1em;
+    border-radius: $components-border-radius $components-border-radius 0 0;
+    font-size: $font-size-content;
     outline: 0;
     border: none;
     color: var(--on-background-text-color);
     background-color: var(--background-second-color);
-    border-bottom: 1px dashed var(--on-background-text-color);
+    border-bottom: $components-border-width dashed var(--on-background-text-color);
+    height: $components-height-content;
 
     &:hover {
         background-color: var(--background-third-color);
@@ -19,5 +20,19 @@ input {
     &:focus {
         background-color: var(--background-third-color);
         border-bottom: 1px solid var(--on-background-text-color);
+    }
+
+    &.invalidated {
+        border-bottom: $components-border-width solid var(--color-error);
+        &::placeholder{
+            color: var(--color-error);
+        }
+    }
+
+    &.validated {
+        border-bottom: $components-border-width solid var(--color-success);
+        &::placeholder{
+            color: var(--color-success);
+        }
     }
 }
