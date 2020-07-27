@@ -1,17 +1,17 @@
 a {
     transition: transform $transition-interactive-delay;
-    color: $link-color;
+    color: var(--link-color);
     text-decoration: none;
     font-family: $font-face-title;
     transition: transform $transition-interactive-delay;
 
     &:hover {
-        border-bottom: 1px dotted $link-color;
+        border-bottom: 1px dotted var(--link-color);
     }
 
     &:active {
-        color: $link-color-active;
-        border-bottom: 1px dotted $link-color-active;
+        color: var(--link-color-active)-active;
+        border-bottom: 1px dotted var(--link-color)-active;
     }
 
     .large & {

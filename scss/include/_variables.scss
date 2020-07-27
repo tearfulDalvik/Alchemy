@@ -1,19 +1,37 @@
 // Color system
-$white: #fff;
-$black: #000;
-
 $theme-color-interval: 8%;
 
-$text-color: $black !default;
-$link-color: $black !default;
-$link-color-active: transparentize($link-color, .5) !default;
-$background-color: white !default;
+:root {
+  --black: hsl(0, 0%, 0%);
+  --black-a10: hsla(0, 0%, 0%, .1);
+  --black-a20: hsla(0, 0%, 0%, .2);
+  --black-a30: hsla(0, 0%, 0%, .3);
+  --black-a50: hsla(0, 0%, 0%, .5);
+  --black-a60: hsla(0, 0%, 0%, .6);
+  --black-a80: hsla(0, 0%, 0%, .8);
+  --white: hsl(0, 100%, 100%);
+  --white-a10: hsla(0, 100%, 100%, .1);
+  --white-a20: hsla(0, 100%, 100%, .2);
+  --white-a30: hsla(0, 100%, 100%, .3);
+  --white-a50: hsla(0, 100%, 100%, .5);
+  --white-a60: hsla(0, 100%, 100%, .6);
+  --white-a80: hsla(0, 100%, 100%, .8);
 
-@media (prefers-color-scheme: dark) {
-  $text-color: $white;
-  $link-color: $white;
-  $link-color-active: transparentize($link-color, .5);
-  $background-color: $black;
+  --text-color: var(--black);
+  --link-color: var(--black);
+  --link-color-active: var(--black-a50);
+  --background-color: var(--white);
+  --background-second-color: var(--black-a20);
+  --background-third-color: var(--black-a10);
+
+  @media (prefers-color-scheme: light) {
+    --text-color: var(--white);
+    --link-color: var(--white);
+    --link-color-active: var(--white-a50);
+    --background-color: var(--black);
+    --background-second-color: var(--white-a20);
+    --background-third-color: var(--white-a10);
+  }
 }
 
 // Transions

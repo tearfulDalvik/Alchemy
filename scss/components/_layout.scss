@@ -1,0 +1,25 @@
+.content {
+    padding: 0 $spacing-before-page;
+}
+
+.header {
+    @include m-h($spacing-before-page, $spacing-after-page);
+    @include m-v($spacing-top-page, $spacing-bottom-page);
+
+    h1 {
+        font-weight: $weight-minor;
+        font-size: calc(.7rem + .9vmin);
+        letter-spacing: $letter-spacing-discrete;
+        line-height: $line-height;
+    }
+}
+
+.copyright {
+    @extend %titles;
+    padding: $spacing-elements-v $spacing-before-page;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}

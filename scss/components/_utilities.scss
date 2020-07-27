@@ -27,6 +27,11 @@
     margin-bottom: 2vh;
 }
 
+.disabled, :disabled {
+    cursor: not-allowed;
+    background-image: repeating-linear-gradient(45deg,var(--black-a10),var(--black-a10) 12px,var(--white-a10) 12px,var(--white-a10) 24px);
+}
+
 .hoverable:hover {
     transform: rotate3d(0.1, 0.15, 0, 7deg);
 }

@@ -1,0 +1,23 @@
+input {
+    @include m-v(2vh, 2vh);
+    padding: 2.5 * 0.25rem;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 2px 2px 0 0;
+    font-size: 1em;
+    outline: 0;
+    border: none;
+    color: var(--text-color);
+    background-color: var(--background-second-color);
+    border-bottom: 1px dashed var(--text-color);
+
+    &:hover {
+        background-color: var(--background-third-color);
+    }
+
+    &:focus {
+        background-color: var(--background-third-color);
+        border-bottom: 1px solid var(--text-color);
+    }
+}

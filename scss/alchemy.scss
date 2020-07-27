@@ -1,5 +1,5 @@
   /*!
- * Alchemy v1.0.0-alpha1 (https://github.com/tearfulDalvik/Alchemy)
+ * Alchemy v1.0.0 (https://github.com/tearfulDalvik/Alchemy)
  * Copyright 2020 Gufeng Shen
  * Licensed under MIT (https://github.com/tearfulDalvik/Alchemy/blob/main/LICENSE)
  */
@@ -9,11 +9,14 @@
 @import 'include/functions', 
 'include/transitions', 
 'include/variables',
-'include/media';
+'include/media',
+'include/templates';
 
 @import 'reboot';
 
 @import 'components/utilities';
+@import 'components/input';
+@import 'components/layout';
 @import 'components/a';
 @import 'components/grid';
 @import 'components/typography';

@@ -1,21 +1,64 @@
  /*!
-* Alchemy v1.0.0-alpha1 (https://github.com/tearfulDalvik/Alchemy)
+* Alchemy v1.0.0 (https://github.com/tearfulDalvik/Alchemy)
 * Copyright 2020 Gufeng Shen
 * Licensed under MIT (https://github.com/tearfulDalvik/Alchemy/blob/main/LICENSE)
 */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+:root {
+  --black: hsl(0, 0%, 0%);
+  --black-a10: hsla(0, 0%, 0%, .1);
+  --black-a20: hsla(0, 0%, 0%, .2);
+  --black-a30: hsla(0, 0%, 0%, .3);
+  --black-a50: hsla(0, 0%, 0%, .5);
+  --black-a60: hsla(0, 0%, 0%, .6);
+  --black-a80: hsla(0, 0%, 0%, .8);
+  --white: hsl(0, 100%, 100%);
+  --white-a10: hsla(0, 100%, 100%, .1);
+  --white-a20: hsla(0, 100%, 100%, .2);
+  --white-a30: hsla(0, 100%, 100%, .3);
+  --white-a50: hsla(0, 100%, 100%, .5);
+  --white-a60: hsla(0, 100%, 100%, .6);
+  --white-a80: hsla(0, 100%, 100%, .8);
+  --text-color: var(--black);
+  --link-color: var(--black);
+  --link-color-active: var(--black-a50);
+  --background-color: var(--white);
+  --background-second-color: var(--black-a20);
+  --background-third-color: var(--black-a10);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: var(--white);
+    --link-color: var(--white);
+    --link-color-active: var(--white-a50);
+    --background-color: var(--black);
+    --background-second-color: var(--white-a20);
+    --background-third-color: var(--white-a10);
+  }
+}
+
+.copyright, h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+}
+
 body {
   font-size: 1rem;
   font-family: Montserrat, sans-serif;
   letter-spacing: 0.02rem;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: var(--text-color);
   -webkit-font-variant-ligatures: no-common-ligatures;
   font-variant-ligatures: no-common-ligatures;
   font-weight: lighter;
-  background-color: white;
-  color: #000;
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
 }
@@ -75,23 +118,77 @@ samp {
   margin-bottom: 2vh;
 }
 
+.disabled, :disabled {
+  cursor: not-allowed;
+  background-image: repeating-linear-gradient(45deg, var(--black-a10), var(--black-a10) 12px, var(--white-a10) 12px, var(--white-a10) 24px);
+}
+
 .hoverable:hover {
   transform: rotate3d(0.1, 0.15, 0, 7deg);
 }
 
+input {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  padding: 0.625rem;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 2px 2px 0 0;
+  font-size: 1em;
+  outline: 0;
+  border: none;
+  color: var(--text-color);
+  background-color: var(--background-second-color);
+  border-bottom: 1px dashed var(--text-color);
+}
+input:hover {
+  background-color: var(--background-third-color);
+}
+input:focus {
+  background-color: var(--background-third-color);
+  border-bottom: 1px solid var(--text-color);
+}
+
+.content {
+  padding: 0 3.4vw;
+}
+
+.header {
+  margin-left: 3.4vw;
+  margin-right: 3.4vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.header h1 {
+  font-weight: normal;
+  font-size: calc(.7rem + .9vmin);
+  letter-spacing: 0.4rem;
+  line-height: 1.5;
+}
+
+.copyright {
+  padding: 4vh 3.4vw;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 a {
   transition: transform 0.2s;
-  color: #000;
+  color: var(--link-color);
   text-decoration: none;
   font-family: Montserrat, sans-serif;
   transition: transform 0.2s;
 }
 a:hover {
-  border-bottom: 1px dotted #000;
+  border-bottom: 1px dotted var(--link-color);
 }
 a:active {
-  color: rgba(0, 0, 0, 0.5);
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+  color: var(--link-color-active) -active;
+  border-bottom: 1px dotted var(--link-color) -active;
 }
 .large a {
   letter-spacing: 0.4rem;
@@ -146,37 +243,6 @@ h4,
 h5,
 h6 {
   font-weight: bold;
-}
-
-.content {
-  padding: 0 3.4vw;
-}
-
-.header {
-  margin-left: 3.4vw;
-  margin-right: 3.4vw;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-}
-.header h1 {
-  font-weight: normal;
-  font-size: calc(.7rem + .9vmin);
-  letter-spacing: 0.4rem;
-  line-height: 1.5;
-}
-
-.copyright {
-  padding: 4vh 3.4vw;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6, .copyright {
-  font-family: Montserrat, sans-serif;
-  font-size: 1rem;
 }
 
 /*# sourceMappingURL=alchemy.css.map */
