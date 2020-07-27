@@ -3,6 +3,7 @@ $theme-color-interval: 8%;
 
 :root {
   --black: hsl(0, 0%, 0%);
+  --black-a5: hsla(0, 0%, 0%, .05);
   --black-a10: hsla(0, 0%, 0%, .1);
   --black-a20: hsla(0, 0%, 0%, .2);
   --black-a30: hsla(0, 0%, 0%, .3);
@@ -10,6 +11,7 @@ $theme-color-interval: 8%;
   --black-a60: hsla(0, 0%, 0%, .6);
   --black-a80: hsla(0, 0%, 0%, .8);
   --white: hsl(0, 100%, 100%);
+  --white-a5: hsla(0, 100%, 100%, .05);
   --white-a10: hsla(0, 100%, 100%, .1);
   --white-a20: hsla(0, 100%, 100%, .2);
   --white-a30: hsla(0, 100%, 100%, .3);
@@ -21,10 +23,10 @@ $theme-color-interval: 8%;
   --link-color: var(--black);
   --link-color-active: var(--black-a50);
   --background-color: var(--white);
-  --background-second-color: var(--black-a20);
+  --background-second-color: var(--black-a5);
   --background-third-color: var(--black-a10);
 
-  @media (prefers-color-scheme: light) {
+  @media (prefers-color-scheme: dark) {
     --text-color: var(--white);
     --link-color: var(--white);
     --link-color-active: var(--white-a50);
@@ -38,9 +40,11 @@ $theme-color-interval: 8%;
 $transition-interactive-delay: .2s;
 
 // Typography
-$font-face-title: Montserrat, sans-serif; 
-$font-face-content: Montserrat, sans-serif;
-$font-face-code: "Montserrat Mono", monospace;
+:root {
+  --font-face-title: Montserrat, sans-serif; 
+  --font-face-content: Montserrat, sans-serif;
+  --font-face-code: "Montserrat Mono", monospace;
+}
 
 $weight-minor: normal;
 $weight-major: bold;
@@ -59,4 +63,13 @@ $spacing-before-page: 3.4vw;
 $spacing-after-page: $spacing-before-page;
 $spacing-top-page: 5vh;
 $spacing-bottom-page: $spacing-top-page;
-$spacing-elements-v: 4vh;
+$spacing-elements-v-major: 2vh;
+$spacing-elements-v-minor: 1vh;
+$spacing-elements-h-major: 2vw;
+
+:root {
+  --container-max-width: 55vmin;
+  @include media("<small") {
+    --container-max-width: 86vmin;
+  }
+}

@@ -1,10 +1,20 @@
 .content {
     padding: 0 $spacing-before-page;
+    margin: $spacing-elements-v-major 0;
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+}
+
+.hero {
+    margin-top: 28vh;
 }
 
 .header {
     @include m-h($spacing-before-page, $spacing-after-page);
-    @include m-v($spacing-top-page, $spacing-bottom-page);
+    @include m-v($spacing-top-page, $spacing-top-page);
 
     h1 {
         font-weight: $weight-minor;
@@ -16,10 +26,5 @@
 
 .copyright {
     @extend %titles;
-    padding: $spacing-elements-v $spacing-before-page;
-}
-
-.container {
-    max-width: 600px;
-    margin: 0 auto;
+    padding: $spacing-elements-v-major $spacing-before-page;
 }

@@ -1,5 +1,5 @@
 input {
-    @include m-v(2vh, 2vh);
+    @include m-v($spacing-elements-v-minor, $spacing-elements-v-minor);
     padding: 2.5 * 0.25rem;
     width: 100%;
     -webkit-box-sizing: border-box;

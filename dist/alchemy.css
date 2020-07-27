@@ -6,6 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
 :root {
   --black: hsl(0, 0%, 0%);
+  --black-a5: hsla(0, 0%, 0%, .05);
   --black-a10: hsla(0, 0%, 0%, .1);
   --black-a20: hsla(0, 0%, 0%, .2);
   --black-a30: hsla(0, 0%, 0%, .3);
@@ -13,6 +14,7 @@
   --black-a60: hsla(0, 0%, 0%, .6);
   --black-a80: hsla(0, 0%, 0%, .8);
   --white: hsl(0, 100%, 100%);
+  --white-a5: hsla(0, 100%, 100%, .05);
   --white-a10: hsla(0, 100%, 100%, .1);
   --white-a20: hsla(0, 100%, 100%, .2);
   --white-a30: hsla(0, 100%, 100%, .3);
@@ -23,10 +25,10 @@
   --link-color: var(--black);
   --link-color-active: var(--black-a50);
   --background-color: var(--white);
-  --background-second-color: var(--black-a20);
+  --background-second-color: var(--black-a5);
   --background-third-color: var(--black-a10);
 }
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
     --text-color: var(--white);
     --link-color: var(--white);
@@ -37,19 +39,34 @@
   }
 }
 
+:root {
+  --font-face-title: Montserrat, sans-serif;
+  --font-face-content: Montserrat, sans-serif;
+  --font-face-code: "Montserrat Mono", monospace;
+}
+
+:root {
+  --container-max-width: 55vmin;
+}
+@media (max-width: 48em) {
+  :root {
+    --container-max-width: 86vmin;
+  }
+}
+
 .copyright, h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: Montserrat, sans-serif;
-  font-size: 1rem;
+  font-family: var(--font-face-title);
+  font-size: var(--font-size-title);
 }
 
 body {
   font-size: 1rem;
-  font-family: Montserrat, sans-serif;
+  font-family: var(--font-face-content);
   letter-spacing: 0.02rem;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
@@ -67,7 +84,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: "Montserrat Mono", monospace;
+  font-family: var(--font-face-code);
   font-size: 1rem;
 }
 
@@ -128,8 +145,8 @@ samp {
 }
 
 input {
-  margin-top: 2vh;
-  margin-bottom: 2vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
   padding: 0.625rem;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -152,6 +169,16 @@ input:focus {
 
 .content {
   padding: 0 3.4vw;
+  margin: 2vh 0;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.hero {
+  margin-top: 28vh;
 }
 
 .header {
@@ -168,27 +195,22 @@ input:focus {
 }
 
 .copyright {
-  padding: 4vh 3.4vw;
-}
-
-.container {
-  max-width: 600px;
-  margin: 0 auto;
+  padding: 2vh 3.4vw;
 }
 
 a {
   transition: transform 0.2s;
   color: var(--link-color);
   text-decoration: none;
-  font-family: Montserrat, sans-serif;
+  font-family: var(--font-face-title);
   transition: transform 0.2s;
 }
 a:hover {
   border-bottom: 1px dotted var(--link-color);
 }
 a:active {
-  color: var(--link-color-active) -active;
-  border-bottom: 1px dotted var(--link-color) -active;
+  color: var(--link-color-active);
+  border-bottom: 1px dotted var(--link-color-active);
 }
 .large a {
   letter-spacing: 0.4rem;
