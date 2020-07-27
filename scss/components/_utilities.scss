@@ -2,27 +2,35 @@
     display: none;
 }
 
-.m-t-3 {
+.m-t-grand {
+    margin-top: 4vh;
+}
+
+.m-t-sparse {
     margin-top: 1.5vh;
 }
 
-.m-t-2 {
+.m-t-normal {
     margin-top: 1vh;
 }
 
-.m-t-1 {
+.m-t-compat {
     margin-top: .5vh;
 }
 
-.m-b-3 {
+.m-b-grand {
+    margin-bottom: 4vh;
+}
+
+.m-b-sparse {
     margin-bottom: 1.5vh;
 }
 
-.m-b-2 {
+.m-b-normal {
     margin-bottom: 1vh;
 }
 
-.m-b-1 {
+.m-b-compat {
     margin-bottom: .5vh;
 }
 

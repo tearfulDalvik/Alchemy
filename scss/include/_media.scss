@@ -23,7 +23,6 @@ $-bp-xxlarge: 160em; // 2560px
   @return map-get( $condMap, $c );
 }
 
-// The mdia mixin
 @mixin media($args...) {
   $query: "";
   @each $arg in $args {
@@ -34,4 +33,8 @@ $-bp-xxlarge: 160em; // 2560px
     $query: $query + $op + translate-media-condition($arg);
   }
   @media #{$query}  { @content; }
+}
+
+@mixin dark($args...) {
+  @media (prefers-color-scheme: dark) { @content; }
 }

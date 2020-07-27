@@ -8,6 +8,14 @@
     margin: 0 auto;
 }
 
+.block {
+    background-color: var(--background-third-color);
+    border-radius: 2px;
+    padding: .4rem;
+    margin: .4rem;
+    font-size: .8rem;
+}
+
 .hero {
     margin-top: 28vh;
 }

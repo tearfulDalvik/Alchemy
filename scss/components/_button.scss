@@ -8,19 +8,17 @@ button,
     font-weight: $weight-major;
 
     &.primary {
-        background: #ec7211;
-        color: #fff;
-        border-color: #ec7211;
+        background: var(--primary-color);
+        color: var(--on-primary-text-color);
+        border-color: var(--primary-color);
 
         &:hover {
-            background: #eb5f07;
-            color: #fff;
-            border-color: #dd6b10;
+            background: var(--primary-color);
+            border-color: var(--primary-color-accent);
         }
 
         &:active {
-            background: #dd6b10;
-            color: #fff;
+            background: var(--primary-color-accent);
         }
     }
 }

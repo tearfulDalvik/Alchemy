@@ -4,12 +4,12 @@ body {
     letter-spacing: $letter-spacing;
     line-height: $line-height;
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: var(--text-color);
+    -webkit-tap-highlight-color: var(--on-background-text-color);
     -webkit-font-variant-ligatures: no-common-ligatures;
     font-variant-ligatures: no-common-ligatures;
     font-weight: lighter;
     background-color: var(--background-color);
-    color: var(--text-color);
+    color: var(--on-background-text-color);
     margin: 0;
     padding: 0;
 }

@@ -5,7 +5,7 @@
 */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
 :root {
-  --black: hsl(0, 0%, 0%);
+  --black: black;
   --black-a5: hsla(0, 0%, 0%, .05);
   --black-a10: hsla(0, 0%, 0%, .1);
   --black-a20: hsla(0, 0%, 0%, .2);
@@ -13,7 +13,7 @@
   --black-a50: hsla(0, 0%, 0%, .5);
   --black-a60: hsla(0, 0%, 0%, .6);
   --black-a80: hsla(0, 0%, 0%, .8);
-  --white: hsl(0, 100%, 100%);
+  --white: white;
   --white-a5: hsla(0, 100%, 100%, .05);
   --white-a10: hsla(0, 100%, 100%, .1);
   --white-a20: hsla(0, 100%, 100%, .2);
@@ -21,16 +21,31 @@
   --white-a50: hsla(0, 100%, 100%, .5);
   --white-a60: hsla(0, 100%, 100%, .6);
   --white-a80: hsla(0, 100%, 100%, .8);
-  --text-color: var(--black);
-  --link-color: var(--black);
-  --link-color-active: var(--black-a50);
+  --orange-100: #a24f0b;
+  --orange-200: #b5580d;
+  --orange-300: #c8620e;
+  --orange-400: #db6b0f;
+  --orange-500: #ee7411;
+  --orange-600: #f07f24;
+  --orange-700: #f18b37;
+  --orange-800: #f2964a;
+  --orange-900: #f4a15d;
+  --primary-color: var(--orange-600);
+  --primary-color-accent: var(--orange-400);
+  --on-primary-text-color: var(--white);
   --background-color: var(--white);
   --background-second-color: var(--black-a5);
   --background-third-color: var(--black-a10);
+  --on-background-text-color: var(--black);
+  --link-color: var(--black);
+  --link-color-active: var(--black-a50);
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color: var(--white);
+    --primary-color: var(--orange-400);
+    --primary-color-accent: var(--orange-500);
+    --on-primary-text-color: var(--white);
+    --on-background-text-color: var(--white);
     --link-color: var(--white);
     --link-color-active: var(--white-a50);
     --background-color: var(--black);
@@ -70,12 +85,12 @@ body {
   letter-spacing: 0.02rem;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: var(--text-color);
+  -webkit-tap-highlight-color: var(--on-background-text-color);
   -webkit-font-variant-ligatures: no-common-ligatures;
   font-variant-ligatures: no-common-ligatures;
   font-weight: lighter;
   background-color: var(--background-color);
-  color: var(--text-color);
+  color: var(--on-background-text-color);
   margin: 0;
   padding: 0;
 }
@@ -111,27 +126,35 @@ samp {
   display: none;
 }
 
-.m-t-3 {
+.m-t-grand {
+  margin-top: 4vh;
+}
+
+.m-t-sparse {
   margin-top: 1.5vh;
 }
 
-.m-t-2 {
+.m-t-normal {
   margin-top: 1vh;
 }
 
-.m-t-1 {
+.m-t-compat {
   margin-top: .5vh;
 }
 
-.m-b-3 {
+.m-b-grand {
+  margin-bottom: 4vh;
+}
+
+.m-b-sparse {
   margin-bottom: 1.5vh;
 }
 
-.m-b-2 {
+.m-b-normal {
   margin-bottom: 1vh;
 }
 
-.m-b-1 {
+.m-b-compat {
   margin-bottom: .5vh;
 }
 
@@ -167,16 +190,16 @@ input {
   font-size: 1em;
   outline: 0;
   border: none;
-  color: var(--text-color);
+  color: var(--on-background-text-color);
   background-color: var(--background-second-color);
-  border-bottom: 1px dashed var(--text-color);
+  border-bottom: 1px dashed var(--on-background-text-color);
 }
 input:hover {
   background-color: var(--background-third-color);
 }
 input:focus {
   background-color: var(--background-third-color);
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--on-background-text-color);
 }
 
 .content {
@@ -187,6 +210,14 @@ input:focus {
 .container {
   max-width: var(--container-max-width);
   margin: 0 auto;
+}
+
+.block {
+  background-color: var(--background-third-color);
+  border-radius: 2px;
+  padding: .4rem;
+  margin: .4rem;
+  font-size: .8rem;
 }
 
 .hero {
@@ -257,20 +288,18 @@ button,
 }
 button.primary,
 .btn.primary {
-  background: #ec7211;
-  color: #fff;
-  border-color: #ec7211;
+  background: var(--primary-color);
+  color: var(--on-primary-text-color);
+  border-color: var(--primary-color);
 }
 button.primary:hover,
 .btn.primary:hover {
-  background: #eb5f07;
-  color: #fff;
-  border-color: #dd6b10;
+  background: var(--primary-color);
+  border-color: var(--primary-color-accent);
 }
 button.primary:active,
 .btn.primary:active {
-  background: #dd6b10;
-  color: #fff;
+  background: var(--primary-color-accent);
 }
 
 .grid {
