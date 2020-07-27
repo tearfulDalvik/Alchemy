@@ -13,4 +13,25 @@ a {
         color: $link-color-active;
         border-bottom: 1px dotted $link-color-active;
     }
+
+    .large & {
+        letter-spacing: $letter-spacing-discrete;
+        font-size: 2.6vmin;
+        margin-bottom: 2vh;
+
+        @include media("<small") {
+            font-size: 130%;
+        }
+    }
+
+    .xxlarge &{
+        letter-spacing: $letter-spacing-discrete;
+        font-size: 4.6vmin;
+        margin-bottom: 4vh;
+        text-transform: uppercase;
+
+        @include media("<small") {
+            font-size: 180%;
+        }
+    }
 }
