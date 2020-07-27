@@ -1,35 +1,46 @@
-
 .hidden {
     display: none;
 }
 
 .m-t-3 {
-    margin-top: 6vh;
+    margin-top: 1.5vh;
 }
 
 .m-t-2 {
-    margin-top: 4vh;
+    margin-top: 1vh;
 }
 
 .m-t-1 {
-    margin-top: 2vh;
+    margin-top: .5vh;
 }
 
 .m-b-3 {
-    margin-bottom: 6vh;
+    margin-bottom: 1.5vh;
 }
 
 .m-b-2 {
-    margin-bottom: 4vh;
+    margin-bottom: 1vh;
 }
 
 .m-b-1 {
-    margin-bottom: 2vh;
+    margin-bottom: .5vh;
 }
 
-.disabled, :disabled {
-    cursor: not-allowed;
-    background-image: repeating-linear-gradient(45deg,var(--black-a10),var(--black-a10) 12px,var(--white-a10) 12px,var(--white-a10) 24px);
+.disabled,
+:disabled {
+    cursor: not-allowed !important;
+    background-image: repeating-linear-gradient(45deg, var(--black-a10), var(--black-a10) 12px, var(--white-a10) 12px, var(--white-a10) 24px) !important;
+}
+
+.h-center {
+    text-align: center;
+}
+
+.unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .hoverable:hover {

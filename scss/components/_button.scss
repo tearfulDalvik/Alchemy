@@ -1,0 +1,26 @@
+button,
+.btn {
+    font-size: $font-size-content;
+    border-radius: 2px;
+    outline: 0;
+    border: 1px solid;
+    padding: .4rem .8rem;
+    font-weight: $weight-major;
+
+    &.primary {
+        background: #ec7211;
+        color: #fff;
+        border-color: #ec7211;
+
+        &:hover {
+            background: #eb5f07;
+            color: #fff;
+            border-color: #dd6b10;
+        }
+
+        &:active {
+            background: #dd6b10;
+            color: #fff;
+        }
+    }
+}
