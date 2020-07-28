@@ -5,6 +5,12 @@ a {
     font-family: var(--font-face-title);
     transition: transform $transition-interactive-delay;
 
+    .list &.item {
+        &:hover, &:active {
+            border: none;
+        }
+    }
+
     &:hover {
         border-bottom: 1px dotted var(--link-color);
     }

@@ -8,4 +8,15 @@ body {
     color: var(--on-background-text-color);
     margin: 0;
     padding: 0;
+    -webkit-transition: all .3s cubic-bezier(0,0,.2,1);
+    transition: all .3s cubic-bezier(0,0,.2,1);
+
+    &.with-drawer {
+        margin-left: var(--content-safe-margin-by-drawer);
+
+        &.drawer-collapsed {
+            --drawer-max-width: #{$drawer-collapsed-width};
+            --content-safe-margin-by-drawer: #{$drawer-collapsed-width};
+        }
+    }
 }

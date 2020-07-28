@@ -120,3 +120,18 @@ $components-border-radius: 2px;
     --container-max-width: 86vmin;
   }
 }
+
+// Drawer
+$drawer-hide-width: 0;
+$drawer-normal-width: 280px;
+$drawer-collapsed-width: 64px;
+$drawer-fullscreen-width: 100vw;
+:root {
+  --content-safe-margin-by-drawer: #{$drawer-normal-width};
+  --drawer-max-width: #{$drawer-normal-width};
+
+  @include media("<small") {
+    --content-safe-margin-by-drawer: 0;
+    --drawer-max-width: #{$drawer-fullscreen-width};
+  }
+}

@@ -6,8 +6,18 @@ h5,
 h6 {
     @extend %titles;
     font-weight: $weight-major;
+    .list>.item>& {
+        margin: 0;
+    }
 } 
 
 :target {
     color: var(--color-primary);
+}
+
+p {
+    .list>.item>& {
+        white-space: pre-line;
+        margin: 0;
+    }
 }

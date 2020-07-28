@@ -1,0 +1,32 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    >.item {
+        @extend %block;
+        width: 100%;
+        background-color: var(--background-second-color);
+        cursor: pointer;
+        margin-bottom: $spacing-elements-v-minor;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            background-color: var(--color-primary-aux);
+            color: var(--color-on-primary-text);
+        }
+
+        &:active, &.active {
+            background-color: var(--color-primary);
+            color: var(--color-on-primary-text);
+        }
+
+        .drawer > & {
+            border-radius: 0;
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,6 +1,12 @@
 .content {
     padding: 0 $spacing-before-page;
     margin: $spacing-elements-v-major 0;
+    /* This is for .content.block */
+    border-radius: 0;
+
+    .drawer>& {
+        padding: 0;
+    }
 }
 
 .container {

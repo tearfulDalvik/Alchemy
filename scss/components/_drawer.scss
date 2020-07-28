@@ -1,0 +1,40 @@
+.drawer {
+    width: var(--drawer-max-width);
+    background-color: var(--background-color);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5000;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-box-shadow: 0 8px 10px -5px rgba(0, 0, 0, .2), 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12);
+    box-shadow: 0 8px 10px -5px rgba(0, 0, 0, .2), 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12);
+    -webkit-transition: all .3s cubic-bezier(0, 0, .2, 1);
+    transition: all .3s cubic-bezier(0, 0, .2, 1);
+
+    @include p-h($padding-h-content, $padding-h-content);
+
+    >* {
+        @include m-h(0, 0);
+    }
+
+    >:first-child {
+        @include m-v($padding-v-content, $padding-v-content);
+    }
+}
+
+body:not([class*='with-drawer'])>.drawer {
+    transform: translateX(calc(-1 * var(--drawer-max-width)));
+    -webkit-transform: translateX(calc(-1 * var(--drawer-max-width)));
+    box-shadow: none;
+
+    @include media("<small") {
+        transform: translateY(-100vh);
+        -webkit-transform: translateY(-100vh);
+    }
+}
