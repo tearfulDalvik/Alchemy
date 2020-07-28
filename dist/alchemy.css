@@ -409,7 +409,6 @@ h4,
 h5,
 h6 {
   font-weight: bold;
-  overflow: hidden;
 }
 .list > .item > h1, .list > .item >
 h2, .list > .item >
@@ -420,6 +419,14 @@ h6 {
   margin: 0;
   grid-column: 2;
   grid-row: 1;
+}
+body.drawer-collapsed > .drawer h1, body.drawer-collapsed > .drawer
+h2, body.drawer-collapsed > .drawer
+h3, body.drawer-collapsed > .drawer
+h4, body.drawer-collapsed > .drawer
+h5, body.drawer-collapsed > .drawer
+h6 {
+  display: none;
 }
 
 :target {

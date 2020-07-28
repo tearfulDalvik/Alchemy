@@ -21,10 +21,21 @@ module.exports = function (grunt) {
         }
       }
     },
+    ejs: {
+      all: {
+        options: {
+          alchemy_url: '../../dist/alchemy.min.css'
+        },
+        src: ['docs/*.ejs'],
+        dest: 'dist/',
+        expand: true,
+        ext: '.html',
+      },
+    },
     watch: {
       scripts: {
-        files: '**/*.scss',
-        tasks: ['sass', 'cssmin'],
+        files: ['scss/*.scss', 'docs/*.ejs'],
+        tasks: ['build'],
         options: {
           interrupt: true
         }
@@ -35,6 +46,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-ejs');
 
-  grunt.registerTask('build', ['sass', 'cssmin']);
+  grunt.registerTask('build', ['sass', 'cssmin', 'ejs']);
 }

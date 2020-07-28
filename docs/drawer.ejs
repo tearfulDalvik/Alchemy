@@ -1,0 +1,137 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css"
+        integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="<%=alchemy_url%>">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="A lightweight web UI framework for building super fast and beautiful websites.">
+    <meta name="author" content="Gufeng Shen">
+    <meta name="keywords" content="css framework,ui,ui framework,css ui,css,gufeng shen">
+    <meta name="copyright" content="Gufeng Shen">
+
+    <title>Drawer | Alchemy UI</title>
+    <meta name="theme-color" content="#000000">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tearfulDalvik">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Alchemy UI">
+    <meta property="og:description"
+        content="A lightweight web UI framework for building super fast and beautiful websites. Produced by Gufeng Shen.">
+</head>
+
+<body class="with-drawer">
+    <div class="header">
+        <h1><a href="drawer.html">Drawer</a></h1>
+    </div>
+    <div class="drawer">
+        <div class="header">
+            <h1><a href="javascript:document.body.classList.remove('with-drawer')">✕</a>&nbsp;<a href="#">Drawer Header</a></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <h3>Animals</h3>
+        <div class="content list">
+            <a href="#home" class="item active">
+                <i class="fas fa-home" id="icon"></i>
+                <h3>Home</h3>
+                <p>This is the description of Home</p>
+            </a>
+            <a href="#fishes" class="item">
+                <i class="fas fa-fish"></i>
+                <h3>Fishes</h3>
+            </a>
+            <a href="#birds" class="item">
+                <i class="fas fa-crow"></i>
+                <h3>Birds</h3>
+                <p>Oops! There is no description for Fishes, but we have much more description!</p>
+            </a>
+        </div>
+        <h3>Plants</h3>
+        <div class="content list">
+            <a class="item">
+                <h3>Cone</h3>
+                <p>Proudly with no icons</p>
+            </a>
+            <a class="item">
+                <i class="fab fa-canadian-maple-leaf"></i>
+                <h3>Maple</h3>
+            </a>
+            <a class="item">
+                <h3>Sequoia</h3>
+            </a>
+        </div>
+    </div>
+    <div class="content">
+        <h3>Identical Elements</h3>
+        <p>Elements inside and outside drawer are exactly the same, while they have slightly different styles.</p>
+        <i>Drawer is fully compatible with lists. View more on <a href="lists.html">Lists</a></i>
+    </div>
+    <div class="content">
+        <h1 id="home">Home Selected</h1>
+        <h1 id="fishes">Fishes Selected</h1>
+        <h1 id="birds">Birds Selected</h1>
+    </div>
+    <div class="content block">
+        <code>
+            &lt;div class=&quot;header&quot;&gt;
+        &lt;h1&gt;&lt;a href=&quot;drawer.html&quot;&gt;Drawer&lt;/a&gt;&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;drawer&quot;&gt;
+        &lt;div class=&quot;header&quot;&gt;
+            &lt;h1&gt;&lt;a href=&quot;#&quot;&gt;Drawer Header&lt;/a&gt;&lt;/h1&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;h3&gt;Animals&lt;/h3&gt;
+        &lt;div class=&quot;content list&quot;&gt;
+            &lt;a href=&quot;#home&quot; class=&quot;item active&quot;&gt;
+                &lt;i class=&quot;fas fa-home&quot; id=&quot;icon&quot;&gt;&lt;/i&gt;
+                &lt;h3&gt;Home&lt;/h3&gt;
+                &lt;p&gt;This is the description of Home&lt;/p&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;#fishes&quot; class=&quot;item&quot;&gt;
+                &lt;i class=&quot;fas fa-fish&quot;&gt;&lt;/i&gt;
+                &lt;h3&gt;Fishes&lt;/h3&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;#birds&quot; class=&quot;item&quot;&gt;
+                &lt;i class=&quot;fas fa-crow&quot;&gt;&lt;/i&gt;
+                &lt;h3&gt;Birds&lt;/h3&gt;
+                &lt;p&gt;Oops! There is no description for Fishes, but we have much more description!&lt;/p&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;h3&gt;Plants&lt;/h3&gt;
+        &lt;div class=&quot;content list&quot;&gt;
+            &lt;a class=&quot;item&quot;&gt;
+                &lt;h3&gt;Cone&lt;/h3&gt;
+                &lt;p&gt;Proudly with no icons&lt;/p&gt;
+            &lt;/a&gt;
+            &lt;a class=&quot;item&quot;&gt;
+                &lt;i class=&quot;fab fa-canadian-maple-leaf&quot;&gt;&lt;/i&gt;
+                &lt;h3&gt;Maple&lt;/h3&gt;
+            &lt;/a&gt;
+            &lt;a class=&quot;item&quot;&gt;
+                &lt;h3&gt;Sequoia&lt;/h3&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+        </code>
+    </div>
+    <div class="content">
+        <h3>Control via Javascript</h3>
+        <p><button onclick="document.querySelector('body').classList.remove('with-drawer')">Hide Drawer</button>
+        <button onclick="document.querySelector('body').classList.add('with-drawer')">Show Drawer</button></p>
+        <code>&lt;button onclick=&quot;document.querySelector('body').classList.remove('with-drawer')&quot;&gt;Hide Drawer&lt;/button&gt;
+                &lt;button onclick=&quot;document.querySelector('body').classList.add('with-drawer')&quot;&gt;Show Drawer&lt;/button&gt;
+        </code>
+        <p><button onclick="document.querySelector('body').classList.add('with-drawer', 'drawer-collapsed')">Collapse</button>
+        <button onclick="document.querySelector('body').classList.add('with-drawer') & document.querySelector('body').classList.remove('drawer-collapsed')">Show Drawer</button></p>
+        <code>&lt;button onclick=&quot;document.querySelector('body').classList.add('with-drawer', 'drawer-collapsed')&quot;&gt;Collapse&lt;/button&gt;
+            &lt;button onclick=&quot;document.querySelector('body').classList.add('with-drawer') &amp; document.querySelector('body').classList.remove('drawer-collapsed')&quot;&gt;Show Drawer&lt;/button&gt;
+        </code>
+    </div>
+</body>
+
+</html>
