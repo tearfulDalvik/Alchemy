@@ -1,4 +1,7 @@
 module.exports = function (grunt) {
+  let DEBUG = false;
+  let VERSION = '1.0.0-alpha.6';
+
   grunt.initConfig({
     sass: {
       dist: {
@@ -24,7 +27,8 @@ module.exports = function (grunt) {
     ejs: {
       all: {
         options: {
-          alchemy_url: '../../dist/alchemy.min.css'
+          alchemy_url: DEBUG ? '../../dist/alchemy.min.css' : `https://cdn.jsdelivr.net/gh/tearfuldalvik/alchemy@${VERSION}/dist/alchemy.min.css`,
+          debug_scripts: DEBUG ? '<script src="//localhost:35729/livereload.js"></script>' : '<div class="copyright"><p>© 2020 Gufeng Shen</p></div>'
         },
         src: ['docs/*.ejs'],
         dest: 'dist/',
@@ -32,13 +36,17 @@ module.exports = function (grunt) {
         ext: '.html',
       },
     },
+    serve: {
+      'path': 'dist/'
+    },
     watch: {
+      options: {
+        interrupt: true,
+        livereload: true,
+      },
       scripts: {
         files: ['scss/*.scss', 'docs/*.ejs'],
-        tasks: ['build'],
-        options: {
-          interrupt: true
-        }
+        tasks: ['build', 'serve'],
       }
     }
   });
@@ -47,6 +55,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-ejs');
+  grunt.loadNpmTasks('grunt-serve');
 
   grunt.registerTask('build', ['sass', 'cssmin', 'ejs']);
 }
