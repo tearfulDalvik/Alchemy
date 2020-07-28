@@ -20,3 +20,21 @@ body {
         }
     }
 }
+
+.theme-blue {
+    --color-primary: var(--color-warn);
+    --color-primary-aux: var(--color-warn-aux);
+    --color-on-primary-text: var(--white);
+}
+
+.theme-red {
+    --color-primary: var(--color-error);
+    --color-primary-aux: var(--color-error-aux);
+    --color-on-primary-text: var(--white);
+}
+
+.theme-green {
+    --color-primary: var(--color-success);
+    --color-primary-aux: var(--color-success-aux);
+    --color-on-primary-text: var(--white);
+}

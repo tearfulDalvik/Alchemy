@@ -1,6 +1,6 @@
 module.exports = function (grunt) {
-  let DEBUG = false;
-  let VERSION = '1.0.0-alpha.6';
+  let DEBUG = grunt.option('build') === 'dev';
+  let VERSION = '1.0.0-alpha.7';
 
   grunt.initConfig({
     sass: {
@@ -45,7 +45,7 @@ module.exports = function (grunt) {
         livereload: true,
       },
       scripts: {
-        files: ['scss/*.scss', 'docs/*.ejs'],
+        files: ['scss/**/*.scss', 'docs/*.ejs'],
         tasks: ['build', 'serve'],
       }
     }

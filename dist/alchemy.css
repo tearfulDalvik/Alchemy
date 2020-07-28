@@ -101,7 +101,7 @@ h6 {
 
 .block, .badge, .list > .item {
   background-color: var(--background-second-color);
-  border-radius: 2px;
+  border-radius: 6px;
   padding: 0.4rem 0.8rem;
 }
 
@@ -136,6 +136,24 @@ body.with-drawer {
 body.with-drawer.drawer-collapsed {
   --drawer-max-width: 3.2em;
   --content-safe-margin-by-drawer: 3.2em;
+}
+
+.theme-blue {
+  --color-primary: var(--color-warn);
+  --color-primary-aux: var(--color-warn-aux);
+  --color-on-primary-text: var(--white);
+}
+
+.theme-red {
+  --color-primary: var(--color-error);
+  --color-primary-aux: var(--color-error-aux);
+  --color-on-primary-text: var(--white);
+}
+
+.theme-green {
+  --color-primary: var(--color-success);
+  --color-primary-aux: var(--color-success-aux);
+  --color-on-primary-text: var(--white);
 }
 
 .hidden {
@@ -202,7 +220,7 @@ input {
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border-radius: 2px 2px 0 0;
+  border-radius: 6px 6px 0 0;
   font-size: 1rem;
   outline: 0;
   border: none;
@@ -313,7 +331,7 @@ a:active {
 button,
 .btn {
   font-size: 1rem;
-  border-radius: 2px;
+  border-radius: 6px;
   outline: 0;
   border: 1px solid;
   padding: 0.4rem 0.8rem;
@@ -322,6 +340,18 @@ button,
   background: var(--background-color);
   color: var(--on-background-text-color);
   border-color: var(--background-second-color);
+}
+button.low-profile,
+.btn.low-profile {
+  font-size: 80%;
+  height: 1.84rem;
+  padding: 0.4rem 0.56rem;
+}
+button.high-profile,
+.btn.high-profile {
+  font-size: 120%;
+  height: 2.76rem;
+  padding: 0.4rem 1.04rem;
 }
 button:hover,
 .btn:hover {
@@ -459,12 +489,10 @@ body.drawer-collapsed > .drawer p {
   box-sizing: border-box;
   margin: 0;
   overflow-x: hidden;
-  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  -webkit-box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
-  box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
   -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
   transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  border-right: 1px dashed var(--background-second-color);
   padding-left: 0.8rem;
   padding-right: 0.8rem;
 }
@@ -486,6 +514,12 @@ body:not([class*='with-drawer']) > .drawer {
   body:not([class*='with-drawer']) > .drawer {
     transform: translateY(-100vh);
     -webkit-transform: translateY(-100vh);
+  }
+}
+
+@media (max-width: 48em) {
+  body:not([class*='drawer-collapsed']) > .drawer {
+    border-right: none;
   }
 }
 

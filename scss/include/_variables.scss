@@ -111,7 +111,7 @@ $padding-h-content: .8rem;
 $components-height-content: $padding-v-content * 2+$line-height;
 
 $components-border-width: 1px;
-$components-border-radius: 2px;
+$components-border-radius: 6px;
 
 :root {
   --container-max-width: 55vmin;
@@ -126,6 +126,7 @@ $drawer-hide-width: 0;
 $drawer-normal-width: 320px;
 $drawer-collapsed-width: 3.2em;
 $drawer-fullscreen-width: 100vw;
+$drawer-border-width: $components-border-width;
 :root {
   --content-safe-margin-by-drawer: #{$drawer-normal-width};
   --drawer-max-width: #{$drawer-normal-width};

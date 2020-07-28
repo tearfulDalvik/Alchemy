@@ -11,6 +11,18 @@ button,
     color: var(--on-background-text-color);
     border-color: var(--background-second-color);
 
+    &.low-profile {
+        font-size: 80%;
+        height: $components-height-content * 0.8;
+        padding: $padding-v-content $padding-h-content * 0.7;
+    }
+
+    &.high-profile {
+        font-size: 120%;
+        height: $components-height-content * 1.2;
+        padding: $padding-v-content $padding-h-content * 1.3;
+    }
+
     &:hover {
         background: var(--background-color);
         border-color: var(--background-third-color);
