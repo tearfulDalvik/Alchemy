@@ -123,8 +123,8 @@ $components-border-radius: 2px;
 
 // Drawer
 $drawer-hide-width: 0;
-$drawer-normal-width: 280px;
-$drawer-collapsed-width: 64px;
+$drawer-normal-width: 320px;
+$drawer-collapsed-width: 3.2em;
 $drawer-fullscreen-width: 100vw;
 :root {
   --content-safe-margin-by-drawer: #{$drawer-normal-width};

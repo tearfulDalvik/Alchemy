@@ -1,0 +1,9 @@
+i.fas {
+    @extend %icon-font;
+    font-family: 'Font Awesome 5 Free';
+}
+
+i.fab {
+    @extend %icon-font;
+    font-family: 'Font Awesome 5 Brands';
+}
