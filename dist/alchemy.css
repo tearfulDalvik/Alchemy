@@ -88,39 +88,22 @@ h6 {
   font-size: var(--font-size-title);
 }
 
+.block {
+  background-color: var(--background-second-color);
+  border-radius: 2px;
+  padding: 0.4rem 0.8rem;
+}
+
 body {
   font-size: 1rem;
   font-family: var(--font-face-content);
   letter-spacing: 0.02rem;
   line-height: 1.5;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: var(--on-background-text-color);
-  -webkit-font-variant-ligatures: no-common-ligatures;
-  font-variant-ligatures: no-common-ligatures;
-  font-weight: lighter;
+  font-weight: normal;
   background-color: var(--background-color);
   color: var(--on-background-text-color);
   margin: 0;
   padding: 0;
-}
-
-#background {
-  background-image: url(https://img.akacdn.app/7188cfede72c2a49de12bf57b0ef9764.gif);
-  background-position: left center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: .5;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-  position: fixed;
-}
-@media (max-width: 48em) {
-  #background {
-    background-image: none;
-  }
 }
 
 .hidden {
@@ -224,14 +207,6 @@ input.validated::placeholder {
 .container {
   max-width: var(--container-max-width);
   margin: 0 auto;
-}
-
-.block {
-  background-color: var(--background-third-color);
-  border-radius: 2px;
-  padding: .4rem;
-  margin: .4rem;
-  font-size: .8rem;
 }
 
 .hero {
@@ -392,6 +367,10 @@ h6 {
   font-weight: bold;
 }
 
+:target {
+  color: var(--color-primary);
+}
+
 pre,
 code,
 kbd,
@@ -399,6 +378,33 @@ xmp,
 samp {
   font-family: var(--font-face-code);
   font-size: 1rem;
+  overflow-x: scroll;
+  white-space: pre-line;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+pre::-webkit-scrollbar,
+code::-webkit-scrollbar,
+kbd::-webkit-scrollbar,
+xmp::-webkit-scrollbar,
+samp::-webkit-scrollbar {
+  display: none;
+}
+pre.lang-shell::before,
+code.lang-shell::before,
+kbd.lang-shell::before,
+xmp.lang-shell::before,
+samp.lang-shell::before {
+  content: '$ ';
+}
+pre.lang-shell-root::before,
+code.lang-shell-root::before,
+kbd.lang-shell-root::before,
+xmp.lang-shell-root::before,
+samp.lang-shell-root::before {
+  content: '# ';
 }
 
 /*# sourceMappingURL=alchemy.css.map */

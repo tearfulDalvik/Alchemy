@@ -5,4 +5,16 @@ xmp,
 samp {
   font-family: var(--font-face-code);
   font-size: $font-size-content;
+  overflow-x: scroll;
+  white-space: pre-line;
+  @include p-v($padding-v-content * 2, $padding-v-content * 2);
+  @include hide-scrollbar();
+
+  &.lang-shell::before {
+    content: '$ ';
+  }
+
+  &.lang-shell-root::before {
+    content: '# ';
+  }
 }

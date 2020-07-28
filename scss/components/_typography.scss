@@ -7,3 +7,7 @@ h6 {
     @extend %titles;
     font-weight: $weight-major;
 } 
+
+:target {
+    color: var(--color-primary);
+}

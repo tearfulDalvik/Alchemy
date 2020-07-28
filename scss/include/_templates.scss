@@ -2,3 +2,9 @@
   font-family: var(--font-face-title);
   font-size: var(--font-size-title);
 }
+
+%block {
+  background-color: var(--background-second-color);
+  border-radius: $components-border-radius;
+  padding: $padding-v-content $padding-h-content;
+}
