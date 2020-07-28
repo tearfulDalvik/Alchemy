@@ -12,6 +12,11 @@
     @extend %block;
 }
 
+.badge {
+    @extend %block;
+    margin: .4rem;
+}
+
 .hero {
     margin-top: 28vh;
 }
