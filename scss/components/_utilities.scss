@@ -18,6 +18,10 @@
     margin-top: .5vh;
 }
 
+.m-t-none {
+    margin-top: 0;
+}
+
 .m-b-grand {
     margin-bottom: 4vh;
 }
@@ -32,6 +36,10 @@
 
 .m-b-compat {
     margin-bottom: .5vh;
+}
+
+.m-b-none {
+    margin-bottom: 0;
 }
 
 .disabled,
@@ -53,4 +61,11 @@
 
 .hoverable:hover {
     transform: rotate3d(0.1, 0.15, 0, 7deg);
+}
+
+.collapsable {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 }

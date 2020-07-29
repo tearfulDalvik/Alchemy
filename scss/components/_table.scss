@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    * {
+        height: $components-height * 1.5;
+        vertical-align: middle;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    thead th {
+        border-bottom: 1px dashed var(--background-second-color);
+    }
+
+    &.striate tr:nth-child(even) {
+        background-color: var(--background-second-color);
+    }
+}

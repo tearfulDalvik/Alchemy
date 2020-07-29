@@ -1,9 +1,19 @@
-i.fas {
+i.fas, i.far {
     @extend %icon-font;
-    font-family: 'Font Awesome 5 Free';
+    opacity: .8;
 }
 
 i.fab {
     @extend %icon-font;
-    font-family: 'Font Awesome 5 Brands';
+    opacity: .8;
+}
+
+i.fad {
+    @extend %icon-font;
+    opacity: .8;
+}
+
+i.fa {
+    @extend %icon-font;
+    opacity: .8;
 }

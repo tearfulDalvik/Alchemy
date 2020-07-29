@@ -88,6 +88,7 @@ $weight-normal: normal;
 $weight-major: bold;
 
 $line-height: 1.5;
+$line-height-lp: $line-height * 0.8;
 
 $letter-spacing: .02rem;
 $letter-spacing-discrete: .4rem;
@@ -106,12 +107,15 @@ $spacing-elements-v-minor: 1vh;
 $spacing-elements-h-major: 2vw;
 
 $padding-v-content: .4rem;
+$padding-v-content-lp: .4rem;
 $padding-h-content: .8rem;
+$padding-h-content-lp: $padding-h-content * 0.7;
 
-$components-height-content: $padding-v-content * 2+$line-height;
+$components-height: $padding-v-content * 2+$line-height;
+$components-height-lp: $padding-v-content-lp * 2+$line-height-lp;
 
 $components-border-width: 1px;
-$components-border-radius: 6px;
+$components-border-radius: 2px;
 
 :root {
   --container-max-width: 55vmin;
@@ -136,3 +140,6 @@ $drawer-border-width: $components-border-width;
     --drawer-max-width: #{$drawer-fullscreen-width};
   }
 }
+
+// Spinners
+$spinner-border-width: .25em

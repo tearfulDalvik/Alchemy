@@ -26,6 +26,7 @@
     }
 }
 
+// Closed Mode
 body:not([class*='with-drawer'])>.drawer {
     transform: translateX(calc(-1 * var(--drawer-max-width)));
     -webkit-transform: translateX(calc(-1 * var(--drawer-max-width)));
@@ -37,8 +38,13 @@ body:not([class*='with-drawer'])>.drawer {
     }
 }
 
+// Normal Mode
 body:not([class*='drawer-collapsed'])>.drawer {
     @include media("<small") {
         border-right: none;
+    }
+
+    .only-collapsed {
+        display: none;
     }
 }

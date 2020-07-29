@@ -101,15 +101,15 @@ h6 {
 
 .block, .badge, .list > .item {
   background-color: var(--background-second-color);
-  border-radius: 6px;
+  border-radius: 2px;
   padding: 0.4rem 0.8rem;
 }
 
-i.fas, i.fab {
+i.fas, i.far, i.fab, i.fad, i.fa {
   font-style: initial;
   font-size: 1.38em;
 }
-.list > .item > i.fas, .list > .item > i.fab {
+.list > .item > i.fas, .list > .item > i.far, .list > .item > i.fab, .list > .item > i.fad, .list > .item > i.fa {
   white-space: pre-line;
   margin: 0;
   grid-column: 1 / 1;
@@ -176,6 +176,10 @@ body.with-drawer.drawer-collapsed {
   margin-top: .5vh;
 }
 
+.m-t-none {
+  margin-top: 0;
+}
+
 .m-b-grand {
   margin-bottom: 4vh;
 }
@@ -190,6 +194,10 @@ body.with-drawer.drawer-collapsed {
 
 .m-b-compat {
   margin-bottom: .5vh;
+}
+
+.m-b-none {
+  margin-bottom: 0;
 }
 
 .disabled,
@@ -213,6 +221,13 @@ body.with-drawer.drawer-collapsed {
   transform: rotate3d(0.1, 0.15, 0, 7deg);
 }
 
+.collapsable {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
 input {
   margin-top: 1vh;
   margin-bottom: 1vh;
@@ -220,7 +235,7 @@ input {
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border-radius: 6px 6px 0 0;
+  border-radius: 2px 2px 0 0;
   font-size: 1rem;
   outline: 0;
   border: none;
@@ -331,7 +346,7 @@ a:active {
 button,
 .btn {
   font-size: 1rem;
-  border-radius: 6px;
+  border-radius: 2px;
   outline: 0;
   border: 1px solid;
   padding: 0.4rem 0.8rem;
@@ -344,7 +359,7 @@ button,
 button.low-profile,
 .btn.low-profile {
   font-size: 80%;
-  height: 1.84rem;
+  height: 2rem;
   padding: 0.4rem 0.56rem;
 }
 button.high-profile,
@@ -361,6 +376,21 @@ button:hover,
 button:active,
 .btn:active {
   background: var(--background-third-color);
+}
+button.error,
+.btn.error {
+  background: var(--color-error);
+  color: var(--color-on-error-text);
+  border-color: var(--color-error);
+}
+button.error:hover,
+.btn.error:hover {
+  background: var(--color-error);
+  border-color: var(--color-error-aux);
+}
+button.error:active,
+.btn.error:active {
+  background: var(--color-error-aux);
 }
 button.warn,
 .btn.warn {
@@ -522,21 +552,27 @@ body:not([class*='with-drawer']) > .drawer {
     border-right: none;
   }
 }
+body:not([class*='drawer-collapsed']) > .drawer .only-collapsed {
+  display: none;
+}
 
 .list {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.drawer > .list:not(:last-child) {
+  border-bottom: 1px solid var(--background-second-color);
+}
 .list > .item {
   width: 100%;
-  background-color: var(--background-second-color);
+  background-color: var(--background-color);
   cursor: pointer;
   margin-bottom: 1vh;
   display: grid;
   grid-template-columns: 1.6em auto;
   grid-template-rows: auto auto;
-  column-gap: .8em;
+  column-gap: 1.3em;
 }
 .list > .item.no-icon {
   grid-template-columns: 0 auto;
@@ -544,13 +580,24 @@ body:not([class*='with-drawer']) > .drawer {
 .list > .item:last-child {
   margin-bottom: 0;
 }
+.list > .item.active {
+  color: var(--color-primary);
+}
+.list > .item:active {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary-text);
+}
+.list > .item:active.low-profile {
+  background-color: var(--background-third-color);
+  color: var(--on-background-text-color);
+}
 .list > .item:hover {
   background-color: var(--color-primary-aux);
   color: var(--color-on-primary-text);
 }
-.list > .item:active, .list > .item.active {
-  background-color: var(--color-primary);
-  color: var(--color-on-primary-text);
+.list > .item:hover.low-profile {
+  background-color: var(--background-second-color);
+  color: var(--on-background-text-color);
 }
 .drawer > .list > .item {
   border-radius: 0;
@@ -600,12 +647,59 @@ samp.lang-shell-root::before {
   content: '# ';
 }
 
-i.fas {
-  font-family: 'Font Awesome 5 Free';
+i.fas, i.far {
+  opacity: .8;
 }
 
 i.fab {
-  font-family: 'Font Awesome 5 Brands';
+  opacity: .8;
+}
+
+i.fad {
+  opacity: .8;
+}
+
+i.fa {
+  opacity: .8;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spinner {
+  display: inline-block;
+  width: 2.3rem;
+  height: 2.3rem;
+  vertical-align: middle;
+  border: 0.25em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner .75s linear infinite;
+}
+.spinner.low-profile {
+  width: .6em;
+  height: .6em;
+  border-width: .2em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table * {
+  height: 3.45rem;
+  vertical-align: middle;
+}
+table .center {
+  text-align: center;
+}
+table thead th {
+  border-bottom: 1px dashed var(--background-second-color);
+}
+table.striate tr:nth-child(even) {
+  background-color: var(--background-second-color);
 }
 
 /*# sourceMappingURL=alchemy.css.map */

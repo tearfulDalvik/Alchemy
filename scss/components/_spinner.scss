@@ -1,0 +1,20 @@
+@keyframes spinner {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  display: inline-block;
+  width: $components-height;
+  height: $components-height;
+  vertical-align: middle;
+  border: $spinner-border-width solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner .75s linear infinite;
+
+  &.low-profile {
+    width: .6em;
+    height: .6em;
+    border-width: .2em;
+  }
+}

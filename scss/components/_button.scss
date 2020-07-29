@@ -6,20 +6,20 @@ button,
     border: $components-border-width solid;
     padding: $padding-v-content $padding-h-content;
     font-weight: $weight-major;
-    height: $components-height-content;
+    height: $components-height;
     background: var(--background-color);
     color: var(--on-background-text-color);
     border-color: var(--background-second-color);
 
     &.low-profile {
         font-size: 80%;
-        height: $components-height-content * 0.8;
-        padding: $padding-v-content $padding-h-content * 0.7;
+        height: $components-height-lp;
+        padding: $padding-v-content-lp $padding-h-content-lp;
     }
 
     &.high-profile {
         font-size: 120%;
-        height: $components-height-content * 1.2;
+        height: $components-height * 1.2;
         padding: $padding-v-content $padding-h-content * 1.3;
     }
 
@@ -30,6 +30,21 @@ button,
 
     &:active {
         background: var(--background-third-color);
+    }
+
+    &.error {
+        background: var(--color-error);
+        color: var(--color-on-error-text);
+        border-color: var(--color-error);
+
+        &:hover {
+            background: var(--color-error);
+            border-color: var(--color-error-aux);
+        }
+
+        &:active {
+            background: var(--color-error-aux);
+        }
     }
 
     &.warn {
