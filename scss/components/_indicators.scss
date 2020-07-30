@@ -1,0 +1,22 @@
+span.indicator {
+
+    &.primary {
+        color: var(--color-primary);
+    }
+
+    &.error {
+        color: var(--color-error);
+    }
+
+    &.warn {
+        color: var(--color-warn);
+    }
+
+    &.success {
+        color: var(--color-success);
+    }
+
+    &::before {
+        content: '●';
+    }
+}

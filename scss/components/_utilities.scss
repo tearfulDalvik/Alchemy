@@ -69,3 +69,19 @@
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-error {
+    color: var(--color-error);
+}
+
+.text-warn {
+    color: var(--color-warn);
+}
+
+.text-success {
+    color: var(--color-success);
+}
