@@ -1,6 +1,6 @@
 @charset "UTF-8";
  /*!
-* Alchemy v1.0.0 (https://github.com/tearfulDalvik/Alchemy)
+* Alchemy UI v1.0.0 (https://github.com/tearfulDalvik/Alchemy)
 * Copyright 2020 Gufeng Shen
 * Licensed under MIT (https://github.com/tearfulDalvik/Alchemy/blob/main/LICENSE)
 */
@@ -279,6 +279,34 @@ input.validated {
 }
 input.validated::placeholder {
   color: var(--color-success);
+}
+input.low-profile {
+  font-size: 80%;
+  height: 2rem;
+  padding: 0.4rem 0.56rem;
+}
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  padding: 0;
+}
+
+label {
+  padding: 0.4rem 0.8rem;
+  font-size: .84rem;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 2.3rem;
+  box-sizing: border-box;
+  border: 1px solid var(--background-second-color);
+  border-radius: 2px;
+}
+label.low-profile {
+  font-size: 80%;
+  height: 2rem;
+  padding: 0.4rem 0.56rem;
 }
 
 .content {
@@ -619,12 +647,15 @@ body:not([class*='drawer-collapsed']) > .drawer .only-collapsed {
 .drawer > .list > .item {
   border-radius: 0;
   margin-bottom: 0;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 body.drawer-collapsed > .drawer > .list > .item {
-  grid-template-columns: 1.6em 0;
+  grid-template-columns: 100% 0;
   grid-template-rows: auto 0;
   column-gap: 0;
   height: 2.2em;
+  justify-items: center;
 }
 
 pre,
@@ -700,23 +731,32 @@ i.fa {
   height: .6em;
   border-width: .2em;
 }
+button > .spinner {
+  display: none;
+}
+button.loading > .spinner {
+  display: inline-block;
+}
 
 table {
   width: 100%;
   border-collapse: collapse;
 }
-table * {
+table tr {
   height: 3.45rem;
   vertical-align: middle;
+}
+table.low-profile tr {
+  height: 80%;
+}
+table.high-profile tr:nth-child(even) {
+  background-color: var(--background-second-color);
 }
 table .center {
   text-align: center;
 }
 table thead th {
   border-bottom: 1px dashed var(--background-second-color);
-}
-table.striate tr:nth-child(even) {
-  background-color: var(--background-second-color);
 }
 
 span.indicator.primary {

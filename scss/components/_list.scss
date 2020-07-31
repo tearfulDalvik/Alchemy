@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
 
-    .drawer > &:not(:last-child) {
+    .drawer>&:not(:last-child) {
         border-bottom: 1px solid var(--background-second-color)
     }
 
@@ -29,7 +29,7 @@
         &.active {
             color: var(--color-primary);
         }
-        
+
         &:active {
             background-color: var(--color-primary);
             color: var(--color-on-primary-text);
@@ -44,7 +44,7 @@
             background-color: var(--color-primary-aux);
             color: var(--color-on-primary-text);
 
-            &.low-profile{
+            &.low-profile {
                 background-color: var(--background-second-color);
                 color: var(--on-background-text-color);
             }
@@ -53,12 +53,15 @@
         .drawer>& {
             border-radius: 0;
             margin-bottom: 0;
+            padding-top: 1vh;
+            padding-bottom: 1vh;
 
             body.drawer-collapsed>& {
-                grid-template-columns: 1.6em 0;
+                grid-template-columns: 100% 0;
                 grid-template-rows: auto 0;
                 column-gap: 0;
                 height: 2.2em;
+                justify-items: center;
             }
         }
     }

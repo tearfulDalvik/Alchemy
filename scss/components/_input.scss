@@ -24,15 +24,49 @@ input {
 
     &.invalidated {
         border-bottom: $components-border-width solid var(--color-error);
-        &::placeholder{
+
+        &::placeholder {
             color: var(--color-error);
         }
     }
 
     &.validated {
         border-bottom: $components-border-width solid var(--color-success);
-        &::placeholder{
+
+        &::placeholder {
             color: var(--color-success);
         }
+    }
+
+    &.low-profile {
+        font-size: 80%;
+        height: $components-height-lp;
+        padding: $padding-v-content-lp $padding-h-content-lp;
+    }
+
+    &[type=checkbox],
+    &[type=radio] {
+        box-sizing: border-box;
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+}
+
+label {
+    padding: $padding-v-content $padding-h-content;
+    font-size: .84rem;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: $components-height;
+    box-sizing: border-box;
+    border: $components-border-width solid var(--background-second-color);
+    border-radius: $components-border-radius;
+
+    &.low-profile {
+        font-size: 80%;
+        height: $components-height-lp;
+        padding: $padding-v-content-lp $padding-h-content-lp;
     }
 }

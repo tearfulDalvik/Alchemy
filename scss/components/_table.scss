@@ -2,9 +2,17 @@ table {
     width: 100%;
     border-collapse: collapse;
 
-    * {
+    tr {
         height: $components-height * 1.5;
         vertical-align: middle;
+    }
+
+    &.low-profile tr {
+        height: 80%;
+    }
+
+    &.high-profile tr:nth-child(even) {
+        background-color: var(--background-second-color);
     }
 
     .center {
@@ -13,9 +21,5 @@ table {
 
     thead th {
         border-bottom: 1px dashed var(--background-second-color);
-    }
-
-    &.striate tr:nth-child(even) {
-        background-color: var(--background-second-color);
     }
 }

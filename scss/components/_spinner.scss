@@ -1,5 +1,7 @@
 @keyframes spinner {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .spinner {
@@ -16,5 +18,13 @@
     width: .6em;
     height: .6em;
     border-width: .2em;
+  }
+
+  button>& {
+    display: none;
+  }
+
+  button.loading>& {
+    display: inline-block;
   }
 }
