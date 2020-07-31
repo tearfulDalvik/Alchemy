@@ -1,11 +1,7 @@
 table {
     width: 100%;
     border-collapse: collapse;
-
-    tr {
-        height: $components-height * 1.5;
-        vertical-align: middle;
-    }
+    table-layout: fixed;
 
     &.low-profile tr {
         height: 80%;
@@ -19,7 +15,35 @@ table {
         text-align: center;
     }
 
-    thead th {
+    .right {
+        text-align: right;
+    }
+
+    >tbody>tr>td:not(:first-child):not(:last-child) {
+        padding: $padding-v-content $padding-h-content;
+    }
+
+    >tbody>tr>td {
+        overflow: hidden;
+        height: $components-height * 1.5;
+        padding: $padding-v-content 0;
+        white-space: nowrap;
+        vertical-align: middle;
+        text-overflow: ellipsis;
+
+        span {
+            display: block;
+        }
+    }
+
+    >thead>th {
         border-bottom: 1px dashed var(--background-second-color);
+    }
+
+    @include media("<small") {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        display: block;
     }
 }

@@ -8,6 +8,7 @@
 
 @import 'include/functions', 
 'include/media',
+'include/colors',
 'include/variables',
 'include/transitions', 
 'include/templates';
@@ -28,3 +29,4 @@
 @import 'components/spinner';
 @import 'components/table';
 @import 'components/indicators';
+@import 'components/img';

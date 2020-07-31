@@ -91,4 +91,18 @@ button,
             background: var(--color-primary-aux);
         }
     }
+
+    .group > &:not(:first-child):not(:last-child) {
+        border-radius: 0;
+    }
+
+    .group > &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .group > &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
 }

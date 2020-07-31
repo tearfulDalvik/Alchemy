@@ -22,14 +22,50 @@
   --white-a50: hsla(0, 100%, 100%, .5);
   --white-a60: hsla(0, 100%, 100%, .6);
   --white-a80: hsla(0, 100%, 100%, .8);
-  --color-primary: #f07f24;
-  --color-primary-aux: #db6b0f;
-  --color-success: #10aaa8;
-  --color-success-aux: #0c8583;
-  --color-error: #f05a24;
-  --color-error-aux: #c8400e;
-  --color-warn: #107dd0;
-  --color-warn-aux: #0c5d9b;
+  --orange-100: #a24f0b;
+  --orange-200: #b5580d;
+  --orange-300: #c8620e;
+  --orange-400: #db6b0f;
+  --orange-500: #ee7411;
+  --orange-600: #f07f24;
+  --orange-700: #f18b37;
+  --orange-800: #f2964a;
+  --orange-900: #f4a15d;
+  --green-100: #096261;
+  --green-200: #0a6e6c;
+  --green-300: #0b7a78;
+  --green-400: #0c8583;
+  --green-500: #0d918e;
+  --green-600: #10aaa8;
+  --green-700: #12c4c1;
+  --green-800: #15dedb;
+  --green-900: #24ebe7;
+  --red-100: #a2330b;
+  --red-200: #b53a0d;
+  --red-300: #c8400e;
+  --red-400: #db460f;
+  --red-500: #ee4c11;
+  --red-600: #f05a24;
+  --red-700: #f16837;
+  --red-800: #f2774a;
+  --red-900: #f4855d;
+  --blue-100: #094b7e;
+  --blue-200: #0b548d;
+  --blue-300: #0c5d9b;
+  --blue-400: #0d66aa;
+  --blue-500: #0e6fb9;
+  --blue-600: #107dd0;
+  --blue-700: #118be7;
+  --blue-800: #2396ee;
+  --blue-900: #3aa1f0;
+  --color-primary: var(--orange-600);
+  --color-primary-aux: var(--orange-400);
+  --color-success: var(--green-600);
+  --color-success-aux: var(--green-400);
+  --color-error: var(--red-600);
+  --color-error-aux: var(--red-300);
+  --color-warn: var(--blue-600);
+  --color-warn-aux: var(--blue-300);
   --color-on-primary-text: var(--white);
   --color-on-success-text: var(--white);
   --color-on-error-text: var(--white);
@@ -43,14 +79,14 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #c8620e;
-    --color-primary-aux: #b5580d;
-    --color-success: #0b7a78;
-    --color-success-aux: #096261;
-    --color-error: #c8400e;
-    --color-error-aux: #a2330b;
-    --color-warn: #0c5d9b;
-    --color-warn-aux: #094b7e;
+    --color-primary: var(--orange-300);
+    --color-primary-aux: var(--orange-200);
+    --color-success: var(--green-300);
+    --color-success-aux: var(--green-100);
+    --color-error: var(--red-300);
+    --color-error-aux: var(--red-100);
+    --color-warn: var(--blue-300);
+    --color-warn-aux: var(--blue-100);
     --color-on-primary-text: var(--white-a80);
     --color-on-success-text: var(--white);
     --color-on-error-text: var(--white-a40);
@@ -220,13 +256,6 @@ body.with-drawer.drawer-collapsed {
 
 .hoverable:hover {
   transform: rotate3d(0.1, 0.15, 0, 7deg);
-}
-
-.collapsable {
-  display: block;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 .text-primary {
@@ -482,10 +511,22 @@ button.primary:active,
 .btn.primary:active {
   background: var(--color-primary-aux);
 }
+.group > button:not(:first-child):not(:last-child), .group >
+.btn:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.group > button:first-child, .group >
+.btn:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.group > button:last-child, .group >
+.btn:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
 
 .grid {
-  width: 90vw;
-  margin: 5vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
@@ -741,10 +782,7 @@ button.loading > .spinner {
 table {
   width: 100%;
   border-collapse: collapse;
-}
-table tr {
-  height: 3.45rem;
-  vertical-align: middle;
+  table-layout: fixed;
 }
 table.low-profile tr {
   height: 80%;
@@ -755,8 +793,33 @@ table.high-profile tr:nth-child(even) {
 table .center {
   text-align: center;
 }
-table thead th {
+table .right {
+  text-align: right;
+}
+table > tbody > tr > td:not(:first-child):not(:last-child) {
+  padding: 0.4rem 0.8rem;
+}
+table > tbody > tr > td {
+  overflow: hidden;
+  height: 3.45rem;
+  padding: 0.4rem 0;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+}
+table > tbody > tr > td span {
+  display: block;
+}
+table > thead > th {
   border-bottom: 1px dashed var(--background-second-color);
+}
+@media (max-width: 48em) {
+  table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    display: block;
+  }
 }
 
 span.indicator.primary {
@@ -773,6 +836,14 @@ span.indicator.success {
 }
 span.indicator::before {
   content: '●';
+}
+
+img {
+  border-radius: 2px;
+  width: 100%;
+}
+img.original {
+  border-radius: inherit;
 }
 
 /*# sourceMappingURL=alchemy.css.map */

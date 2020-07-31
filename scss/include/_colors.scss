@@ -1,0 +1,114 @@
+// Color system
+$theme-color-interval: 8%;
+
+$red: hsl(16, 87%, 50%);
+$orange: hsl(27, 87%, 50%);
+$yellow: hsl(59, 100%, 48%);
+$green: hsl(179, 83%, 31%);
+$blue: hsl(206, 86%, 39%);
+$purple: hsl(233, 64%, 53%);
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 100%, 100%);
+
+:root {
+  --black: #{$black};
+  --black-a5: hsla(0, 0%, 0%, .05);
+  --black-a10: hsla(0, 0%, 0%, .1);
+  --black-a20: hsla(0, 0%, 0%, .2);
+  --black-a30: hsla(0, 0%, 0%, .3);
+  --black-a50: hsla(0, 0%, 0%, .5);
+  --black-a60: hsla(0, 0%, 0%, .6);
+  --black-a80: hsla(0, 0%, 0%, .8);
+  --white: #{$white};
+  --white-a5: hsla(0, 100%, 100%, .05);
+  --white-a10: hsla(0, 100%, 100%, .1);
+  --white-a20: hsla(0, 100%, 100%, .2);
+  --white-a30: hsla(0, 100%, 100%, .3);
+  --white-a50: hsla(0, 100%, 100%, .5);
+  --white-a60: hsla(0, 100%, 100%, .6);
+  --white-a80: hsla(0, 100%, 100%, .8);
+  
+  --orange-100: #{tint-color($orange, 100)};
+  --orange-200: #{tint-color($orange, 200)};
+  --orange-300: #{tint-color($orange, 300)};
+  --orange-400: #{tint-color($orange, 400)};
+  --orange-500: #{$orange};
+  --orange-600: #{tint-color($orange, 600)};
+  --orange-700: #{tint-color($orange, 700)};
+  --orange-800: #{tint-color($orange, 800)};
+  --orange-900: #{tint-color($orange, 900)};
+
+  --green-100: #{tint-color($green, 100)};
+  --green-200: #{tint-color($green, 200)};
+  --green-300: #{tint-color($green, 300)};
+  --green-400: #{tint-color($green, 400)};
+  --green-500: #{$green};
+  --green-600: #{tint-color($green, 600)};
+  --green-700: #{tint-color($green, 700)};
+  --green-800: #{tint-color($green, 800)};
+  --green-900: #{tint-color($green, 900)};
+
+  --red-100: #{tint-color($red, 100)};
+  --red-200: #{tint-color($red, 200)};
+  --red-300: #{tint-color($red, 300)};
+  --red-400: #{tint-color($red, 400)};
+  --red-500: #{$red};
+  --red-600: #{tint-color($red, 600)};
+  --red-700: #{tint-color($red, 700)};
+  --red-800: #{tint-color($red, 800)};
+  --red-900: #{tint-color($red, 900)};
+
+  --blue-100: #{tint-color($blue, 100)};
+  --blue-200: #{tint-color($blue, 200)};
+  --blue-300: #{tint-color($blue, 300)};
+  --blue-400: #{tint-color($blue, 400)};
+  --blue-500: #{$blue};
+  --blue-600: #{tint-color($blue, 600)};
+  --blue-700: #{tint-color($blue, 700)};
+  --blue-800: #{tint-color($blue, 800)};
+  --blue-900: #{tint-color($blue, 900)};
+
+  --color-primary: var(--orange-600);
+  --color-primary-aux: var(--orange-400);
+  --color-success: var(--green-600);
+  --color-success-aux: var(--green-400);
+  --color-error: var(--red-600);
+  --color-error-aux: var(--red-300);
+  --color-warn: var(--blue-600);
+  --color-warn-aux: var(--blue-300);
+
+  --color-on-primary-text: var(--white);
+  --color-on-success-text: var(--white);
+  --color-on-error-text: var(--white);
+  --color-on-warn-text: var(--white);
+
+  --background-color: var(--white);
+  --background-second-color: var(--black-a5);
+  --background-third-color: var(--black-a10);
+  --on-background-text-color: var(--black);
+  --link-color: var(--black);
+  --link-color-active: var(--black-a50);
+
+  @include dark() {
+    --color-primary: var(--orange-300);
+    --color-primary-aux: var(--orange-200);
+    --color-success: var(--green-300);
+    --color-success-aux: var(--green-100);
+    --color-error: var(--red-300);
+    --color-error-aux: var(--red-100);
+    --color-warn: var(--blue-300);
+    --color-warn-aux: var(--blue-100);
+
+    --color-on-primary-text: var(--white-a80);
+    --color-on-success-text: var(--white);
+    --color-on-error-text: var(--white-a40);
+    --color-on-warn-text: var(--white);
+
+    --background-color: var(--black);
+    --background-second-color: var(--white-a20);
+    --background-third-color: var(--white-a10);
+    --on-background-text-color: var(--white-a80);
+    --link-color: var(--white-a80);
+    --link-color-active: var(--white-a40);
+  }
+}

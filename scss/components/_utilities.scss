@@ -63,13 +63,6 @@
     transform: rotate3d(0.1, 0.15, 0, 7deg);
 }
 
-.collapsable {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-}
-
 .text-primary {
     color: var(--color-primary);
 }
