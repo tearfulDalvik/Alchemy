@@ -42,6 +42,26 @@
     margin-bottom: 0;
 }
 
+.m-l-grand {
+    margin-left: 4vh;
+}
+
+.m-l-sparse {
+    margin-left: 1.5vh;
+}
+
+.m-l-normal {
+    margin-left: 1vh;
+}
+
+.m-l-compat {
+    margin-left: .5vh;
+}
+
+.m-l-none {
+    margin-left: 0;
+}
+
 .disabled,
 :disabled {
     cursor: not-allowed !important;

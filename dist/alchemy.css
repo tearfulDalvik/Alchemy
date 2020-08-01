@@ -237,6 +237,26 @@ body.with-drawer.drawer-collapsed {
   margin-bottom: 0;
 }
 
+.m-l-grand {
+  margin-left: 4vh;
+}
+
+.m-l-sparse {
+  margin-left: 1.5vh;
+}
+
+.m-l-normal {
+  margin-left: 1vh;
+}
+
+.m-l-compat {
+  margin-left: .5vh;
+}
+
+.m-l-none {
+  margin-left: 0;
+}
+
 .disabled,
 :disabled {
   cursor: not-allowed !important;
@@ -353,6 +373,10 @@ label.low-profile {
   margin: 0 auto;
 }
 
+.block.low-profile {
+  padding: 0.4rem 0.56rem;
+}
+
 .badge {
   margin: .4rem;
 }
@@ -383,6 +407,7 @@ a {
   color: var(--link-color);
   text-decoration: none;
   font-family: var(--font-face-title);
+  font-weight: lighter;
   transition: transform 0.2s;
 }
 .list a.item:hover, .list a.item:active {

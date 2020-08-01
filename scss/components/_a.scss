@@ -3,6 +3,7 @@ a {
     color: var(--link-color);
     text-decoration: none;
     font-family: var(--font-face-title);
+    font-weight: $weight-minor;
     transition: transform $transition-interactive-delay;
 
     .list &.item {

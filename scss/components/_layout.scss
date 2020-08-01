@@ -16,6 +16,10 @@
 
 .block {
     @extend %block;
+
+    &.low-profile {
+        padding: $padding-v-content-lp $padding-h-content-lp;
+    }
 }
 
 .badge {
