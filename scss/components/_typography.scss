@@ -12,7 +12,7 @@ h6 {
         grid-row: 1;
     }
 
-    body.drawer-collapsed > .drawer & {
+    body.drawer-collapsed .drawer & {
         display: none;
     }
 } 
@@ -24,7 +24,7 @@ h6 {
 p {
     overflow: hidden;
 
-    body.drawer-collapsed > .drawer & {
+    body.drawer-collapsed .drawer & {
         display: none;
     }
     

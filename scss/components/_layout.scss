@@ -5,6 +5,7 @@
     border-radius: 0;
 
     .drawer>& {
+        margin: 0;
         padding: 0;
     }
 }
@@ -40,6 +41,10 @@
         font-size: calc(.7rem + .9vmin);
         letter-spacing: $letter-spacing-discrete;
         line-height: $line-height;
+    }
+
+    body.drawer-collapsed .drawer>& {
+        margin: 0;
     }
 }
 

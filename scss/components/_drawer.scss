@@ -27,7 +27,7 @@
 }
 
 // Closed Mode
-body:not([class*='with-drawer'])>.drawer {
+body:not([class*='with-drawer']) .drawer {
     transform: translateX(calc(-1 * var(--drawer-max-width)));
     -webkit-transform: translateX(calc(-1 * var(--drawer-max-width)));
     box-shadow: none;
@@ -39,7 +39,7 @@ body:not([class*='with-drawer'])>.drawer {
 }
 
 // Normal Mode
-body:not([class*='drawer-collapsed'])>.drawer {
+body:not([class*='drawer-collapsed']) .drawer {
     @include media("<small") {
         border-right: none;
     }

@@ -1,5 +1,5 @@
 @charset "UTF-8";
- /*!
+/*!
 * Alchemy UI v1.0.0 (https://github.com/tearfulDalvik/Alchemy)
 * Copyright 2020 Gufeng Shen
 * Licensed under MIT (https://github.com/tearfulDalvik/Alchemy/blob/main/LICENSE)
@@ -126,31 +126,36 @@
   }
 }
 
-.copyright, h1,
+h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6, .copyright {
   font-family: var(--font-face-title);
   font-size: var(--font-size-title);
 }
 
-.block, .badge, .list > .item {
+div.alert, .list > .item, .badge, .block {
   background-color: var(--background-second-color);
-  border-radius: 2px;
   padding: 0.4rem 0.8rem;
 }
+.content div.alert, .content .list > .item, .content .badge, .content .block {
+  border-radius: 2px;
+}
 
-i.fas, i.far, i.fab, i.fad, i.fa {
+i.fa, i.fad, i.fab, i.fas, i.far {
   font-style: initial;
+  font-size: 1em;
+}
+.drawer i.fa, .drawer i.fad, .drawer i.fab, .drawer i.fas, .drawer i.far {
   font-size: 1.38em;
 }
-.list > .item > i.fas, .list > .item > i.far, .list > .item > i.fab, .list > .item > i.fad, .list > .item > i.fa {
+.list > .item > i.fa, .list > .item > i.fad, .list > .item > i.fab, .list > .item > i.fas, .list > .item > i.far {
   white-space: pre-line;
   margin: 0;
-  grid-column: 1 / 1;
-  grid-row: 1 / span 2;
+  grid-column: 1/1;
+  grid-row: 1/span 2;
   align-self: center;
 }
 
@@ -210,7 +215,7 @@ body.with-drawer.drawer-collapsed {
 }
 
 .m-t-compat {
-  margin-top: .5vh;
+  margin-top: 0.5vh;
 }
 
 .m-t-none {
@@ -230,7 +235,7 @@ body.with-drawer.drawer-collapsed {
 }
 
 .m-b-compat {
-  margin-bottom: .5vh;
+  margin-bottom: 0.5vh;
 }
 
 .m-b-none {
@@ -250,7 +255,7 @@ body.with-drawer.drawer-collapsed {
 }
 
 .m-l-compat {
-  margin-left: .5vh;
+  margin-left: 0.5vh;
 }
 
 .m-l-none {
@@ -343,7 +348,7 @@ input[type=checkbox], input[type=radio] {
 
 label {
   padding: 0.4rem 0.8rem;
-  font-size: .84rem;
+  font-size: 0.84rem;
   display: flex;
   align-items: center;
   width: fit-content;
@@ -365,6 +370,7 @@ label.low-profile {
   border-radius: 0;
 }
 .drawer > .content {
+  margin: 0;
   padding: 0;
 }
 
@@ -378,7 +384,7 @@ label.low-profile {
 }
 
 .badge {
-  margin: .4rem;
+  margin: 0.4rem;
 }
 
 .hero {
@@ -396,6 +402,9 @@ label.low-profile {
   font-size: calc(.7rem + .9vmin);
   letter-spacing: 0.4rem;
   line-height: 1.5;
+}
+body.drawer-collapsed .drawer > .header {
+  margin: 0;
 }
 
 .copyright {
@@ -536,17 +545,17 @@ button.primary:active,
 .btn.primary:active {
   background: var(--color-primary-aux);
 }
-.group > button:not(:first-child):not(:last-child), .group >
-.btn:not(:first-child):not(:last-child) {
+.group > button:not(:first-child):not(:last-child),
+.group > .btn:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
-.group > button:first-child, .group >
-.btn:first-child {
+.group > button:first-child,
+.group > .btn:first-child {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.group > button:last-child, .group >
-.btn:last-child {
+.group > button:last-child,
+.group > .btn:last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -581,22 +590,22 @@ h5,
 h6 {
   font-weight: bold;
 }
-.list > .item > h1, .list > .item >
-h2, .list > .item >
-h3, .list > .item >
-h4, .list > .item >
-h5, .list > .item >
-h6 {
+.list > .item > h1,
+.list > .item > h2,
+.list > .item > h3,
+.list > .item > h4,
+.list > .item > h5,
+.list > .item > h6 {
   margin: 0;
   grid-column: 2;
   grid-row: 1;
 }
-body.drawer-collapsed > .drawer h1, body.drawer-collapsed > .drawer
-h2, body.drawer-collapsed > .drawer
-h3, body.drawer-collapsed > .drawer
-h4, body.drawer-collapsed > .drawer
-h5, body.drawer-collapsed > .drawer
-h6 {
+body.drawer-collapsed .drawer h1,
+body.drawer-collapsed .drawer h2,
+body.drawer-collapsed .drawer h3,
+body.drawer-collapsed .drawer h4,
+body.drawer-collapsed .drawer h5,
+body.drawer-collapsed .drawer h6 {
   display: none;
 }
 
@@ -607,7 +616,7 @@ h6 {
 p {
   overflow: hidden;
 }
-body.drawer-collapsed > .drawer p {
+body.drawer-collapsed .drawer p {
   display: none;
 }
 .list > .item > p {
@@ -615,7 +624,7 @@ body.drawer-collapsed > .drawer p {
   margin: 0;
   grid-column: 2;
   grid-row: 2;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .drawer {
@@ -646,24 +655,24 @@ body.drawer-collapsed > .drawer p {
   margin-bottom: 0.4rem;
 }
 
-body:not([class*='with-drawer']) > .drawer {
+body:not([class*=with-drawer]) .drawer {
   transform: translateX(calc(-1 * var(--drawer-max-width)));
   -webkit-transform: translateX(calc(-1 * var(--drawer-max-width)));
   box-shadow: none;
 }
 @media (max-width: 48em) {
-  body:not([class*='with-drawer']) > .drawer {
+  body:not([class*=with-drawer]) .drawer {
     transform: translateY(-100vh);
     -webkit-transform: translateY(-100vh);
   }
 }
 
 @media (max-width: 48em) {
-  body:not([class*='drawer-collapsed']) > .drawer {
+  body:not([class*=drawer-collapsed]) .drawer {
     border-right: none;
   }
 }
-body:not([class*='drawer-collapsed']) > .drawer .only-collapsed {
+body:not([class*=drawer-collapsed]) .drawer .only-collapsed {
   display: none;
 }
 
@@ -710,13 +719,13 @@ body:not([class*='drawer-collapsed']) > .drawer .only-collapsed {
   background-color: var(--background-second-color);
   color: var(--on-background-text-color);
 }
-.drawer > .list > .item {
+.drawer .list > .item {
   border-radius: 0;
   margin-bottom: 0;
   padding-top: 1vh;
   padding-bottom: 1vh;
 }
-body.drawer-collapsed > .drawer > .list > .item {
+body.drawer-collapsed .drawer .list > .item {
   grid-template-columns: 100% 0;
   grid-template-rows: auto 0;
   column-gap: 0;
@@ -751,30 +760,30 @@ code.lang-shell::before,
 kbd.lang-shell::before,
 xmp.lang-shell::before,
 samp.lang-shell::before {
-  content: '$ ';
+  content: "$ ";
 }
 pre.lang-shell-root::before,
 code.lang-shell-root::before,
 kbd.lang-shell-root::before,
 xmp.lang-shell-root::before,
 samp.lang-shell-root::before {
-  content: '# ';
+  content: "# ";
 }
 
 i.fas, i.far {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 i.fab {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 i.fad {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 i.fa {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 @keyframes spinner {
@@ -790,12 +799,12 @@ i.fa {
   border: 0.25em solid currentColor;
   border-right-color: transparent;
   border-radius: 50%;
-  animation: spinner .75s linear infinite;
+  animation: spinner 0.75s linear infinite;
 }
 .spinner.low-profile {
-  width: .6em;
-  height: .6em;
-  border-width: .2em;
+  width: 0.6em;
+  height: 0.6em;
+  border-width: 0.2em;
 }
 button > .spinner {
   display: none;
@@ -860,7 +869,7 @@ span.indicator.success {
   color: var(--color-success);
 }
 span.indicator::before {
-  content: '●';
+  content: "●";
 }
 
 img {
@@ -869,6 +878,33 @@ img {
 }
 img.original {
   border-radius: inherit;
+}
+
+div.alert {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  padding-left: 3.4vw;
+  padding-right: 3.4vw;
+}
+div.alert.error {
+  background: var(--color-error);
+  color: var(--color-on-error-text);
+  border-color: var(--color-error);
+}
+div.alert.warn {
+  background: var(--color-warn);
+  color: var(--color-on-warn-text);
+  border-color: var(--color-warn);
+}
+div.alert.success {
+  background: var(--color-success);
+  color: var(--color-on-success-text);
+  border-color: var(--color-success);
+}
+div.alert.primary {
+  background: var(--color-primary);
+  color: var(--color-on-primary-text);
+  border-color: var(--color-primary);
 }
 
 /*# sourceMappingURL=alchemy.css.map */

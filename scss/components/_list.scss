@@ -50,13 +50,13 @@
             }
         }
 
-        .drawer>& {
+        .drawer & {
             border-radius: 0;
             margin-bottom: 0;
             padding-top: 1vh;
             padding-bottom: 1vh;
 
-            body.drawer-collapsed>& {
+            body.drawer-collapsed & {
                 grid-template-columns: 100% 0;
                 grid-template-rows: auto 0;
                 column-gap: 0;

@@ -4,20 +4,27 @@
 }
 
 %block {
+  .content & {
+    border-radius: $components-border-radius;
+  }
+
   background-color: var(--background-second-color);
-  border-radius: $components-border-radius;
   padding: $padding-v-content $padding-h-content;
 }
 
 %icon-font {
   font-style: initial;
-  font-size: 1.38em;
-  
+  font-size: 1em;
+
+  .drawer & {
+    font-size: 1.38em;
+  }
+
   .list>.item>& {
-      white-space: pre-line;
-      margin: 0;
-      grid-column: 1 / 1;
-      grid-row: 1 / span 2;
-      align-self: center;
+    white-space: pre-line;
+    margin: 0;
+    grid-column: 1 / 1;
+    grid-row: 1 / span 2;
+    align-self: center;
   }
 }
