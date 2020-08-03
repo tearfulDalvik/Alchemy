@@ -423,11 +423,10 @@ a {
   border: none;
 }
 a:hover {
-  border-bottom: 1px dotted var(--link-color);
+  border-bottom: 1px dotted currentColor;
 }
 a:active {
   color: var(--link-color-active);
-  border-bottom: 1px dotted var(--link-color-active);
 }
 .large a {
   letter-spacing: 0.4rem;
@@ -886,25 +885,40 @@ div.alert {
   padding-left: 3.4vw;
   padding-right: 3.4vw;
 }
+div.alert a {
+  color: var(--color-on-primary-text);
+}
 div.alert.error {
   background: var(--color-error);
   color: var(--color-on-error-text);
   border-color: var(--color-error);
+}
+div.alert.error a {
+  color: var(--color-on-error-text);
 }
 div.alert.warn {
   background: var(--color-warn);
   color: var(--color-on-warn-text);
   border-color: var(--color-warn);
 }
+div.alert.warn a {
+  color: var(--color-on-warn-text);
+}
 div.alert.success {
   background: var(--color-success);
   color: var(--color-on-success-text);
   border-color: var(--color-success);
 }
+div.alert.success a {
+  color: var(--color-on-success-text);
+}
 div.alert.primary {
   background: var(--color-primary);
   color: var(--color-on-primary-text);
   border-color: var(--color-primary);
+}
+div.alert.primary a {
+  color: var(--color-on-primary-text);
 }
 
 /*# sourceMappingURL=alchemy.css.map */

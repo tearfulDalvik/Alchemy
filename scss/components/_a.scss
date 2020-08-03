@@ -13,12 +13,11 @@ a {
     }
 
     &:hover {
-        border-bottom: 1px dotted var(--link-color);
+        border-bottom: 1px dotted currentColor;
     }
 
     &:active {
         color: var(--link-color-active);
-        border-bottom: 1px dotted var(--link-color-active);
     }
 
     .large & {
