@@ -28,8 +28,11 @@
     margin: .4rem;
 }
 
+/** Must use with body.with-hero */
 .hero {
-    margin-top: 28vh;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .header {

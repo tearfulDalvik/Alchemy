@@ -11,6 +11,12 @@ body {
     -webkit-transition: all .3s cubic-bezier(0,0,.2,1);
     transition: all .3s cubic-bezier(0,0,.2,1);
 
+    &.with-hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     &.with-drawer {
         margin-left: var(--content-safe-margin-by-drawer);
 

@@ -172,6 +172,11 @@ body {
   -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
   transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
+body.with-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 body.with-drawer {
   margin-left: var(--content-safe-margin-by-drawer);
 }
@@ -387,8 +392,11 @@ label.low-profile {
   margin: 0.4rem;
 }
 
+/** Must use with body.with-hero */
 .hero {
-  margin-top: 28vh;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .header {
