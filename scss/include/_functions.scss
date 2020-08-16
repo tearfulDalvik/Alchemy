@@ -31,3 +31,49 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+@mixin light-theme {
+  --color-primary: var(--orange-600);
+  --color-primary-aux: var(--orange-400);
+  --color-success: var(--green-600);
+  --color-success-aux: var(--green-400);
+  --color-error: var(--red-600);
+  --color-error-aux: var(--red-300);
+  --color-warn: var(--blue-600);
+  --color-warn-aux: var(--blue-300);
+
+  --color-on-primary-text: var(--white);
+  --color-on-success-text: var(--white);
+  --color-on-error-text: var(--white);
+  --color-on-warn-text: var(--white);
+
+  --background-color: var(--white);
+  --background-second-color: var(--black-a5);
+  --background-third-color: var(--black-a10);
+  --on-background-text-color: var(--black);
+  --link-color: var(--black);
+  --link-color-active: var(--black-a50);
+}
+
+@mixin dark-theme {
+    --color-primary: var(--orange-300);
+    --color-primary-aux: var(--orange-200);
+    --color-success: var(--green-300);
+    --color-success-aux: var(--green-100);
+    --color-error: var(--red-300);
+    --color-error-aux: var(--red-100);
+    --color-warn: var(--blue-300);
+    --color-warn-aux: var(--blue-100);
+
+    --color-on-primary-text: var(--white-a80);
+    --color-on-success-text: var(--white);
+    --color-on-error-text: var(--white-a40);
+    --color-on-warn-text: var(--white);
+
+    --background-color: var(--black);
+    --background-second-color: var(--white-a20);
+    --background-third-color: var(--white-a10);
+    --on-background-text-color: var(--white-a80);
+    --link-color: var(--white-a80);
+    --link-color-active: var(--white-a40);
+}
