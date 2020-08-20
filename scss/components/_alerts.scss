@@ -1,7 +1,34 @@
+/** Alert container **/
+div.alerts {
+    position: fixed;
+    width: 100%;
+    max-height: 20vh;
+    overflow-y: scroll;
+    background: var(--background-color);
+}
+
+/** Alerts **/
 div.alert {
     @extend %block;
     @include p-v(.8em, .8em);
     @include p-h($spacing-before-page, $spacing-after-page);
+
+    &.disappear.longer {
+        animation-delay: 30s;
+    }
+
+    &.disappear.shorter {
+        animation-delay: 5s;
+    }
+
+    &.disappear {
+        animation-delay: 10s;
+        animation-duration: 1s;
+        animation-name: disappear;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
 
     a {
         color: var(--color-on-background-text)
@@ -11,17 +38,19 @@ div.alert {
         background: var(--color-error);
         color: var(--color-on-error-text);
         border-color: var(--color-error);
+
         a {
             color: var(--color-on-error-text)
         }
     }
 
-    &.warn {
-        background: var(--color-warn);
-        color: var(--color-on-warn-text);
-        border-color: var(--color-warn);
+    &.info {
+        background: var(--color-info);
+        color: var(--color-on-info-text);
+        border-color: var(--color-info);
+
         a {
-            color: var(--color-on-warn-text)
+            color: var(--color-on-info-text)
         }
     }
 
@@ -29,8 +58,19 @@ div.alert {
         background: var(--color-success);
         color: var(--color-on-success-text);
         border-color: var(--color-success);
+
         a {
             color: var(--color-on-success-text)
+        }
+    }
+
+    &.warn {
+        background: var(--color-warn);
+        color: var(--color-on-warn-text);
+        border-color: var(--color-warn);
+
+        a {
+            color: var(--color-on-warn-text)
         }
     }
 
@@ -38,6 +78,7 @@ div.alert {
         background: var(--color-primary);
         color: var(--color-on-primary-text);
         border-color: var(--color-primary);
+
         a {
             color: var(--color-on-primary-text)
         }

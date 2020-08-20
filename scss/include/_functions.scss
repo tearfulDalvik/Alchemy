@@ -39,10 +39,13 @@
   --color-success-aux: var(--green-400);
   --color-error: var(--red-600);
   --color-error-aux: var(--red-300);
-  --color-warn: var(--blue-600);
-  --color-warn-aux: var(--blue-300);
+  --color-warn: var(--orange-600);
+  --color-warn-aux: var(--orange-400);
+  --color-info: var(--blue-600);
+  --color-info-aux: var(--blue-300);
 
   --color-on-primary-text: var(--white);
+  --color-on-info-text: var(--white);
   --color-on-success-text: var(--white);
   --color-on-error-text: var(--white);
   --color-on-warn-text: var(--white);
@@ -62,13 +65,16 @@
     --color-success-aux: var(--green-100);
     --color-error: var(--red-300);
     --color-error-aux: var(--red-100);
-    --color-warn: var(--blue-300);
-    --color-warn-aux: var(--blue-100);
+    --color-warn: var(--orange-300);
+    --color-warn-aux: var(--orange-200);
+    --color-info: var(--blue-300);
+    --color-info-aux: var(--blue-100);
 
     --color-on-primary-text: var(--white-a80);
     --color-on-success-text: var(--white);
+    --color-on-info-text: var(--white);
     --color-on-error-text: var(--white-a40);
-    --color-on-warn-text: var(--white);
+    --color-on-warn-text: var(--white-a80);
 
     --background-color: var(--black);
     --background-second-color: var(--white-a20);

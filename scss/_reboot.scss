@@ -35,8 +35,8 @@ body {
     }
 
     &.theme-blue {
-        --color-primary: var(--color-warn);
-        --color-primary-aux: var(--color-warn-aux);
+        --color-primary: var(--color-info);
+        --color-primary-aux: var(--color-info-aux);
         --color-on-primary-text: var(--white);
     }
     
