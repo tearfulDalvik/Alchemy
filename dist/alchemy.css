@@ -304,6 +304,26 @@ body.theme-green {
   margin-left: 0;
 }
 
+.m-r-grand {
+  margin-right: 4vh;
+}
+
+.m-r-sparse {
+  margin-right: 1.5vh;
+}
+
+.m-r-normal {
+  margin-right: 1vh;
+}
+
+.m-r-compat {
+  margin-right: 0.5vh;
+}
+
+.m-r-none {
+  margin-right: 0;
+}
+
 .disabled,
 :disabled {
   cursor: not-allowed !important;
@@ -935,7 +955,7 @@ div.alert {
   padding-right: 3.4vw;
 }
 div.alert a {
-  color: var(--color-on-primary-text);
+  color: var(--color-on-background-text);
 }
 div.alert.error {
   background: var(--color-error);

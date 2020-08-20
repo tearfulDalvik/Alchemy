@@ -4,7 +4,7 @@ div.alert {
     @include p-h($spacing-before-page, $spacing-after-page);
 
     a {
-        color: var(--color-on-primary-text)
+        color: var(--color-on-background-text)
     }
 
     &.error {
