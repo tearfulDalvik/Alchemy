@@ -44,12 +44,43 @@ input {
         padding: $padding-v-content-lp $padding-h-content-lp;
     }
 
+    &.high-profile {
+        background: transparent;
+        width: 100%;
+        border: none;
+        font-size: 300%;
+        padding: 0;
+    }
+
     &[type=checkbox],
     &[type=radio] {
         box-sizing: border-box;
         width: auto;
         height: auto;
         padding: 0;
+    }
+}
+
+select {
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+    
+    &.high-profile {
+        @include m-v($spacing-elements-v-minor, $spacing-elements-v-minor);
+        padding: $padding-v-content $padding-h-content;
+        color: var(--on-background-text-color);
+        background-color: var(--background-color);
+        height: $components-height;
+        border-radius: $components-border-radius $components-border-radius 0 0;
+        font-size: $font-size-content;
+        outline: var(--background-second-color) auto 1px;
+
+        &:focus {
+            outline: -webkit-focus-ring-color auto 1px;
+        }
     }
 }
 

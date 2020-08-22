@@ -36,8 +36,9 @@ table {
         }
     }
 
-    >thead>th {
+    >thead>tr>th {
         border-bottom: 1px dashed var(--background-second-color);
+        padding: 1em;
     }
 
     @include media("<small") {

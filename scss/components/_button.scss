@@ -92,6 +92,10 @@ button,
         }
     }
 
+    .group > & {
+        margin: 0;
+    }
+
     .group > &:not(:first-child):not(:last-child) {
         border-radius: 0;
     }
