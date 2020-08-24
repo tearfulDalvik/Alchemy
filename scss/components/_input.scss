@@ -52,6 +52,16 @@ input {
         padding: 0;
     }
 
+    &[type=time],
+    &[type=datetime-local],
+    &[type=date] {
+        border-bottom: none;
+    }
+
+    ::-webkit-calendar-picker-indicator {
+        color: var(--on-background-text-color);
+    }
+
     &[type=checkbox],
     &[type=radio] {
         box-sizing: border-box;
@@ -62,24 +72,32 @@ input {
 }
 
 select {
+    @include m-v($spacing-elements-v-minor, $spacing-elements-v-minor);
+    padding: $padding-v-content $padding-h-content;
+    color: var(--on-background-text-color);
+    background-color: var(--background-color);
+    height: $components-height;
+    border-radius: $components-border-radius $components-border-radius 0 0;
+    font-size: $font-size-content;
     border: none;
+    outline: none;
+    background-color: var(--background-second-color);
 
     &:focus {
-        outline: none;
+        outline: -webkit-focus-ring-color auto 1px;
     }
-    
-    &.high-profile {
-        @include m-v($spacing-elements-v-minor, $spacing-elements-v-minor);
-        padding: $padding-v-content $padding-h-content;
-        color: var(--on-background-text-color);
-        background-color: var(--background-color);
-        height: $components-height;
-        border-radius: $components-border-radius $components-border-radius 0 0;
-        font-size: $font-size-content;
-        outline: var(--background-second-color) auto 1px;
+
+    &.low-profile {
+        outline: none;
+        border: none;
+        height: auto;
+        padding: 0;
+        background: none;
+        margin: 0;
+        font-size: inherit;
 
         &:focus {
-            outline: -webkit-focus-ring-color auto 1px;
+            outline: none;
         }
     }
 }

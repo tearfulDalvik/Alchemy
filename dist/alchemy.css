@@ -446,6 +446,12 @@ input.high-profile {
   font-size: 300%;
   padding: 0;
 }
+input[type=time], input[type=datetime-local], input[type=date] {
+  border-bottom: none;
+}
+input ::-webkit-calendar-picker-indicator {
+  color: var(--on-background-text-color);
+}
 input[type=checkbox], input[type=radio] {
   box-sizing: border-box;
   width: auto;
@@ -454,12 +460,6 @@ input[type=checkbox], input[type=radio] {
 }
 
 select {
-  border: none;
-}
-select:focus {
-  outline: none;
-}
-select.high-profile {
   margin-top: 1vh;
   margin-bottom: 1vh;
   padding: 0.4rem 0.8rem;
@@ -468,10 +468,24 @@ select.high-profile {
   height: 2.3rem;
   border-radius: 2px 2px 0 0;
   font-size: 1rem;
-  outline: var(--background-second-color) auto 1px;
+  border: none;
+  outline: none;
+  background-color: var(--background-second-color);
 }
-select.high-profile:focus {
+select:focus {
   outline: -webkit-focus-ring-color auto 1px;
+}
+select.low-profile {
+  outline: none;
+  border: none;
+  height: auto;
+  padding: 0;
+  background: none;
+  margin: 0;
+  font-size: inherit;
+}
+select.low-profile:focus {
+  outline: none;
 }
 
 label {
