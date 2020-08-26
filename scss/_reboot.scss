@@ -8,8 +8,8 @@ body {
     color: var(--on-background-text-color);
     margin: 0;
     padding: 0;
-    -webkit-transition: all .3s cubic-bezier(0,0,.2,1);
-    transition: all .3s cubic-bezier(0,0,.2,1);
+    -webkit-transition: all .3s cubic-bezier(0, 0, .2, 1);
+    transition: all .3s cubic-bezier(0, 0, .2, 1);
 
     &.with-hero {
         display: flex;
@@ -39,16 +39,20 @@ body {
         --color-primary-aux: var(--color-info-aux);
         --color-on-primary-text: var(--white);
     }
-    
+
     &.theme-red {
         --color-primary: var(--color-error);
         --color-primary-aux: var(--color-error-aux);
         --color-on-primary-text: var(--white);
     }
-    
+
     &.theme-green {
         --color-primary: var(--color-success);
         --color-primary-aux: var(--color-success-aux);
         --color-on-primary-text: var(--white);
+    }
+
+    &[alchemy-spin-scene=true] {
+        overflow: hidden;
     }
 }

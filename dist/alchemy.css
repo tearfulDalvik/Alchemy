@@ -277,6 +277,9 @@ body.theme-green {
   --color-primary-aux: var(--color-success-aux);
   --color-on-primary-text: var(--white);
 }
+body[alchemy-spin-scene=true] {
+  overflow: hidden;
+}
 
 .hidden {
   display: none;
@@ -558,6 +561,16 @@ body.drawer-collapsed .drawer > .header {
 
 .copyright {
   padding: 2vh 3.4vw;
+}
+
+.scene {
+  background-color: var(--background-color);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20000;
 }
 
 a {

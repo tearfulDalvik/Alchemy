@@ -39,13 +39,29 @@ module.exports = function (grunt) {
     serve: {
       'path': 'dist/'
     },
+    webpack: {
+      myConfig: require('./webpack.config.js'),
+    },
+    rsync: {
+      options: {
+        args: ["-avz"],
+        exclude: [".DS_Store", "docs"],
+        recursive: true
+      },
+      frontend: {
+        options: {
+          src: "./dist/",
+          dest: "../dalvik-club-frontend/dist/"
+        }
+      },
+    },
     watch: {
       options: {
         interrupt: true,
         livereload: true,
       },
       scripts: {
-        files: ['scss/**/*.scss', 'docs/*.ejs'],
+        files: ['scss/**/*.scss', 'docs/*.ejs', 'js/**/*.js'],
         tasks: ['build', 'serve'],
       }
     }
@@ -56,6 +72,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-ejs');
   grunt.loadNpmTasks('grunt-serve');
+  grunt.loadNpmTasks('grunt-webpack');
+  grunt.loadNpmTasks('grunt-rsync');
 
-  grunt.registerTask('build', ['sass', 'cssmin', 'ejs']);
+  grunt.registerTask('build', ['sass', 'cssmin', 'ejs', 'webpack', 'rsync']);
 }
