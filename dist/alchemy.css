@@ -282,87 +282,87 @@ body[alchemy-spin-scene=true] {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .m-t-grand {
-  margin-top: 4vh;
+  margin-top: 4vh !important;
 }
 
 .m-t-sparse {
-  margin-top: 1.5vh;
+  margin-top: 1.5vh !important;
 }
 
 .m-t-normal {
-  margin-top: 1vh;
+  margin-top: 1vh !important;
 }
 
 .m-t-compat {
-  margin-top: 0.5vh;
+  margin-top: 0.5vh !important;
 }
 
 .m-t-none {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 
 .m-b-grand {
-  margin-bottom: 4vh;
+  margin-bottom: 4vh !important;
 }
 
 .m-b-sparse {
-  margin-bottom: 1.5vh;
+  margin-bottom: 1.5vh !important;
 }
 
 .m-b-normal {
-  margin-bottom: 1vh;
+  margin-bottom: 1vh !important;
 }
 
 .m-b-compat {
-  margin-bottom: 0.5vh;
+  margin-bottom: 0.5vh !important;
 }
 
 .m-b-none {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .m-l-grand {
-  margin-left: 4vh;
+  margin-left: 4vh !important;
 }
 
 .m-l-sparse {
-  margin-left: 1.5vh;
+  margin-left: 1.5vh !important;
 }
 
 .m-l-normal {
-  margin-left: 1vh;
+  margin-left: 1vh !important;
 }
 
 .m-l-compat {
-  margin-left: 0.5vh;
+  margin-left: 0.5vh !important;
 }
 
 .m-l-none {
-  margin-left: 0;
+  margin-left: 0 !important;
 }
 
 .m-r-grand {
-  margin-right: 4vh;
+  margin-right: 4vh !important;
 }
 
 .m-r-sparse {
-  margin-right: 1.5vh;
+  margin-right: 1.5vh !important;
 }
 
 .m-r-normal {
-  margin-right: 1vh;
+  margin-right: 1vh !important;
 }
 
 .m-r-compat {
-  margin-right: 0.5vh;
+  margin-right: 0.5vh !important;
 }
 
 .m-r-none {
-  margin-right: 0;
+  margin-right: 0 !important;
 }
 
 .disabled,
@@ -509,8 +509,7 @@ label.low-profile {
 }
 
 .content {
-  padding: 0 3.4vw;
-  margin: 2vh 0;
+  margin: 2vh 3.4vw;
   /* This is for .content.block */
   border-radius: 0;
 }
@@ -1046,9 +1045,43 @@ img.original {
   border-radius: inherit;
 }
 
+.tab {
+  display: flex;
+  flex-direction: row;
+  padding-inline-start: 0;
+  list-style: none;
+  align-items: baseline;
+  column-gap: 1.5em;
+  overflow-x: auto;
+  cursor: pointer;
+}
+.tab .item.active {
+  opacity: 1;
+}
+.tab .item.active:hover {
+  opacity: 1;
+}
+.tab .item {
+  opacity: 0.3;
+  text-transform: uppercase;
+  font-size: 140%;
+  font-weight: bold;
+  transition: 0.1s linear;
+  letter-spacing: 0.4rem;
+}
+.tab .item.disabled:hover {
+  opacity: 0.3;
+}
+.tab .item:hover {
+  opacity: 1;
+}
+.tab a:hover {
+  border: none;
+}
+
 /** Alert container **/
 div.alerts {
-  position: fixed;
+  display: contents;
   width: 100%;
   max-height: 20vh;
   overflow-y: scroll;

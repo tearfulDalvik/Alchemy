@@ -5,10 +5,12 @@ class Alert {
 
     duration(duration) {
         this._duration = duration;
+        return this;
     }
     
     icon(icon) {
         this._icon = icon;
+        return this;
     }
 
     warn() {
@@ -53,7 +55,6 @@ class Alert {
         let i = document.createElement("i");
         i.classList.add('fad');
         i.classList.add('m-r-compat');
-        console.log(this._icon);
         i.classList.add(this._icon || 'fa-exclamation-circle');
         let newContent = document.createTextNode(this._content);
         newDiv.appendChild(i);

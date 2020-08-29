@@ -112,10 +112,12 @@ class Alert {
 
     duration(duration) {
         this._duration = duration;
+        return this;
     }
     
     icon(icon) {
         this._icon = icon;
+        return this;
     }
 
     warn() {
@@ -160,7 +162,6 @@ class Alert {
         let i = document.createElement("i");
         i.classList.add('fad');
         i.classList.add('m-r-compat');
-        console.log(this._icon);
         i.classList.add(this._icon || 'fa-exclamation-circle');
         let newContent = document.createTextNode(this._content);
         newDiv.appendChild(i);
@@ -218,6 +219,62 @@ class Spinner {
 
 /***/ }),
 
+/***/ "./js/components/tab.js":
+/*!******************************!*\
+  !*** ./js/components/tab.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+class Tab {
+    static attach(element) {
+        if (!element || !element.classList.contains("tab")) {
+            throw "This element has to be a tab.";
+        }
+        return new Tab(element);
+    }
+
+    constructor(element) {
+        this.element = element;
+        this.items = [];
+        this.active = null;
+        for (let i = 0; i < element.children.length; i++) {
+            let item = element.children[i];
+            if (item.classList.contains("item")) {
+                if (item.hasAttribute("name")) {
+                    this.items.push(item);
+                    if (item.classList.contains("active")) {
+                        this.active = item;
+                    }
+                    item.addEventListener("click", (() => {
+                        this.select(item.getAttribute("name"));
+                    }).bind(this));
+                }
+            }
+        }
+    }
+
+    select(name) {
+        if (this.active) {
+            this.active.classList.remove("active");
+            this.active = null;
+        }
+        let item = this.element.querySelector(`.item[name=${name}]`);
+        if (item && this.items.indexOf(item) > -1) {
+            item.classList.add("active");
+            this.active = item;
+        } else {
+            throw "Item not found"
+        }
+    }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Tab);
+
+/***/ }),
+
 /***/ "./js/index.umd.js":
 /*!*************************!*\
   !*** ./js/index.umd.js ***!
@@ -229,13 +286,21 @@ class Spinner {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_spinner__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/spinner */ "./js/components/spinner.js");
 /* harmony import */ var _components_alerts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/alerts */ "./js/components/alerts.js");
+/* harmony import */ var _components_tab__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/tab */ "./js/components/tab.js");
+/*!
+ * Alchemy UI v1.0.0 (https://github.com/tearfulDalvik/Alchemy)
+ * Copyright 2020 Gufeng Shen
+ * Licensed under MIT (https://github.com/tearfulDalvik/Alchemy/blob/main/LICENSE)
+ */
+
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     Spinner: _components_spinner__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Alert: _components_alerts__WEBPACK_IMPORTED_MODULE_1__["default"]
+    Alert: _components_alerts__WEBPACK_IMPORTED_MODULE_1__["default"],
+    Tab: _components_tab__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
 
 /***/ })

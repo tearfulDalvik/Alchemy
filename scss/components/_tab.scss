@@ -1,0 +1,39 @@
+.tab {
+    display: flex;
+    flex-direction: row;
+    padding-inline-start: 0;
+    list-style: none;
+    align-items: baseline;
+    column-gap: 1.5em;
+    overflow-x: auto;
+    cursor: pointer;
+
+    .item.active {
+        opacity: 1;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .item {
+        opacity: .3;
+        text-transform: uppercase;
+        font-size: 140%;
+        font-weight: $weight-major;
+        transition: .1s linear;
+        letter-spacing: $letter-spacing-discrete;
+
+        &.disabled:hover {
+            opacity: .3;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    a:hover {
+        border: none;
+    }
+}

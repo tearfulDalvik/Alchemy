@@ -1,5 +1,5 @@
 module.exports = function (grunt) {
-  let DEBUG = grunt.option('build') === 'dev';
+  let DEBUG = true;
   let VERSION = '1.0.0-alpha.7';
 
   grunt.initConfig({

@@ -10,7 +10,7 @@
     <meta name="keywords" content="css framework,ui,ui framework,css ui,css,gufeng shen">
     <meta name="copyright" content="Gufeng Shen">
 
-    <title>Inputs | Alchemy UI</title>
+    <title>Tabs | Alchemy UI</title>
     <meta name="theme-color" content="#000000">
 
     <meta name="twitter:card" content="summary">
@@ -24,21 +24,37 @@
 
 <body>
     <div class="header">
-        <h1><a href="input.html">Inputs</a></h1>
+        <h1><a href="tabs.html">Tabs</a></h1>
     </div>
     <div class="content">
-        <h3>Standard inputs</h3>
-        <input type="text" placeholder="Username">
-        <xmp><input type="text" placeholder="Username"></xmp>
-        <input type="number" placeholder="Numbers">
-        <xmp><input type="number" placeholder="Numbers"></xmp>
-        <h3 class="m-t-grand">Form validations</h3>
-        <input class="invalidated" type="text" placeholder="Invalidated">
-        <xmp><input class="invalidated" type="text" placeholder="Invalidated"></xmp>
-        <input class="validated" type="text" placeholder="Validated">
-        <xmp><input class="validated" type="text" placeholder="Validated"></xmp>
-        <input disabled type="text" placeholder="Disabled">
-        <xmp><input disabled type="text" placeholder="Disabled"></xmp>
+        <h3>Example</h3>
+        <ul class="tab">
+            <li class="item active">Home</li>
+            <li class="item">Accounts</li>
+            <li class="item">Balance</li>
+        </ul>
+        <ul class="tab">
+            <li class="item">Home</li>
+            <li class="item active">Accounts</li>
+            <li class="item">Settings</li>
+        </ul>
+        <h3 class="m-t-grand">Disabled</h3>
+        <ul class="tab">
+            <li class="item active">Home</li>
+            <li class="item disabled">Accounts</li>
+            <li class="item">Settings</li>
+        </ul>
+        <h3 class="m-t-grand">Colorized</h3>
+        <ul class="tab">
+            <li class="item active text-primary">Home</li>
+            <li class="item text-primary">Accounts</li>
+            <li class="item text-primary">Settings</li>
+        </ul>
+        <ul class="tab">
+            <li class="item active text-primary">Home</li>
+            <li class="item">Accounts</li>
+            <li class="item">Settings</li>
+        </ul>
     </div>
     <script src="//localhost:35729/livereload.js"></script>
 </body>
