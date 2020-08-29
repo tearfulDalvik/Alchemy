@@ -12,6 +12,10 @@ span.indicator {
         color: var(--color-warn);
     }
 
+    &.info {
+        color: var(--color-info);
+    }
+
     &.success {
         color: var(--color-success);
     }

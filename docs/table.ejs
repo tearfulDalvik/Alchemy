@@ -1,0 +1,150 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="<%=alchemy_url%>">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="A lightweight web UI framework for building super fast and beautiful websites.">
+    <meta name="author" content="Gufeng Shen">
+    <meta name="keywords" content="css framework,ui,ui framework,css ui,css,gufeng shen">
+    <meta name="copyright" content="Gufeng Shen">
+
+    <title>Tables | Alchemy UI</title>
+    <meta name="theme-color" content="#000000">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tearfulDalvik">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Alchemy UI">
+    <meta property="og:description"
+        content="A lightweight web UI framework for building super fast and beautiful websites. Produced by Gufeng Shen.">
+</head>
+
+<body>
+    <div class="header">
+        <h1><a href="tables.html">Tables</a></h1>
+    </div>
+    <div class="content">
+        <table>
+            <thead>
+                <th class="left">#</th>
+                <th class="left">ID</th>
+                <th class="left">Name</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>tj#3*t6</td>
+                    <td>Computer</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>N*)asg2</td>
+                    <td>Mobile Phone</td>
+                </tr>
+            </tbody>
+        </table>
+        <xmp>
+            <table>
+                <thead>
+                    <th class="left">#</th>
+                    <th class="left">ID</th>
+                    <th class="left">Name</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>tj#3*t6</td>
+                        <td>Computer</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>N*)asg2</td>
+                        <td>Mobile Phone</td>
+                    </tr>
+                </tbody>
+            </table>
+        </xmp>
+        <h3>Smaller Table</h3>
+        <table class="low-profile">
+            <thead>
+                <th class="left">#</th>
+                <th class="left">ID</th>
+                <th class="left">Name</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>tj#3*t6</td>
+                    <td>Computer</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>N*)asg2</td>
+                    <td>Mobile Phone</td>
+                </tr>
+            </tbody>
+        </table>
+        <xmp>
+            <table class="low-profile">
+                ...
+        </xmp>
+        <h3>Striped Table</h3>
+        <table class="high-profile">
+            <thead>
+                <th class="left">#</th>
+                <th class="left">ID</th>
+                <th class="left">Name</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>tj#3*t6</td>
+                    <td>Computer</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>N*)asg2</td>
+                    <td>Mobile Phone</td>
+                </tr>
+            </tbody>
+        </table>
+        <xmp>
+            <table class="high-profile">
+                ...
+        </xmp>
+        <h3>Full widthed Table</h3>
+    </div>
+    <table class="high-profile full">
+        <thead>
+            <th class="left">#</th>
+            <th class="left">ID</th>
+            <th class="left">Name</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>tj#3*t6</td>
+                <td>Computer</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>N*)asg2</td>
+                <td>Mobile Phone</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="content">
+        <xmp>
+            <!-- Not in any div.content -->
+            <table class="high-profile full">
+                ...
+        </xmp>
+    </div>
+    <%- debug_scripts %>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.14.0/css/all.css">
+</body>
+
+</html>

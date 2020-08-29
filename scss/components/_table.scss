@@ -3,12 +3,18 @@ table {
     border-collapse: collapse;
     table-layout: fixed;
 
-    &.low-profile tr {
+    &.low-profile tr>th, &.low-profile tr>td{
+        padding-top: .4em;
+        padding-bottom: .4em;
         height: 80%;
     }
 
     &.high-profile tr:nth-child(even) {
         background-color: var(--background-second-color);
+    }
+
+    .left {
+        text-align: left;
     }
 
     .center {
@@ -19,7 +25,15 @@ table {
         text-align: right;
     }
 
-    >tbody>tr>td:not(:first-child):not(:last-child) {
+    &.high-profile>thead>tr>th:first-child, &.high-profile>tbody>tr>td:first-child {
+        padding: $padding-v-content $padding-h-content;
+    }
+
+    &.full>thead>tr>th:first-child, &.full>tbody>tr>td:first-child {
+        padding-left: $spacing-before-page;
+    }
+
+    >thead>tr>th:not(:first-child):not(:last-child), >tbody>tr>td:not(:first-child):not(:last-child) {
         padding: $padding-v-content $padding-h-content;
     }
 
@@ -38,7 +52,7 @@ table {
 
     >thead>tr>th {
         border-bottom: 1px dashed var(--background-second-color);
-        padding: 1em;
+        padding: 1em 0;
     }
 
     @include media("<small") {

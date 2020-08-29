@@ -982,11 +982,16 @@ table {
   border-collapse: collapse;
   table-layout: fixed;
 }
-table.low-profile tr {
+table.low-profile tr > th, table.low-profile tr > td {
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
   height: 80%;
 }
 table.high-profile tr:nth-child(even) {
   background-color: var(--background-second-color);
+}
+table .left {
+  text-align: left;
 }
 table .center {
   text-align: center;
@@ -994,7 +999,13 @@ table .center {
 table .right {
   text-align: right;
 }
-table > tbody > tr > td:not(:first-child):not(:last-child) {
+table.high-profile > thead > tr > th:first-child, table.high-profile > tbody > tr > td:first-child {
+  padding: 0.4rem 0.8rem;
+}
+table.full > thead > tr > th:first-child, table.full > tbody > tr > td:first-child {
+  padding-left: 3.4vw;
+}
+table > thead > tr > th:not(:first-child):not(:last-child), table > tbody > tr > td:not(:first-child):not(:last-child) {
   padding: 0.4rem 0.8rem;
 }
 table > tbody > tr > td {
@@ -1010,7 +1021,7 @@ table > tbody > tr > td span {
 }
 table > thead > tr > th {
   border-bottom: 1px dashed var(--background-second-color);
-  padding: 1em;
+  padding: 1em 0;
 }
 @media (max-width: 48em) {
   table {
@@ -1029,6 +1040,9 @@ span.indicator.error {
 }
 span.indicator.warn {
   color: var(--color-warn);
+}
+span.indicator.info {
+  color: var(--color-info);
 }
 span.indicator.success {
   color: var(--color-success);
