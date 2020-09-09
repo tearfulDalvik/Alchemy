@@ -1,0 +1,13 @@
+span.badge {
+    border: 1px solid currentColor;
+    border-radius: $components-border-radius;
+    font-size: 80%;
+    display: inline-block;
+    padding: .1vw .5vw;
+    vertical-align: middle;
+
+    &.low-profile {
+        font-size: 30%;
+        padding: 0 .3vw;
+    }
+}

@@ -27,11 +27,6 @@
     }
 }
 
-.badge {
-    @extend %block;
-    margin: .4rem;
-}
-
 /** Must use with body.with-hero */
 .hero {
     position: absolute;

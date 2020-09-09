@@ -168,11 +168,11 @@ h6, .copyright {
   font-size: var(--font-size-title);
 }
 
-div.alert, .list > .item, .badge, .block {
+div.alert, .list > .item, .block {
   background-color: var(--background-second-color);
   padding: 0.4rem 0.8rem;
 }
-.content div.alert, .content .list > .item, .content .badge, .content .block {
+.content div.alert, .content .list > .item, .content .block {
   border-radius: 2px;
 }
 
@@ -529,10 +529,6 @@ label.low-profile {
 
 .block.low-profile {
   padding: 0.4rem 0.56rem;
-}
-
-.badge {
-  margin: 0.4rem;
 }
 
 /** Must use with body.with-hero */
@@ -1165,6 +1161,19 @@ div.alert.primary {
 }
 div.alert.primary a {
   color: var(--color-on-primary-text);
+}
+
+span.badge {
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  font-size: 80%;
+  display: inline-block;
+  padding: 0.1vw 0.5vw;
+  vertical-align: middle;
+}
+span.badge.low-profile {
+  font-size: 30%;
+  padding: 0 0.3vw;
 }
 
 /*# sourceMappingURL=alchemy.css.map */
