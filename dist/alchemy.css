@@ -509,7 +509,7 @@ label.low-profile {
 }
 
 .content {
-  margin: 2vh 3.4vw;
+  margin: 2vh 2.4vw;
   /* This is for .content.block */
   border-radius: 0;
 }
@@ -539,10 +539,10 @@ label.low-profile {
 }
 
 .header {
-  margin-left: 3.4vw;
-  margin-right: 3.4vw;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-left: 2.4vw;
+  margin-right: 2.4vw;
+  margin-top: 3.5vh;
+  margin-bottom: 3.5vh;
 }
 .header h1 {
   font-weight: normal;
@@ -550,12 +550,17 @@ label.low-profile {
   letter-spacing: 0.4rem;
   line-height: 1.5;
 }
+@media (max-width: 48em) {
+  .header h1 {
+    font-size: 110%;
+  }
+}
 body.drawer-collapsed .drawer > .header {
   margin: 0;
 }
 
 .copyright {
-  padding: 2vh 3.4vw;
+  padding: 2vh 2.4vw;
 }
 
 .scene {
@@ -999,7 +1004,7 @@ table.high-profile > thead > tr > th:first-child, table.high-profile > tbody > t
   padding: 0.4rem 0.8rem;
 }
 table.full > thead > tr > th:first-child, table.full > tbody > tr > td:first-child {
-  padding-left: 3.4vw;
+  padding-left: 2.4vw;
 }
 table > thead > tr > th:not(:first-child):not(:last-child), table > tbody > tr > td:not(:first-child):not(:last-child) {
   padding: 0.4rem 0.8rem;
@@ -1102,8 +1107,8 @@ div.alerts {
 div.alert {
   padding-top: 0.8em;
   padding-bottom: 0.8em;
-  padding-left: 3.4vw;
-  padding-right: 3.4vw;
+  padding-left: 2.4vw;
+  padding-right: 2.4vw;
 }
 div.alert.disappear.longer {
   animation-delay: 30s;

@@ -43,6 +43,10 @@
         font-size: calc(.7rem + .9vmin);
         letter-spacing: $letter-spacing-discrete;
         line-height: $line-height;
+        
+        @include media("<small") {
+            font-size: 110%;
+        }
     }
 
     body.drawer-collapsed .drawer>& {
