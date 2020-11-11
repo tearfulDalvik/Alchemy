@@ -287,6 +287,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_spinner__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/spinner */ "./js/components/spinner.js");
 /* harmony import */ var _components_alerts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/alerts */ "./js/components/alerts.js");
 /* harmony import */ var _components_tab__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/tab */ "./js/components/tab.js");
+/*eslint-env es6*/
 /*!
  * Alchemy UI v1.0.0 (https://github.com/tearfulDalvik/Alchemy)
  * Copyright 2020 Gufeng Shen

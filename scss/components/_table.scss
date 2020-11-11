@@ -1,7 +1,9 @@
 table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
 
     &.low-profile tr>th, &.low-profile tr>td{
         padding-top: .4em;

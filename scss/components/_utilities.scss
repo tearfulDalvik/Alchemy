@@ -119,3 +119,8 @@
 .text-success {
     color: var(--color-success);
 }
+
+.divider {
+    border-bottom: 1px solid var(--background-second-color);
+    width: 100%;
+}

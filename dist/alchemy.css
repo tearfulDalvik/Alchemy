@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
-* Alchemy UI v1.0.0 (https://github.com/tearfulDalvik/Alchemy)
+* Alchemy UI v1.2.0 (https://github.com/tearfulDalvik/Alchemy)
 * Copyright 2020 Gufeng Shen
 * Licensed under MIT (https://github.com/tearfulDalvik/Alchemy/blob/main/LICENSE)
 */
@@ -123,12 +123,16 @@
 
 :root {
   --content-safe-margin-by-drawer: 320px;
+  --content-safe-margin-by-drawer-right: 320px;
   --drawer-max-width: 320px;
+  --drawer-right-max-width: 320px;
 }
 @media (max-width: 48em) {
   :root {
     --content-safe-margin-by-drawer: 0;
+    --content-safe-margin-by-drawer-right: 0;
     --drawer-max-width: 100vw;
+    --drawer-right-max-width: 100vw;
   }
 }
 
@@ -168,27 +172,17 @@ h6, .copyright {
   font-size: var(--font-size-title);
 }
 
-div.alert, .list > .item, .block {
+div.alert, .list > .item, .outline, .block {
   background-color: var(--background-second-color);
   padding: 0.4rem 0.8rem;
 }
-.content div.alert, .content .list > .item, .content .block {
+.content div.alert, .content .list > .item, .content .outline, .content .block {
   border-radius: 2px;
 }
-
-i.fa, i.fad, i.fab, i.fas, i.far {
-  font-style: initial;
-  font-size: 1em;
-}
-.drawer i.fa, .drawer i.fad, .drawer i.fab, .drawer i.fas, .drawer i.far {
-  font-size: 1.38em;
-}
-.list > .item > i.fa, .list > .item > i.fad, .list > .item > i.fab, .list > .item > i.fas, .list > .item > i.far {
-  white-space: pre-line;
-  margin: 0;
-  grid-column: 1/1;
-  grid-row: 1/span 2;
-  align-self: center;
+@media (max-width: 48em) {
+  .content div.alert, .content .list > .item, .content .outline, .content .block {
+    border-radius: 0;
+  }
 }
 
 body {
@@ -208,13 +202,6 @@ body.with-hero {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-body.with-drawer {
-  margin-left: var(--content-safe-margin-by-drawer);
-}
-body.with-drawer.drawer-collapsed {
-  --drawer-max-width: 3.2em;
-  --content-safe-margin-by-drawer: 3.2em;
 }
 body.always-dark {
   --color-primary: var(--orange-300);
@@ -402,6 +389,11 @@ body[alchemy-spin-scene=true] {
   color: var(--color-success);
 }
 
+.divider {
+  border-bottom: 1px solid var(--background-second-color);
+  width: 100%;
+}
+
 input {
   margin-top: 1vh;
   margin-bottom: 1vh;
@@ -445,6 +437,7 @@ input.low-profile {
 input.high-profile {
   background: transparent;
   width: 100%;
+  height: auto;
   border: none;
   font-size: 300%;
   padding: 0;
@@ -528,6 +521,10 @@ label.low-profile {
 }
 
 .block.low-profile {
+  padding: 0.4rem 0.56rem;
+}
+
+.outline.low-profile {
   padding: 0.4rem 0.56rem;
 }
 
@@ -765,12 +762,25 @@ h6 {
   grid-column: 2;
   grid-row: 1;
 }
-body.drawer-collapsed .drawer h1,
+.list > .item.i-r > h1,
+.list > .item.i-r > h2,
+.list > .item.i-r > h3,
+.list > .item.i-r > h4,
+.list > .item.i-r > h5,
+.list > .item.i-r > h6 {
+  grid-column: 1;
+}
+body.drawer-collapsed .drawer h1, body.drawer-right-collapsed .drawer.right h1,
 body.drawer-collapsed .drawer h2,
+body.drawer-right-collapsed .drawer.right h2,
 body.drawer-collapsed .drawer h3,
+body.drawer-right-collapsed .drawer.right h3,
 body.drawer-collapsed .drawer h4,
+body.drawer-right-collapsed .drawer.right h4,
 body.drawer-collapsed .drawer h5,
-body.drawer-collapsed .drawer h6 {
+body.drawer-right-collapsed .drawer.right h5,
+body.drawer-collapsed .drawer h6,
+body.drawer-right-collapsed .drawer.right h6 {
   display: none;
 }
 
@@ -790,6 +800,9 @@ body.drawer-collapsed .drawer p {
   grid-column: 2;
   grid-row: 2;
   opacity: 0.8;
+}
+.list > .item.i-r > p {
+  grid-column: 1;
 }
 
 .drawer {
@@ -819,25 +832,60 @@ body.drawer-collapsed .drawer p {
   margin-top: 0.4rem;
   margin-bottom: 0.4rem;
 }
+.drawer.right {
+  border-left: 1px solid var(--background-second-color);
+  border-right: none;
+  width: var(--drawer-right-max-width);
+  left: initial;
+  right: 0;
+}
 
-body:not([class*=with-drawer]) .drawer {
+body.with-drawer {
+  margin-left: var(--content-safe-margin-by-drawer);
+}
+body.with-drawer.drawer-collapsed {
+  --drawer-max-width: 3.2em;
+  --content-safe-margin-by-drawer: 3.2em;
+}
+
+body.with-drawer-right {
+  margin-right: var(--content-safe-margin-by-drawer-right);
+}
+body.with-drawer-right.drawer-right-collapsed {
+  --drawer-right-max-width: 3.2em;
+  --content-safe-margin-by-drawer-right: 3.2em;
+}
+
+body:not([class*=with-drawer]) .drawer,
+body:not([class*=with-drawer-right]) .drawer.right {
   transform: translateX(calc(-1 * var(--drawer-max-width)));
   -webkit-transform: translateX(calc(-1 * var(--drawer-max-width)));
   box-shadow: none;
 }
 @media (max-width: 48em) {
-  body:not([class*=with-drawer]) .drawer {
+  body:not([class*=with-drawer]) .drawer,
+body:not([class*=with-drawer-right]) .drawer.right {
     transform: translateY(-100vh);
     -webkit-transform: translateY(-100vh);
   }
 }
 
+body:not([class*=with-drawer-right]) .drawer.right {
+  transform: translateX(var(--drawer-right-max-width));
+  -webkit-transform: translateX(var(--drawer-right-max-width));
+}
+
 @media (max-width: 48em) {
-  body:not([class*=drawer-collapsed]) .drawer {
+  body:not([class*=drawer-collapsed]) .drawer,
+body:not([class*=drawer-right-collapsed]) .drawer.right {
     border-right: none;
+    border-left: none;
+    left: 0;
+    right: 0;
   }
 }
-body:not([class*=drawer-collapsed]) .drawer .only-collapsed {
+body:not([class*=drawer-collapsed]) .drawer .only-collapsed,
+body:not([class*=drawer-right-collapsed]) .drawer.right .only-collapsed {
   display: none;
 }
 
@@ -855,12 +903,20 @@ body:not([class*=drawer-collapsed]) .drawer .only-collapsed {
   cursor: pointer;
   margin-bottom: 1vh;
   display: grid;
-  grid-template-columns: 1.6em auto;
+  grid-template-columns: 0 auto;
   grid-template-rows: auto auto;
   column-gap: 1.3em;
 }
-.list > .item.no-icon {
-  grid-template-columns: 0 auto;
+.list > .item.i-lr, .list > .item.i-rl {
+  grid-template-columns: 1.6em auto 1.6em;
+  grid-template-rows: auto auto;
+  /** Action icon span and opacity are defined in _i.scss */
+}
+.list > .item.i-r {
+  grid-template-columns: auto 1.6em;
+}
+.list > .item.i-l {
+  grid-template-columns: 1.6em auto;
 }
 .list > .item:last-child {
   margin-bottom: 0;
@@ -935,20 +991,50 @@ samp.lang-shell-root::before {
   content: "# ";
 }
 
-i.fas, i.far {
-  opacity: 0.8;
-}
-
-i.fab {
-  opacity: 0.8;
-}
-
-i.fad {
-  opacity: 0.8;
-}
-
+i.fas,
+i.far,
+i.fab,
+i.fad,
 i.fa {
+  font-style: initial;
+  font-size: 1em;
   opacity: 0.8;
+}
+.drawer .item > i.fas,
+.drawer .item > i.far,
+.drawer .item > i.fab,
+.drawer .item > i.fad,
+.drawer .item > i.fa {
+  font-size: 1.38em;
+}
+.list > .item > i.fas,
+.list > .item > i.far,
+.list > .item > i.fab,
+.list > .item > i.fad,
+.list > .item > i.fa {
+  white-space: pre-line;
+  margin: 0;
+  grid-column: 1/1;
+  grid-row: 1/span 2;
+  align-self: center;
+}
+.list > .item.i-r > i.r.fas,
+.list > .item.i-r > i.r.far,
+.list > .item.i-r > i.r.fab,
+.list > .item.i-r > i.r.fad,
+.list > .item.i-r > i.r.fa {
+  grid-column: 2/2;
+}
+.list > .item.i-lr > i.r.fas,
+.list > .item.i-lr > i.r.far,
+.list > .item.i-lr > i.r.fab,
+.list > .item.i-lr > i.r.fad,
+.list > .item.i-lr > i.r.fa, .list > .item.i-rl > i.r.fas,
+.list > .item.i-rl > i.r.far,
+.list > .item.i-rl > i.r.fab,
+.list > .item.i-rl > i.r.fad,
+.list > .item.i-rl > i.r.fa {
+  grid-column: 3/3;
 }
 
 @keyframes spinner {
@@ -981,7 +1067,9 @@ button.loading > .spinner {
 table {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 table.low-profile tr > th, table.low-profile tr > td {
   padding-top: 0.4em;
@@ -1179,6 +1267,19 @@ span.badge {
 span.badge.low-profile {
   font-size: 30%;
   padding: 0 0.3vw;
+}
+span.badge.borderless {
+  border: 0px;
+}
+span.badge.high-profile {
+  background: var(--color-primary);
+  color: var(--color-on-primary-text);
+  border-color: var(--color-primary);
+}
+span.badge.high-profile:hover {
+  background: var(--color-primary-aux);
+  color: var(--color-on-primary-text);
+  border-color: var(--color-primary);
 }
 
 /*# sourceMappingURL=alchemy.css.map */

@@ -1,3 +1,4 @@
+/*eslint-env es6*/
 /*!
  * Alchemy UI v1.0.0 (https://github.com/tearfulDalvik/Alchemy)
  * Copyright 2020 Gufeng Shen

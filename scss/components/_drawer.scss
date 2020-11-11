@@ -24,10 +24,38 @@
     >:first-child {
         @include m-v($padding-v-content, $padding-v-content);
     }
+
+    &.right {
+        border-left: $drawer-border-width solid var(--background-second-color);
+        border-right: none;
+        width: var(--drawer-right-max-width);
+        left: initial;
+        right: 0;
+    }
+}
+
+// Open Mode
+body.with-drawer {
+    margin-left: var(--content-safe-margin-by-drawer);
+
+    &.drawer-collapsed {
+        --drawer-max-width: #{$drawer-collapsed-width};
+        --content-safe-margin-by-drawer: #{$drawer-collapsed-width};
+    }
+}
+
+body.with-drawer-right {
+    margin-right: var(--content-safe-margin-by-drawer-right);
+
+    &.drawer-right-collapsed {
+        --drawer-right-max-width: #{$drawer-collapsed-width};
+        --content-safe-margin-by-drawer-right: #{$drawer-collapsed-width};
+    }
 }
 
 // Closed Mode
-body:not([class*='with-drawer']) .drawer {
+body:not([class*='with-drawer']) .drawer, 
+body:not([class*='with-drawer-right']) .drawer.right {
     transform: translateX(calc(-1 * var(--drawer-max-width)));
     -webkit-transform: translateX(calc(-1 * var(--drawer-max-width)));
     box-shadow: none;
@@ -38,10 +66,19 @@ body:not([class*='with-drawer']) .drawer {
     }
 }
 
-// Normal Mode
-body:not([class*='drawer-collapsed']) .drawer {
+body:not([class*='with-drawer-right']) .drawer.right {
+    transform: translateX(var(--drawer-right-max-width));
+    -webkit-transform: translateX(var(--drawer-right-max-width));
+}
+
+// Other Modes
+body:not([class*='drawer-collapsed']) .drawer, 
+body:not([class*='drawer-right-collapsed']) .drawer.right {
     @include media("<small") {
         border-right: none;
+        border-left: none;
+        left: 0;
+        right: 0;
     }
 
     .only-collapsed {

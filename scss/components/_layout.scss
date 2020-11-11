@@ -27,6 +27,14 @@
     }
 }
 
+.outline {
+    @extend %block;
+
+    &.low-profile {
+        padding: $padding-v-content-lp $padding-h-content-lp;
+    }
+}
+
 /** Must use with body.with-hero */
 .hero {
     position: absolute;

@@ -6,13 +6,18 @@ h5,
 h6 {
     @extend %titles;
     font-weight: $weight-major;
+
     .list>.item>& {
         margin: 0;
         grid-column: 2;
         grid-row: 1;
     }
 
-    body.drawer-collapsed .drawer & {
+    .list>.item.i-r>& {
+        grid-column: 1;
+    }
+
+    body.drawer-collapsed .drawer &, body.drawer-right-collapsed .drawer.right & {
         display: none;
     }
 } 
@@ -34,5 +39,9 @@ p {
         grid-column: 2;
         grid-row: 2;
         opacity: .8;
+    }
+
+    .list>.item.i-r>& {
+        grid-column: 1;
     }
 }

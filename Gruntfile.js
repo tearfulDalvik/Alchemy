@@ -54,6 +54,12 @@ module.exports = function (grunt) {
           dest: "../dalvik-club-frontend/dist/"
         }
       },
+      passport: {
+        options: {
+          src: "./dist/",
+          dest: "../passport-electron/frontend/public"
+        }
+      },
     },
     watch: {
       options: {

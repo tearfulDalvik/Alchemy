@@ -58,11 +58,15 @@ $drawer-fullscreen-width: 100vw;
 $drawer-border-width: $components-border-width;
 :root {
   --content-safe-margin-by-drawer: #{$drawer-normal-width};
+  --content-safe-margin-by-drawer-right: #{$drawer-normal-width};
   --drawer-max-width: #{$drawer-normal-width};
+  --drawer-right-max-width: #{$drawer-normal-width};
 
   @include media("<small") {
     --content-safe-margin-by-drawer: 0;
+    --content-safe-margin-by-drawer-right: 0;
     --drawer-max-width: #{$drawer-fullscreen-width};
+    --drawer-right-max-width: #{$drawer-fullscreen-width};
   }
 }
 

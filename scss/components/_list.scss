@@ -14,12 +14,22 @@
         cursor: pointer;
         margin-bottom: $spacing-elements-v-minor;
         display: grid;
-        grid-template-columns: 1.6em auto;
+        grid-template-columns: 0 auto;
         grid-template-rows: auto auto;
         column-gap: 1.3em;
 
-        &.no-icon {
-            grid-template-columns: 0 auto;
+        &.i-lr, &.i-rl {
+            grid-template-columns: 1.6em auto 1.6em;
+            grid-template-rows: auto auto;
+            /** Action icon span and opacity are defined in _i.scss */
+        }
+
+        &.i-r {
+            grid-template-columns: auto 1.6em;
+        }
+
+        &.i-l {
+            grid-template-columns: 1.6em auto;
         }
 
         &:last-child {

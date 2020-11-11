@@ -17,15 +17,6 @@ body {
         align-items: center;
     }
 
-    &.with-drawer {
-        margin-left: var(--content-safe-margin-by-drawer);
-
-        &.drawer-collapsed {
-            --drawer-max-width: #{$drawer-collapsed-width};
-            --content-safe-margin-by-drawer: #{$drawer-collapsed-width};
-        }
-    }
-
     &.always-dark {
         @include dark-theme;
     }
