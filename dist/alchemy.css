@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
-* Alchemy UI v1.2.0 (https://github.com/tearfulDalvik/Alchemy)
+* Alchemy UI v1.3 (https://github.com/tearfulDalvik/Alchemy)
 * Copyright 2020 Gufeng Shen
 * Licensed under MIT (https://github.com/tearfulDalvik/Alchemy/blob/main/LICENSE)
 */
@@ -495,6 +495,7 @@ select.low-profile {
   background: none;
   margin: 0;
   font-size: inherit;
+  margin-left: -4px;
 }
 select.low-profile:focus {
   outline: none;
