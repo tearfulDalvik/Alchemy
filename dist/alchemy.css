@@ -268,6 +268,10 @@ body[alchemy-spin-scene=true] {
   overflow: hidden;
 }
 
+fieldset, iframe, img {
+  border: 0;
+}
+
 .hidden {
   display: none !important;
 }
@@ -392,6 +396,18 @@ body[alchemy-spin-scene=true] {
 .divider {
   border-bottom: 1px solid var(--background-second-color);
   width: 100%;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.c-none {
+  cursor: none;
+}
+
+.right {
+  float: right;
 }
 
 input {
@@ -568,6 +584,18 @@ body.drawer-collapsed .drawer > .header {
   bottom: 0;
   left: 0;
   z-index: 20000;
+}
+
+.grid-manager {
+  display: grid;
+  grid-row-gap: 20px;
+  grid-column-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 48em) {
+  .grid-manager {
+    grid-template-columns: auto;
+  }
 }
 
 a {
@@ -1280,6 +1308,54 @@ span.badge.high-profile:hover {
   background: var(--color-primary-aux);
   color: var(--color-on-primary-text);
   border-color: var(--color-primary);
+}
+
+.card {
+  border: 1px solid var(--background-second-color);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.card:hover {
+  border-color: #555;
+}
+.card .card-image {
+  display: flex;
+  line-height: 200px;
+  height: 200px;
+  width: 200px;
+  margin: 52px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card .card-image img {
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+.card .card-info {
+  font-size: 12px;
+  line-height: 1.33341;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-family: sans-serif;
+  margin: 2px 24px 11px;
+  width: auto;
+  text-decoration: none;
+  display: inline-block;
+}
+.card .card-delivery {
+  vertical-align: middle;
+  line-height: unset;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.009em;
+  font-family: sans-serif;
+  border-top: 1px solid #ccc;
+  margin: 0 24px;
+  padding: 19px 0 19px;
 }
 
 /*# sourceMappingURL=alchemy.css.map */

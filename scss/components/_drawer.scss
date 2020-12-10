@@ -53,7 +53,7 @@ body.with-drawer-right {
     }
 }
 
-// Closed Mode
+// Hidden Mode
 body:not([class*='with-drawer']) .drawer, 
 body:not([class*='with-drawer-right']) .drawer.right {
     transform: translateX(calc(-1 * var(--drawer-max-width)));
