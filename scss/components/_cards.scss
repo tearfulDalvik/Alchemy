@@ -7,6 +7,10 @@
         border-color: #555;
     }
 
+    @include dark() {
+        border-color: #bbb;
+    }
+
     .card-image {
         display: flex;
         line-height: 200px;

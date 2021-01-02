@@ -76,16 +76,3 @@
     left: 0;
     z-index: 20000;
 }
-
-.grid-manager {
-    display: grid;
-    grid-row-gap: 20px;
-    grid-column-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr;
-
-    
-    @include media("<small") {
-        grid-template-columns: auto;
-    }
-
-}

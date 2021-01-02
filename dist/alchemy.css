@@ -587,18 +587,6 @@ body.drawer-collapsed .drawer > .header {
   z-index: 20000;
 }
 
-.grid-manager {
-  display: grid;
-  grid-row-gap: 20px;
-  grid-column-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-@media (max-width: 48em) {
-  .grid-manager {
-    grid-template-columns: auto;
-  }
-}
-
 a {
   transition: transform 0.2s;
   color: var(--link-color);
@@ -757,12 +745,12 @@ button.primary:active,
   grid-template-rows: auto;
   grid-gap: 1rem;
 }
-@media (min-width: 121em) {
+@media (min-width: 161em) {
   .grid {
     grid-template-columns: repeat(9, 1fr);
   }
 }
-@media (min-width: 121em) {
+@media (min-width: 121em) and (max-width: 120em) {
   .grid {
     grid-template-columns: repeat(5, 1fr);
   }

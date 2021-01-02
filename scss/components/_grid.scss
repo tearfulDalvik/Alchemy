@@ -4,11 +4,11 @@
     grid-template-rows: auto;
     grid-gap: 1rem;
 
-    @include media(">xlarge") {
+    @include media(">xxlarge") {
         grid-template-columns: repeat(9, 1fr);
     }
 
-    @include media(">xlarge") {
+    @include media(">xlarge", "<xlarge") {
         grid-template-columns: repeat(5, 1fr);
     }
 
