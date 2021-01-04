@@ -10,6 +10,7 @@ module.exports = function (grunt) {
         },
         files: {
           'dist/alchemy.css': 'scss/alchemy.scss',
+          'dist/alchemy.module.css': 'scss/alchemy.scss',
         }
       }
     },
@@ -54,6 +55,12 @@ module.exports = function (grunt) {
           dest: "../dalvik-club-frontend/dist/"
         }
       },
+      backend: {
+        options: {
+          src: "./dist/",
+          dest: "../dalvik-club-backend/app/javascript/alchemy"
+        }
+      },
       passport: {
         options: {
           src: "./dist/",
@@ -67,7 +74,7 @@ module.exports = function (grunt) {
         livereload: true,
       },
       scripts: {
-        files: ['scss/**/*.scss', 'docs/*.ejs', 'js/**/*.js'],
+        files: ['scss/**/*.scss', 'docs/*.ejs', 'js/**/*.js', 'js/**/*.ts*'],
         tasks: ['build', 'serve'],
       }
     }
