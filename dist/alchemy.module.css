@@ -402,6 +402,14 @@ fieldset, iframe, img {
   cursor: pointer;
 }
 
+.c-busy {
+  cursor: wait;
+}
+
+.c-semi-busy {
+  cursor: progress;
+}
+
 .c-none {
   cursor: none;
 }
@@ -1016,6 +1024,7 @@ i.fa {
   font-style: initial;
   font-size: 1em;
   opacity: 0.8;
+  pointer-events: none;
 }
 .drawer .item > i.fas,
 .drawer .item > i.far,

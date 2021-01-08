@@ -106,8 +106,9 @@ return /******/ (function(modules) { // webpackBootstrap
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 class Alert {
-    constructor(content) {
+    constructor(content, css=null) {
         this._content = content;
+        this._css = css;
     }
 
     duration(duration) {
@@ -121,32 +122,32 @@ class Alert {
     }
 
     warn() {
-        this._icon = this._icon | "fa-exclamation-circle";
-        this._style = 'warn';
+        this._icon = this._icon || "fa-exclamation-circle";
+        this._style = this._css ? this._css.warn : 'warn';
         this._show();
     }
 
     primary() {
-        this._icon = this._icon | "fa-info-circle";
-        this._style = '';
+        this._icon = this._icon || "fa-info-circle";
+        this._style = null;
         this._show();
     }
 
     success() {
-        this._icon = this._icon | "fa-check";
-        this._style = 'success';
+        this._icon = this._icon || "fa-check";
+        this._style = this._css ? this._css.success : 'success';
         this._show();
     }
 
     error() {
-        this._icon = this._icon | "fa-times-octagon";
-        this._style = 'error';
+        this._icon = this._icon || "fa-times-octagon";
+        this._style = this._css ? this._css.error : 'error';
         this._show();
     }
 
     info() {
-        this._icon = this._icon | "fa-info-circle";
-        this._style = 'info';
+        this._icon = this._icon || "fa-info-circle";
+        this._style = this._css ? this._css.info : 'info';
         this._show();
     }
     
@@ -154,19 +155,19 @@ class Alert {
         if (!document.getElementById("alchemy-alerts")) {
             let container = document.createElement('div');
             container.id = "alchemy-alerts";
-            container.className = "alerts";
+            container.className = this._css ? this._css.alerts : "alerts";
             document.body.prepend(container);
         }
         let newDiv = document.createElement("div");
-        newDiv.classList.add('alert');
+        newDiv.classList.add(this._css ? this._css.alert : 'alert');
         if (this._duration != null) {
-            newDiv.classList.add('disappear');
+            newDiv.classList.add(this._css ? this._css.disappear : 'disappear');
             if (this._duration != "") newDiv.classList.add(this._duration);
         }
-        newDiv.classList.add(this._style);
+        this._style && newDiv.classList.add(this._style);
         let i = document.createElement("i");
         i.classList.add('fad');
-        i.classList.add('m-r-compat');
+        i.classList.add(this._css ? this._css['m-r-compat'] : 'm-r-compat');
         i.classList.add(this._icon);
         let newContent = document.createTextNode(this._content);
         newDiv.appendChild(i);
