@@ -14,26 +14,31 @@ class Alert {
     }
 
     warn() {
+        this._icon = this._icon | "fa-exclamation-circle";
         this._style = 'warn';
         this._show();
     }
 
     primary() {
-        this._style = 'primary';
+        this._icon = this._icon | "fa-info-circle";
+        this._style = '';
         this._show();
     }
 
     success() {
+        this._icon = this._icon | "fa-check";
         this._style = 'success';
         this._show();
     }
 
     error() {
+        this._icon = this._icon | "fa-times-octagon";
         this._style = 'error';
         this._show();
     }
 
     info() {
+        this._icon = this._icon | "fa-info-circle";
         this._style = 'info';
         this._show();
     }
@@ -55,7 +60,7 @@ class Alert {
         let i = document.createElement("i");
         i.classList.add('fad');
         i.classList.add('m-r-compat');
-        i.classList.add(this._icon || 'fa-exclamation-circle');
+        i.classList.add(this._icon);
         let newContent = document.createTextNode(this._content);
         newDiv.appendChild(i);
         newDiv.appendChild(newContent);
