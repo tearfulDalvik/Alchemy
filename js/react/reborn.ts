@@ -5,6 +5,7 @@ export type ReactProps = {
     // Additional classNames
     className?: string,
     // Children is default in typescript
+    id?: string,
 }
 
 export function setStyle(style: {[key: string]: string}) {

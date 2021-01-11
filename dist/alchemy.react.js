@@ -105,7 +105,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./react */ "./js/react/index.tsx");
+/* harmony import */ var _react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./react */ "./js/react/index.ts");
 /*eslint-env es6*/
 /*!
  * Alchemy UI v1.0.0 (https://github.com/tearfulDalvik/Alchemy)
@@ -168,6 +168,102 @@ var HoverableLink = /** @class */ (function (_super) {
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", { href: this.props.href }, this.props.children));
     };
     return HoverableLink;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
+
+
+
+/***/ }),
+
+/***/ "./js/react/components/button.tsx":
+/*!****************************************!*\
+  !*** ./js/react/components/button.tsx ***!
+  \****************************************/
+/*! exports provided: Button, LowProfileButton */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return Button; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LowProfileButton", function() { return LowProfileButton; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _reborn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reborn */ "./js/react/reborn.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+var Button = /** @class */ (function (_super) {
+    __extends(Button, _super);
+    function Button() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Button.prototype.render = function () {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { onClick: this.props.onClick, className: Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])()[this.props.style] + " " + this.props.className, id: this.props.id }, this.props.children);
+    };
+    return Button;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
+
+var LowProfileButton = /** @class */ (function (_super) {
+    __extends(LowProfileButton, _super);
+    function LowProfileButton() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    LowProfileButton.prototype.render = function () {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { onClick: this.props.onClick, className: Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])()[this.props.style] + " " + Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])()['low-profile'] + " " + this.props.className, id: this.props.id }, this.props.children);
+    };
+    return LowProfileButton;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
+
+
+
+/***/ }),
+
+/***/ "./js/react/components/input.tsx":
+/*!***************************************!*\
+  !*** ./js/react/components/input.tsx ***!
+  \***************************************/
+/*! exports provided: Input */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Input", function() { return Input; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+var Input = /** @class */ (function (_super) {
+    __extends(Input, _super);
+    function Input() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Input.prototype.render = function () {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", { placeholder: this.props.placeHolder, type: this.props.type, value: this.props.value, name: this.props.name, id: this.props.id });
+    };
+    return Input;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
 
 
@@ -248,10 +344,10 @@ var Copyright = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ "./js/react/index.tsx":
-/*!****************************!*\
-  !*** ./js/react/index.tsx ***!
-  \****************************/
+/***/ "./js/react/index.ts":
+/*!***************************!*\
+  !*** ./js/react/index.ts ***!
+  \***************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -259,12 +355,16 @@ var Copyright = /** @class */ (function (_super) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/layout */ "./js/react/components/layout.tsx");
 /* harmony import */ var _components_a__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/a */ "./js/react/components/a.tsx");
-/* harmony import */ var _reborn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./reborn */ "./js/react/reborn.ts");
+/* harmony import */ var _components_input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/input */ "./js/react/components/input.tsx");
+/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/button */ "./js/react/components/button.tsx");
+/* harmony import */ var _reborn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./reborn */ "./js/react/reborn.ts");
+
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    Header: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Header"], Content: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Content"], StandardLink: _components_a__WEBPACK_IMPORTED_MODULE_1__["StandardLink"], HoverableLink: _components_a__WEBPACK_IMPORTED_MODULE_1__["HoverableLink"], Copyright: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Copyright"], css: _reborn__WEBPACK_IMPORTED_MODULE_2__["setStyle"]
+    Header: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Header"], Content: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Content"], StandardLink: _components_a__WEBPACK_IMPORTED_MODULE_1__["StandardLink"], HoverableLink: _components_a__WEBPACK_IMPORTED_MODULE_1__["HoverableLink"], Copyright: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Copyright"], Input: _components_input__WEBPACK_IMPORTED_MODULE_2__["Input"], Button: _components_button__WEBPACK_IMPORTED_MODULE_3__["Button"], LowProfileButton: _components_button__WEBPACK_IMPORTED_MODULE_3__["LowProfileButton"], css: _reborn__WEBPACK_IMPORTED_MODULE_4__["setStyle"]
 });
 
 
