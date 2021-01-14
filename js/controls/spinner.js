@@ -1,16 +1,20 @@
 class Spinner {
+    constructor(css=null) {
+        this.$alchemy = css;
+    }
+
     start() {
         if (document.body.hasAttribute('alchemy-spin-scene')) {
             throw new Exception("This webapp has already started spining");
         }
         let scene = document.createElement('div');
-        scene.classList.add("scene");
+        scene.classList.add(this.$alchemy.scene || "scene");
         let div = document.createElement('div');
-        div.classList.add("hero");
+        div.classList.add(this.$alchemy.hero || "hero");
         div.style.left = '50%';
         div.style.transform = "translate(-50%, -50%)";
         let spinner = document.createElement('span');
-        spinner.classList.add('spinner', 'low-profile');
+        spinner.classList.add(this.$alchemy.spinner || 'spinner', this.$alchemy['low-profile'] || 'low-profile');
         div.appendChild(spinner);
         scene.appendChild(div);
         document.body.appendChild(scene);

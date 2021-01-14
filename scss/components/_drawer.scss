@@ -54,8 +54,8 @@ body.with-drawer-right {
 }
 
 // Hidden Mode
-body:not([class*='with-drawer']) .drawer, 
-body:not([class*='with-drawer-right']) .drawer.right {
+body:not(.with-drawer) .drawer, 
+body:not(.with-drawer-right) .drawer.right {
     transform: translateX(calc(-1 * var(--drawer-max-width)));
     -webkit-transform: translateX(calc(-1 * var(--drawer-max-width)));
     box-shadow: none;
@@ -66,14 +66,14 @@ body:not([class*='with-drawer-right']) .drawer.right {
     }
 }
 
-body:not([class*='with-drawer-right']) .drawer.right {
+body:not(.with-drawer-right) .drawer.right {
     transform: translateX(var(--drawer-right-max-width));
     -webkit-transform: translateX(var(--drawer-right-max-width));
 }
 
 // Other Modes
-body:not([class*='drawer-collapsed']) .drawer, 
-body:not([class*='drawer-right-collapsed']) .drawer.right {
+body:not(.drawer-collapsed) .drawer, 
+body:not(.drawer-right-collapsed) .drawer.right {
     @include media("<small") {
         border-right: none;
         border-left: none;
