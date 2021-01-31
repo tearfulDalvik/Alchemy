@@ -96,6 +96,28 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ({
 
+/***/ "./js/controls/_base.js":
+/*!******************************!*\
+  !*** ./js/controls/_base.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AlchemyBase; });
+class AlchemyBase {
+    constructor(alchemyCSS = null) {
+        this._css = alchemyCSS;
+    }
+
+    css(className) {
+        return this._css ? this._css[className] : className;
+    }
+}
+
+/***/ }),
+
 /***/ "./js/controls/alerts.js":
 /*!*******************************!*\
   !*** ./js/controls/alerts.js ***!
@@ -105,10 +127,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-class Alert {
+/* harmony import */ var _base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_base */ "./js/controls/_base.js");
+
+
+class Alert extends _base__WEBPACK_IMPORTED_MODULE_0__["default"] {
     constructor(content, css=null) {
+        super(css);
         this._content = content;
-        this._css = css;
     }
 
     duration(duration) {
@@ -123,7 +148,7 @@ class Alert {
 
     warn() {
         this._icon = this._icon || "fa-exclamation-circle";
-        this._style = this._css ? this._css.warn : 'warn';
+        this._style = super.css('warn');
         this._show();
     }
 
@@ -135,19 +160,19 @@ class Alert {
 
     success() {
         this._icon = this._icon || "fa-check";
-        this._style = this._css ? this._css.success : 'success';
+        this._style = super.css('success');
         this._show();
     }
 
     error() {
         this._icon = this._icon || "fa-times-octagon";
-        this._style = this._css ? this._css.error : 'error';
+        this._style = super.css('error');
         this._show();
     }
 
     info() {
         this._icon = this._icon || "fa-info-circle";
-        this._style = this._css ? this._css.info : 'info';
+        this._style = super.css('info');
         this._show();
     }
     
@@ -155,19 +180,19 @@ class Alert {
         if (!document.getElementById("alchemy-alerts")) {
             let container = document.createElement('div');
             container.id = "alchemy-alerts";
-            container.className = this._css ? this._css.alerts : "alerts";
+            container.className = super.css('alerts');
             document.body.prepend(container);
         }
         let newDiv = document.createElement("div");
-        newDiv.classList.add(this._css ? this._css.alert : 'alert');
+        newDiv.classList.add(super.css('alert'));
         if (this._duration != null) {
-            newDiv.classList.add(this._css ? this._css.disappear : 'disappear');
+            newDiv.classList.add(super.css('disappear'));
             if (this._duration != "") newDiv.classList.add(this._duration);
         }
         this._style && newDiv.classList.add(this._style);
         let i = document.createElement("i");
         i.classList.add('fad');
-        i.classList.add(this._css ? this._css['m-r-compat'] : 'm-r-compat');
+        i.classList.add(super.css('m-r-compat'));
         i.classList.add(this._icon);
         let newContent = document.createTextNode(this._content);
         newDiv.appendChild(i);
@@ -194,9 +219,12 @@ class Alert {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-class Spinner {
+/* harmony import */ var _base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_base */ "./js/controls/_base.js");
+
+
+class Spinner extends _base__WEBPACK_IMPORTED_MODULE_0__["default"] {
     constructor(css=null) {
-        this.$alchemy = css;
+        super(css);
     }
 
     start() {
@@ -204,13 +232,13 @@ class Spinner {
             throw new Exception("This webapp has already started spining");
         }
         let scene = document.createElement('div');
-        scene.classList.add(this.$alchemy.scene || "scene");
+        scene.classList.add(super.css("scene"));
         let div = document.createElement('div');
-        div.classList.add(this.$alchemy.hero || "hero");
+        div.classList.add(super.css("hero"));
         div.style.left = '50%';
         div.style.transform = "translate(-50%, -50%)";
         let spinner = document.createElement('span');
-        spinner.classList.add(this.$alchemy.spinner || 'spinner', this.$alchemy['low-profile'] || 'low-profile');
+        spinner.classList.add(super.css('spinner'), super.css('low-profile'));
         div.appendChild(spinner);
         scene.appendChild(div);
         document.body.appendChild(scene);

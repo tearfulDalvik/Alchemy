@@ -1,6 +1,8 @@
-class Spinner {
+import AlchemyBase from './_base';
+
+class Spinner extends AlchemyBase {
     constructor(css=null) {
-        this.$alchemy = css;
+        super(css);
     }
 
     start() {
@@ -8,13 +10,13 @@ class Spinner {
             throw new Exception("This webapp has already started spining");
         }
         let scene = document.createElement('div');
-        scene.classList.add(this.$alchemy.scene || "scene");
+        scene.classList.add(super.css("scene"));
         let div = document.createElement('div');
-        div.classList.add(this.$alchemy.hero || "hero");
+        div.classList.add(super.css("hero"));
         div.style.left = '50%';
         div.style.transform = "translate(-50%, -50%)";
         let spinner = document.createElement('span');
-        spinner.classList.add(this.$alchemy.spinner || 'spinner', this.$alchemy['low-profile'] || 'low-profile');
+        spinner.classList.add(super.css('spinner'), super.css('low-profile'));
         div.appendChild(spinner);
         scene.appendChild(div);
         document.body.appendChild(scene);
