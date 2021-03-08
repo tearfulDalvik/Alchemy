@@ -92,6 +92,21 @@ button,
         }
     }
 
+    &.info {
+        background: var(--color-info);
+        color: var(--color-on-info-text);
+        border-color: var(--color-info);
+
+        &:hover {
+            background: var(--color-info);
+            border-color: var(--color-info-aux);
+        }
+
+        &:active {
+            background: var(--color-info-aux);
+        }
+    }
+
     .group > & {
         margin: 0;
     }

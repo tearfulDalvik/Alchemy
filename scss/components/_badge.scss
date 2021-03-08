@@ -11,19 +11,47 @@ span.badge {
         padding: 0 .3vw;
     }
 
-    &.borderless {
-        border: 0px;
-    }
-
     &.high-profile {
-        background: var(--color-primary);
-        color: var(--color-on-primary-text);
-        border-color: var(--color-primary);
+        padding: 4px 8px;
+        border-radius: 4px;
     }
 
-    &.high-profile:hover {
-        background: var(--color-primary-aux);
-        color: var(--color-on-primary-text);
+    &.primary {
+        background-color: var(--color-primary);
         border-color: var(--color-primary);
+        color: var(--color-on-primary-text);
+        box-shadow: 0 0 8px 0px var(--color-primary);
+    }
+
+    &.success {
+        background-color: var(--color-success);
+        border-color: var(--color-success);
+        color: var(--color-on-success-text);
+        box-shadow: 0 0 8px 0px var(--color-success);
+    }
+
+    &.warn {
+        background-color: var(--color-warn);
+        border-color: var(--color-warn);
+        color: var(--color-on-warn-text);
+        box-shadow: 0 0 8px 0px var(--color-warn);
+    }
+
+    &.error {
+        background-color: var(--color-error);
+        border-color: var(--color-error);
+        color: var(--color-on-error-text);
+        box-shadow: 0 0 8px 0px var(--color-error);
+    }
+
+    &.info {
+        background-color: var(--color-info);
+        border-color: var(--color-info);
+        color: var(--color-on-info-text);
+        box-shadow: 0 0 8px 0px var(--color-info);
+    }
+
+    &.flat {
+        box-shadow: none;
     }
 }

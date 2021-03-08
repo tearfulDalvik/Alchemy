@@ -1,4 +1,4 @@
-.drawer {
+.drawer, .drawer-right {
     width: var(--drawer-max-width);
     background-color: var(--background-color);
     position: fixed;
@@ -24,14 +24,14 @@
     >:first-child {
         @include m-v($padding-v-content, $padding-v-content);
     }
+}
 
-    &.right {
-        border-left: $drawer-border-width solid var(--background-second-color);
-        border-right: none;
-        width: var(--drawer-right-max-width);
-        left: initial;
-        right: 0;
-    }
+.drawer-right {
+    border-left: $drawer-border-width solid var(--background-second-color);
+    border-right: none;
+    width: var(--drawer-right-max-width);
+    left: initial;
+    right: 0;
 }
 
 // Open Mode
@@ -55,7 +55,7 @@ body.with-drawer-right {
 
 // Hidden Mode
 body:not(.with-drawer) .drawer, 
-body:not(.with-drawer-right) .drawer.right {
+body:not(.with-drawer-right) .drawer-right {
     transform: translateX(calc(-1 * var(--drawer-max-width)));
     -webkit-transform: translateX(calc(-1 * var(--drawer-max-width)));
     box-shadow: none;
@@ -66,14 +66,14 @@ body:not(.with-drawer-right) .drawer.right {
     }
 }
 
-body:not(.with-drawer-right) .drawer.right {
+body:not(.with-drawer-right) .drawer-right {
     transform: translateX(var(--drawer-right-max-width));
     -webkit-transform: translateX(var(--drawer-right-max-width));
 }
 
 // Other Modes
 body:not(.drawer-collapsed) .drawer, 
-body:not(.drawer-right-collapsed) .drawer.right {
+body:not(.drawer-right-collapsed) .drawer-right {
     @include media("<small") {
         border-right: none;
         border-left: none;

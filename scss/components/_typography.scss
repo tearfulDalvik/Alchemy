@@ -17,7 +17,7 @@ h6 {
         grid-column: 1;
     }
 
-    body.drawer-collapsed .drawer &, body.drawer-right-collapsed .drawer.right & {
+    body.drawer-collapsed .drawer &, body.drawer-right-collapsed .drawer-right & {
         display: none;
     }
 } 
