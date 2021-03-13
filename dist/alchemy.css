@@ -82,8 +82,8 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #3b3959;
-    --color-primary-aux: #232235;
+    --color-primary: var(--orange-300);
+    --color-primary-aux: var(--orange-100);
     --color-success: var(--green-300);
     --color-success-aux: var(--green-100);
     --color-error: var(--red-300);
@@ -204,8 +204,8 @@ body.with-hero {
   align-items: center;
 }
 body.always-dark {
-  --color-primary: #3b3959;
-  --color-primary-aux: #232235;
+  --color-primary: var(--orange-300);
+  --color-primary-aux: var(--orange-100);
   --color-success: var(--green-300);
   --color-success-aux: var(--green-100);
   --color-error: var(--red-300);
@@ -1158,13 +1158,12 @@ table > thead > tr > th {
   border-bottom: 1px dashed var(--background-second-color);
   padding: 1em 0;
 }
-@media (max-width: 48em) {
-  table {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    display: block;
-  }
+
+div.collapsable {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  display: block;
 }
 
 span.indicator.primary {

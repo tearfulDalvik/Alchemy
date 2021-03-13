@@ -59,8 +59,8 @@
 }
 
 @mixin dark-theme {
-    --color-primary: #3b3959;
-    --color-primary-aux: #{tint-color(#3b3959, 1)};
+    --color-primary: var(--orange-300);
+    --color-primary-aux: var(--orange-100);
     --color-success: var(--green-300);
     --color-success-aux: var(--green-100);
     --color-error: var(--red-300);

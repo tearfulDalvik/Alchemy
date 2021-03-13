@@ -55,11 +55,11 @@ table {
         border-bottom: 1px dashed var(--background-second-color);
         padding: 1em 0;
     }
+}
 
-    @include media("<small") {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-        display: block;
-    }
+div.collapsable {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    display: block;
 }
