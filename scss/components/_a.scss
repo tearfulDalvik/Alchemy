@@ -13,11 +13,25 @@ a {
     }
 
     &:hover {
-        border-bottom: 1px dotted currentColor;
+        border-bottom: 0.05em dotted currentColor;
+        opacity: 1;
     }
 
     &:active {
         color: var(--link-color-active);
+        opacity: 1;
+    }
+
+    &.high-profile {
+        font-weight: $weight-normal;
+        border-bottom: 0.05em solid rgba(55,53,47,0.4);
+        opacity: 0.7;
+    }
+
+    &.high-profile:hover {
+        background: rgba(148, 148, 148, 0.15);
+        box-shadow: 0 0 0 3px rgb(148 148 148 / 15%);
+        border-radius: 1px;
     }
 
     .large & {
