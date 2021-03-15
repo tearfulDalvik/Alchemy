@@ -78,6 +78,7 @@
   --background-third-color: var(--black-a10);
   --on-background-text-color: var(--black);
   --link-color: var(--black);
+  --link-color-decoration: var(--black-a30);
   --link-color-active: var(--black-a50);
 }
 @media (prefers-color-scheme: dark) {
@@ -102,6 +103,7 @@
     --background-third-color: var(--white-a10);
     --on-background-text-color: var(--white-a80);
     --link-color: var(--white-a80);
+    --link-color-decoration: var(--white-a60);
     --link-color-active: var(--white-a40);
   }
 }
@@ -224,6 +226,7 @@ body.always-dark {
   --background-third-color: var(--white-a10);
   --on-background-text-color: var(--white-a80);
   --link-color: var(--white-a80);
+  --link-color-decoration: var(--white-a60);
   --link-color-active: var(--white-a40);
 }
 body.always-light {
@@ -247,6 +250,7 @@ body.always-light {
   --background-third-color: var(--black-a10);
   --on-background-text-color: var(--black);
   --link-color: var(--black);
+  --link-color-decoration: var(--black-a30);
   --link-color-active: var(--black-a50);
 }
 body.theme-blue {
@@ -317,19 +321,19 @@ fieldset, iframe, img {
 }
 
 .m-l-grand {
-  margin-left: 4vh !important;
+  margin-left: 2.4em !important;
 }
 
 .m-l-sparse {
-  margin-left: 1.5vh !important;
+  margin-left: 0.9em !important;
 }
 
 .m-l-normal {
-  margin-left: 1vh !important;
+  margin-left: 0.6em !important;
 }
 
 .m-l-compat {
-  margin-left: 0.5vh !important;
+  margin-left: 0.3em !important;
 }
 
 .m-l-none {
@@ -337,19 +341,19 @@ fieldset, iframe, img {
 }
 
 .m-r-grand {
-  margin-right: 4vh !important;
+  margin-right: 2.4em !important;
 }
 
 .m-r-sparse {
-  margin-right: 1.5vh !important;
+  margin-right: 0.9em !important;
 }
 
 .m-r-normal {
-  margin-right: 1vh !important;
+  margin-right: 0.6em !important;
 }
 
 .m-r-compat {
-  margin-right: 0.5vh !important;
+  margin-right: 0.3em !important;
 }
 
 .m-r-none {
@@ -600,38 +604,39 @@ body.drawer-collapsed .drawer > .header {
 }
 
 a {
-  transition: transform 0.2s;
   color: var(--link-color);
   text-decoration: none;
   font-family: var(--font-face-title);
   font-weight: lighter;
   transition: transform 0.2s;
+  border-bottom: 0.05em solid var(--link-color-decoration);
 }
-.list a.item:hover, .list a.item:active {
+a.low-profile, .list a.item, .header a {
   border: none;
+  opacity: 1;
+  box-shadow: none;
+}
+a.high-profile, span > a, li > a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  border-bottom: none;
 }
 a:hover {
-  border-bottom: 0.05em dotted currentColor;
-  opacity: 1;
+  opacity: 0.85;
+  background: var(--background-second-color);
+  box-shadow: 0 0 0 3px var(--background-second-color);
+  border-radius: 1px;
 }
 a:active {
   color: var(--link-color-active);
   opacity: 1;
 }
-a.high-profile {
-  font-weight: normal;
-  border-bottom: 0.05em solid rgba(55, 53, 47, 0.4);
-  opacity: 0.7;
-}
-a.high-profile:hover {
-  background: rgba(148, 148, 148, 0.15);
-  box-shadow: 0 0 0 3px rgba(148, 148, 148, 0.15);
-  border-radius: 1px;
-}
 .large a {
   letter-spacing: 0.4rem;
   font-size: 2.6vmin;
   margin-bottom: 2vh;
+  border-bottom: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (max-width: 48em) {
   .large a {
@@ -642,7 +647,9 @@ a.high-profile:hover {
   letter-spacing: 0.4rem;
   font-size: 4.6vmin;
   margin-bottom: 4vh;
+  border-bottom: none;
   text-transform: uppercase;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (max-width: 48em) {
   .xxlarge a {
@@ -844,9 +851,6 @@ body.drawer-right-collapsed .drawer-right h6 {
   color: var(--color-primary);
 }
 
-p {
-  overflow: hidden;
-}
 body.drawer-collapsed .drawer p {
   display: none;
 }
@@ -982,19 +986,19 @@ body:not(.drawer-right-collapsed) .drawer-right .only-collapsed {
   color: var(--color-primary);
 }
 .list > .item:active {
-  background-color: var(--color-primary);
+  background: var(--color-primary);
   color: var(--color-on-primary-text);
 }
 .list > .item:active.low-profile {
-  background-color: var(--background-third-color);
+  background: var(--background-third-color);
   color: var(--on-background-text-color);
 }
 .list > .item:hover {
-  background-color: var(--color-primary-aux);
+  background: var(--color-primary-aux);
   color: var(--color-on-primary-text);
 }
 .list > .item:hover.low-profile {
-  background-color: var(--background-second-color);
+  background: var(--background-second-color);
   color: var(--on-background-text-color);
 }
 .drawer .list > .item {

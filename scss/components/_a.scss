@@ -1,20 +1,28 @@
 a {
-    transition: transform $transition-interactive-delay;
     color: var(--link-color);
     text-decoration: none;
     font-family: var(--font-face-title);
     font-weight: $weight-minor;
     transition: transform $transition-interactive-delay;
+    border-bottom: 0.05em solid var(--link-color-decoration);
 
-    .list &.item {
-        &:hover, &:active {
-            border: none;
-        }
+    &.low-profile, .list &.item, .header & {
+        border: none;
+        opacity: 1;
+        box-shadow: none;
+    }
+
+    &.high-profile, span > &, li > & {
+        color: var(--color-primary);
+        text-decoration: underline;
+        border-bottom: none;
     }
 
     &:hover {
-        border-bottom: 0.05em dotted currentColor;
-        opacity: 1;
+        opacity: 0.85;
+        background: var(--background-second-color);
+        box-shadow: 0 0 0 3px var(--background-second-color);
+        border-radius: 1px;
     }
 
     &:active {
@@ -22,22 +30,12 @@ a {
         opacity: 1;
     }
 
-    &.high-profile {
-        font-weight: $weight-normal;
-        border-bottom: 0.05em solid rgba(55,53,47,0.4);
-        opacity: 0.7;
-    }
-
-    &.high-profile:hover {
-        background: rgba(148, 148, 148, 0.15);
-        box-shadow: 0 0 0 3px rgb(148 148 148 / 15%);
-        border-radius: 1px;
-    }
-
     .large & {
         letter-spacing: $letter-spacing-discrete;
         font-size: 2.6vmin;
         margin-bottom: 2vh;
+        border-bottom: none;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 
         @include media("<small") {
             font-size: 130%;
@@ -48,7 +46,9 @@ a {
         letter-spacing: $letter-spacing-discrete;
         font-size: 4.6vmin;
         margin-bottom: 4vh;
+        border-bottom: none;
         text-transform: uppercase;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 
         @include media("<small") {
             font-size: 180%;

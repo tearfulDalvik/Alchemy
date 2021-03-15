@@ -27,8 +27,6 @@ h6 {
 }
 
 p {
-    overflow: hidden;
-
     body.drawer-collapsed .drawer & {
         display: none;
     }
