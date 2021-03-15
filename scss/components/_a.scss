@@ -3,19 +3,17 @@ a {
     text-decoration: none;
     font-family: var(--font-face-title);
     font-weight: $weight-minor;
-    transition: transform $transition-interactive-delay;
-    border-bottom: 0.05em solid var(--link-color-decoration);
 
-    &.low-profile, .list &.item, .header & {
-        border: none;
-        opacity: 1;
-        box-shadow: none;
+    &.low-profile {
+        text-decoration: none;
+        color: var(--link-color);
     }
 
-    &.high-profile, span > &, li > & {
+    &.high-profile,
+    span>&,
+    li>& {
         color: var(--color-primary);
         text-decoration: underline;
-        border-bottom: none;
     }
 
     &:hover {
@@ -23,6 +21,11 @@ a {
         background: var(--background-second-color);
         box-shadow: 0 0 0 3px var(--background-second-color);
         border-radius: 1px;
+
+        .list>&.item {
+            opacity: 1;
+            box-shadow: none;
+        }
     }
 
     &:active {
@@ -34,21 +37,19 @@ a {
         letter-spacing: $letter-spacing-discrete;
         font-size: 2.6vmin;
         margin-bottom: 2vh;
-        border-bottom: none;
-        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        transition: color $transition-interactive-delay ease-in-out, background-color $transition-interactive-delay ease-in-out, border-color $transition-interactive-delay ease-in-out, box-shadow $transition-interactive-delay ease-in-out;
 
         @include media("<small") {
             font-size: 130%;
         }
     }
 
-    .xxlarge &{
+    .xxlarge & {
         letter-spacing: $letter-spacing-discrete;
         font-size: 4.6vmin;
         margin-bottom: 4vh;
-        border-bottom: none;
         text-transform: uppercase;
-        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        transition: color $transition-interactive-delay ease-in-out, background-color $transition-interactive-delay ease-in-out, border-color $transition-interactive-delay ease-in-out, box-shadow $transition-interactive-delay ease-in-out;
 
         @include media("<small") {
             font-size: 180%;
