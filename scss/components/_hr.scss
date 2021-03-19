@@ -1,0 +1,13 @@
+hr.low-profile {
+    border-top: solid var(--color-primary);
+    border-width: 2px 0 0;
+    width: 40px;
+}
+
+hr {
+    clear: both;
+    border-top: solid #f0f0f0;
+    border-width: 1px 0 0;
+    margin: 16px 0;
+    height: 0;
+}

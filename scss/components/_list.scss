@@ -1,3 +1,30 @@
+// Built-in lists
+ul {
+    line-height: 1.6;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        position: relative;
+        list-style: none;
+        padding: 0 0 4px 24px;
+        font-size: .875em;
+
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: .75em;
+            left: 0;
+            width: 12px;
+            height: 2px;
+            background: var(--color-primary);
+        }
+    }
+}
+
+// Manual lists
 .list {
     display: flex;
     flex-direction: column;
@@ -18,7 +45,8 @@
         grid-template-rows: auto auto;
         column-gap: 1.3em;
 
-        &.i-lr, &.i-rl {
+        &.i-lr,
+        &.i-rl {
             grid-template-columns: 1.6em auto 1.6em;
             grid-template-rows: auto auto;
             /** Action icon span and opacity are defined in _i.scss */

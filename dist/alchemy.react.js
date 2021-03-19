@@ -140,6 +140,8 @@ var __extends = (undefined && undefined.__extends) || (function () {
         return extendStatics(d, b);
     };
     return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
@@ -196,6 +198,8 @@ var __extends = (undefined && undefined.__extends) || (function () {
         return extendStatics(d, b);
     };
     return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
@@ -229,6 +233,63 @@ var LowProfileButton = /** @class */ (function (_super) {
 
 /***/ }),
 
+/***/ "./js/react/components/hr.tsx":
+/*!************************************!*\
+  !*** ./js/react/components/hr.tsx ***!
+  \************************************/
+/*! exports provided: LowProfileHr, Hr */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LowProfileHr", function() { return LowProfileHr; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Hr", function() { return Hr; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _reborn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reborn */ "./js/react/reborn.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+var LowProfileHr = /** @class */ (function (_super) {
+    __extends(LowProfileHr, _super);
+    function LowProfileHr() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    LowProfileHr.prototype.render = function () {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", { className: Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])()['low-profile'], id: this.props.id }, this.props.children);
+    };
+    return LowProfileHr;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
+
+var Hr = /** @class */ (function (_super) {
+    __extends(Hr, _super);
+    function Hr() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Hr.prototype.render = function () {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", { id: this.props.id }, this.props.children);
+    };
+    return Hr;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
+
+
+
+/***/ }),
+
 /***/ "./js/react/components/input.tsx":
 /*!***************************************!*\
   !*** ./js/react/components/input.tsx ***!
@@ -249,6 +310,8 @@ var __extends = (undefined && undefined.__extends) || (function () {
         return extendStatics(d, b);
     };
     return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
@@ -293,6 +356,8 @@ var __extends = (undefined && undefined.__extends) || (function () {
         return extendStatics(d, b);
     };
     return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
@@ -356,15 +421,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/layout */ "./js/react/components/layout.tsx");
 /* harmony import */ var _components_a__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/a */ "./js/react/components/a.tsx");
 /* harmony import */ var _components_input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/input */ "./js/react/components/input.tsx");
-/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/button */ "./js/react/components/button.tsx");
-/* harmony import */ var _reborn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./reborn */ "./js/react/reborn.ts");
+/* harmony import */ var _components_hr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/hr */ "./js/react/components/hr.tsx");
+/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/button */ "./js/react/components/button.tsx");
+/* harmony import */ var _reborn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./reborn */ "./js/react/reborn.ts");
+
 
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    Header: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Header"], Content: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Content"], StandardLink: _components_a__WEBPACK_IMPORTED_MODULE_1__["StandardLink"], HoverableLink: _components_a__WEBPACK_IMPORTED_MODULE_1__["HoverableLink"], Copyright: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Copyright"], Input: _components_input__WEBPACK_IMPORTED_MODULE_2__["Input"], Button: _components_button__WEBPACK_IMPORTED_MODULE_3__["Button"], LowProfileButton: _components_button__WEBPACK_IMPORTED_MODULE_3__["LowProfileButton"], css: _reborn__WEBPACK_IMPORTED_MODULE_4__["setStyle"]
+    Header: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Header"], Content: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Content"], StandardLink: _components_a__WEBPACK_IMPORTED_MODULE_1__["StandardLink"], HoverableLink: _components_a__WEBPACK_IMPORTED_MODULE_1__["HoverableLink"], Copyright: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Copyright"], Input: _components_input__WEBPACK_IMPORTED_MODULE_2__["Input"], Button: _components_button__WEBPACK_IMPORTED_MODULE_4__["Button"], LowProfileButton: _components_button__WEBPACK_IMPORTED_MODULE_4__["LowProfileButton"],
+    LowProfileHr: _components_hr__WEBPACK_IMPORTED_MODULE_3__["LowProfileHr"], Hr: _components_hr__WEBPACK_IMPORTED_MODULE_3__["Hr"],
+    css: _reborn__WEBPACK_IMPORTED_MODULE_5__["setStyle"]
 });
 
 

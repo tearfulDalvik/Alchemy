@@ -948,6 +948,29 @@ body:not(.drawer-right-collapsed) .drawer-right .only-collapsed {
   display: none;
 }
 
+ul {
+  line-height: 1.6;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  position: relative;
+  list-style: none;
+  padding: 0 0 4px 24px;
+  font-size: 0.875em;
+}
+ul li:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0.75em;
+  left: 0;
+  width: 12px;
+  height: 2px;
+  background: var(--color-primary);
+}
+
 .list {
   display: flex;
   flex-direction: column;
@@ -1415,6 +1438,20 @@ span.badge.flat {
   border-top: 1px solid #ccc;
   margin: 0 24px;
   padding: 19px 0 19px;
+}
+
+hr.low-profile {
+  border-top: solid var(--color-primary);
+  border-width: 2px 0 0;
+  width: 40px;
+}
+
+hr {
+  clear: both;
+  border-top: solid #f0f0f0;
+  border-width: 1px 0 0;
+  margin: 16px 0;
+  height: 0;
 }
 
 /*# sourceMappingURL=alchemy.css.map */
