@@ -39,8 +39,8 @@ $padding-h-content-lp: $padding-h-content * 0.7;
 $components-height: $padding-v-content * 2+$line-height;
 $components-height-lp: $padding-v-content-lp * 2+$line-height-lp;
 
-$components-border-width: 1px;
-$components-border-radius: 2px;
+$components-border-width: 2px;
+$components-border-radius: 3px;
 
 :root {
   --container-max-width: 55vmin;

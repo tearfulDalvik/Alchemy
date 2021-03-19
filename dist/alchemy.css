@@ -179,7 +179,7 @@ div.alert, .list > .item, .outline, .block {
   padding: 0.4rem 0.8rem;
 }
 .content div.alert, .content .list > .item, .content .outline, .content .block {
-  border-radius: 2px;
+  border-radius: 3px;
 }
 @media (max-width: 48em) {
   .content div.alert, .content .list > .item, .content .outline, .content .block {
@@ -433,13 +433,13 @@ input {
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border-radius: 2px 2px 0 0;
+  border-radius: 3px 3px 0 0;
   font-size: 1rem;
   outline: 0;
   border: none;
   color: var(--on-background-text-color);
   background-color: var(--background-second-color);
-  border-bottom: 1px dashed var(--on-background-text-color);
+  border-bottom: 2px dashed var(--on-background-text-color);
   height: 2.3rem;
 }
 input:hover {
@@ -450,13 +450,13 @@ input:focus {
   border-bottom: 1px solid var(--on-background-text-color);
 }
 input.invalidated {
-  border-bottom: 1px solid var(--color-error);
+  border-bottom: 2px solid var(--color-error);
 }
 input.invalidated::placeholder {
   color: var(--color-error);
 }
 input.validated {
-  border-bottom: 1px solid var(--color-success);
+  border-bottom: 2px solid var(--color-success);
 }
 input.validated::placeholder {
   color: var(--color-success);
@@ -494,7 +494,7 @@ select {
   color: var(--on-background-text-color);
   background-color: var(--background-color);
   height: 2.3rem;
-  border-radius: 2px 2px 0 0;
+  border-radius: 3px 3px 0 0;
   font-size: 1rem;
   border: none;
   outline: none;
@@ -525,8 +525,8 @@ label {
   width: fit-content;
   height: 2.3rem;
   box-sizing: border-box;
-  border: 1px solid var(--background-second-color);
-  border-radius: 2px;
+  border: 2px solid var(--background-second-color);
+  border-radius: 3px;
 }
 label.low-profile {
   font-size: 80%;
@@ -657,22 +657,35 @@ a:active {
 
 button,
 .btn {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
   font-size: 1rem;
-  border-radius: 2px;
+  border-radius: 3px;
   outline: 0;
-  border: 1px solid;
-  padding: 0.4rem 0.8rem;
   font-weight: bold;
-  height: 2.3rem;
   background: var(--background-color);
   color: var(--on-background-text-color);
-  border-color: var(--background-second-color);
+  transition: 0.15s;
+  padding: 6px 14px;
+  width: auto;
+  margin: 0;
+  line-height: 1.42;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 2px solid;
 }
 button.low-profile,
 .btn.low-profile {
   font-size: 80%;
   height: 2rem;
   padding: 0.4rem 0.56rem;
+  border: 1px solid;
 }
 button.high-profile,
 .btn.high-profile {
@@ -680,88 +693,60 @@ button.high-profile,
   height: 2.76rem;
   padding: 0.4rem 1.04rem;
 }
-button:hover,
-.btn:hover {
-  background: var(--background-color);
-  border-color: var(--background-third-color);
-}
-button:active,
-.btn:active {
-  background: var(--background-third-color);
+button:hover:enabled,
+.btn:hover:enabled {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary-text);
 }
 button.error,
 .btn.error {
   background: var(--color-error);
   color: var(--color-on-error-text);
-  border-color: var(--color-error);
+  border: none;
 }
 button.error:hover,
 .btn.error:hover {
-  background: var(--color-error);
-  border-color: var(--color-error-aux);
-}
-button.error:active,
-.btn.error:active {
   background: var(--color-error-aux);
 }
 button.warn,
 .btn.warn {
   background: var(--color-warn);
   color: var(--color-on-warn-text);
-  border-color: var(--color-warn);
+  border: none;
 }
 button.warn:hover,
 .btn.warn:hover {
-  background: var(--color-warn);
-  border-color: var(--color-warn-aux);
-}
-button.warn:active,
-.btn.warn:active {
   background: var(--color-warn-aux);
 }
 button.success,
 .btn.success {
   background: var(--color-success);
   color: var(--color-on-success-text);
-  border-color: var(--color-success);
+  border: none;
 }
 button.success:hover,
 .btn.success:hover {
-  background: var(--color-success);
-  border-color: var(--color-success-aux);
-}
-button.success:active,
-.btn.success:active {
   background: var(--color-success-aux);
 }
 button.primary,
 .btn.primary {
   background: var(--color-primary);
   color: var(--color-on-primary-text);
-  border-color: var(--color-primary);
+  border: none;
 }
 button.primary:hover,
 .btn.primary:hover {
-  background: var(--color-primary);
-  border-color: var(--color-primary-aux);
-}
-button.primary:active,
-.btn.primary:active {
   background: var(--color-primary-aux);
 }
 button.info,
 .btn.info {
   background: var(--color-info);
   color: var(--color-on-info-text);
-  border-color: var(--color-info);
+  border: none;
 }
 button.info:hover,
 .btn.info:hover {
-  background: var(--color-info);
-  border-color: var(--color-info-aux);
-}
-button.info:active,
-.btn.info:active {
   background: var(--color-info-aux);
 }
 .group > button,
@@ -781,6 +766,10 @@ button.info:active,
 .group > .btn:last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+.group > button:only-child,
+.group > .btn:only-child {
+  border-radius: 3px;
 }
 
 .grid {
@@ -878,7 +867,7 @@ body.drawer-collapsed .drawer p {
   -webkit-overflow-scrolling: touch;
   -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
   transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
-  border-right: 1px solid var(--background-second-color);
+  border-right: 2px solid var(--background-second-color);
   padding-left: 0.8rem;
   padding-right: 0.8rem;
 }
@@ -892,7 +881,7 @@ body.drawer-collapsed .drawer p {
 }
 
 .drawer-right {
-  border-left: 1px solid var(--background-second-color);
+  border-left: 2px solid var(--background-second-color);
   border-right: none;
   width: var(--drawer-right-max-width);
   left: initial;
@@ -1223,7 +1212,7 @@ span.indicator::before {
 }
 
 img {
-  border-radius: 2px;
+  border-radius: 3px;
   width: 100%;
 }
 img.original {
@@ -1340,7 +1329,7 @@ div.alert.primary a {
 
 span.badge {
   border: 1px solid currentColor;
-  border-radius: 2px;
+  border-radius: 3px;
   font-size: 80%;
   display: inline-block;
   padding: 0.1vw 0.5vw;
@@ -1389,17 +1378,14 @@ span.badge.flat {
 }
 
 .card {
-  border: 1px solid var(--background-second-color);
-  border-radius: 5px;
+  box-shadow: 0 2px 5px var(--background-third-color);
+  border-radius: 4px;
   box-sizing: border-box;
+  transition: 0.15s;
 }
 .card:hover {
-  border-color: #555;
-}
-@media (prefers-color-scheme: dark) {
-  .card {
-    border-color: #bbb;
-  }
+  box-shadow: 0 0 0 2px var(--background-third-color);
+  background: var(--background-second-color);
 }
 .card .card-image {
   display: flex;

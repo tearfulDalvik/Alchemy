@@ -1,14 +1,12 @@
 .card {
-    border: 1px solid var(--background-second-color);
-    border-radius: 5px;
+    box-shadow: 0 2px 5px var(--background-third-color);
+    border-radius: 4px;
     box-sizing: border-box;
+    transition: $transition-interactive-delay;
 
     &:hover {
-        border-color: #555;
-    }
-
-    @include dark() {
-        border-color: #bbb;
+        box-shadow: 0 0 0 2px var(--background-third-color);
+        background: var(--background-second-color);
     }
 
     .card-image {
