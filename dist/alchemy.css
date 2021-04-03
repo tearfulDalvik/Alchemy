@@ -937,19 +937,19 @@ body:not(.drawer-right-collapsed) .drawer-right .only-collapsed {
   display: none;
 }
 
-ul {
+ul:not(.tab) {
   line-height: 1.6;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-ul li {
+ul:not(.tab) li {
   position: relative;
   list-style: none;
   padding: 0 0 4px 24px;
   font-size: 0.875em;
 }
-ul li:before {
+ul:not(.tab) li:before {
   content: "";
   position: absolute;
   display: block;
@@ -1070,7 +1070,6 @@ i.fa {
   font-style: initial;
   font-size: 1em;
   opacity: 0.8;
-  pointer-events: none;
   text-align: center;
 }
 .drawer .item > i.fas,

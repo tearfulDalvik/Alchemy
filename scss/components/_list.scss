@@ -1,5 +1,5 @@
 // Built-in lists
-ul {
+ul:not(.tab) {
     line-height: 1.6;
     list-style: none;
     margin: 0;
