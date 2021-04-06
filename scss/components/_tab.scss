@@ -6,7 +6,6 @@
     align-items: baseline;
     column-gap: 1.5em;
     overflow-x: auto;
-    cursor: pointer;
 
     .item.active {
         opacity: 1;
@@ -23,6 +22,7 @@
         font-weight: $weight-major;
         transition: .1s linear;
         letter-spacing: $letter-spacing-discrete;
+        cursor: pointer;
 
         &.disabled:hover {
             opacity: .3;

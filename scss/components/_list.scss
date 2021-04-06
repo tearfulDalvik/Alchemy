@@ -1,13 +1,12 @@
 // Built-in lists
 ul:not(.tab) {
     line-height: 1.6;
-    list-style: none;
     margin: 0;
+    list-style: none;
     padding: 0;
 
-    li {
+    >li {
         position: relative;
-        list-style: none;
         padding: 0 0 4px 24px;
         font-size: .875em;
 
@@ -22,6 +21,30 @@ ul:not(.tab) {
             background: var(--color-primary);
         }
     }
+}
+
+ol {
+    @include media(">small") {
+        padding: 0;
+    }
+
+    @include media("<small") {
+        padding-inline-start: 1.5em;
+
+        >li {
+            list-style: decimal;
+        }
+    }
+
+    >li {
+        padding-bottom: 4px;
+        list-style: lower-roman;
+
+        &::marker {
+            color: var(--color-primary);
+        }
+    }
+
 }
 
 // Manual lists

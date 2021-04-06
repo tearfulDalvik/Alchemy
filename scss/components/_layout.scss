@@ -12,6 +12,15 @@
         margin: 0;
         padding: 0;
     }
+
+    @include media(">small") {
+        &.read {
+            padding-left: 24vw;
+            padding-right: 24vw;
+            font-size: 1.6vw;
+            margin: 0;
+        }
+    }
 }
 
 .container {
@@ -51,7 +60,7 @@
         font-size: calc(.7rem + .9vmin);
         letter-spacing: $letter-spacing-discrete;
         line-height: $line-height;
-        
+
         @include media("<small") {
             font-size: 110%;
         }
