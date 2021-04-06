@@ -1,11 +1,7 @@
-.tab {
-    display: flex;
-    flex-direction: row;
+ul.tab {
     padding-inline-start: 0;
-    list-style: none;
-    align-items: baseline;
-    column-gap: 1.5em;
-    overflow-x: auto;
+    white-space: nowrap;
+    overflow: auto;
 
     .item.active {
         opacity: 1;
@@ -15,7 +11,9 @@
         }
     }
 
-    .item {
+    li.item {
+        display: inline-block;
+        padding-right: .5em;
         opacity: .3;
         text-transform: uppercase;
         font-size: 140%;

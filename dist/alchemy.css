@@ -284,6 +284,10 @@ fieldset, iframe, img {
   padding-top: 4vh !important;
 }
 
+.p-t-sparse {
+  padding-top: 1.5vh !important;
+}
+
 .m-t-grand {
   margin-top: 4vh !important;
 }
@@ -1250,22 +1254,20 @@ img.original {
   border-radius: inherit;
 }
 
-.tab {
-  display: flex;
-  flex-direction: row;
+ul.tab {
   padding-inline-start: 0;
-  list-style: none;
-  align-items: baseline;
-  column-gap: 1.5em;
-  overflow-x: auto;
+  white-space: nowrap;
+  overflow: auto;
 }
-.tab .item.active {
+ul.tab .item.active {
   opacity: 1;
 }
-.tab .item.active:hover {
+ul.tab .item.active:hover {
   opacity: 1;
 }
-.tab .item {
+ul.tab li.item {
+  display: inline-block;
+  padding-right: 0.5em;
   opacity: 0.3;
   text-transform: uppercase;
   font-size: 140%;
@@ -1274,13 +1276,13 @@ img.original {
   letter-spacing: 0.4rem;
   cursor: pointer;
 }
-.tab .item.disabled:hover {
+ul.tab li.item.disabled:hover {
   opacity: 0.3;
 }
-.tab .item:hover {
+ul.tab li.item:hover {
   opacity: 1;
 }
-.tab a:hover {
+ul.tab a:hover {
   border: none;
 }
 
