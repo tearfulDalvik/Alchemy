@@ -975,6 +975,13 @@ ul:not(.tab) > li:before {
   background: var(--color-primary);
 }
 
+ol > li {
+  padding-bottom: 4px;
+  list-style: lower-roman;
+}
+ol > li::marker {
+  color: var(--color-primary);
+}
 @media (min-width: 49em) {
   ol {
     padding: 0;
@@ -987,13 +994,6 @@ ul:not(.tab) > li:before {
   ol > li {
     list-style: decimal;
   }
-}
-ol > li {
-  padding-bottom: 4px;
-  list-style: lower-roman;
-}
-ol > li::marker {
-  color: var(--color-primary);
 }
 
 .list {

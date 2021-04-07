@@ -24,6 +24,15 @@ ul:not(.tab) {
 }
 
 ol {
+    >li {
+        padding-bottom: 4px;
+        list-style: lower-roman;
+
+        &::marker {
+            color: var(--color-primary);
+        }
+    }
+
     @include media(">small") {
         padding: 0;
     }
@@ -35,16 +44,6 @@ ol {
             list-style: decimal;
         }
     }
-
-    >li {
-        padding-bottom: 4px;
-        list-style: lower-roman;
-
-        &::marker {
-            color: var(--color-primary);
-        }
-    }
-
 }
 
 // Manual lists
