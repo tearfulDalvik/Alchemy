@@ -1,0 +1,90 @@
+.toolbar {
+    background-color: var(--background-color);
+    height: #{$toolbar-height};
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 0;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5000;
+
+    & > * {
+        height: #{$toolbar-height};
+    }
+
+    & > a.toolbar-drawer-control {
+        align-self: flex-start;
+        width: #{$drawer-collapsed-width};
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100%;
+        column-gap: 0;
+        justify-items: center;
+        align-items: center;
+        box-sizing: border-box;
+        border-right: 2px solid var(--background-second-color);
+
+        &:hover {
+            opacity: 1;
+            box-shadow: none;
+            background: var(--color-primary-aux);
+            color: var(--color-on-primary-text);
+            border-radius: 0;
+        }
+    }
+
+    & > a.toolbar-brand {
+        align-self: flex-start;
+        opacity: 1;
+        box-shadow: none;
+        background: var(--color-primary-aux);
+        color: var(--color-on-primary-text);
+        border-radius: 0;
+        justify-items: left;
+        align-items: center;
+        display: grid;
+        line-height: 1.2;
+        font-weight: 500;
+        @include p-h($spacing-before-page, $spacing-after-page);
+
+        @include media("<small") {
+            width: 100px;
+            font-size: 15px;
+        }
+
+        @include media(">small") {
+            width: 240px;
+        }
+    }
+
+    & > h1.toolbar-title {
+        align-self: flex-start;
+        justify-items: center;
+        align-items: center;
+        display: grid;
+        margin: 0 1.2em;
+        padding: 0;
+        line-height: 1.2;
+        font-weight: 500;
+
+        @include media("<small") {
+            font-size: 15px;
+        }
+
+        @include media(">small") {
+            font-size: 18px;
+        }
+    }
+}
+
+body.with-toolbar {
+    margin-top: 80px;
+}
+
+body.with-toolbar .drawer {
+    margin-top: #{$toolbar-height};
+}
