@@ -1255,6 +1255,13 @@ img {
 img.original {
   border-radius: inherit;
 }
+img.avatar {
+  border-radius: 50%;
+  border: 0;
+  display: block;
+  margin: 0px;
+  position: relative;
+}
 
 ul.tab {
   padding-inline-start: 0;
@@ -1480,6 +1487,7 @@ hr {
   height: 60px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   padding: 0;
   min-width: 100%;
@@ -1489,10 +1497,15 @@ hr {
   left: 0;
   z-index: 5000;
 }
-.toolbar > * {
+.toolbar > .toolbar-left, .toolbar > .toolbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.toolbar > .toolbar-left > *, .toolbar > .toolbar-right > * {
   height: 60px;
 }
-.toolbar > a.toolbar-drawer-control {
+.toolbar > .toolbar-left > a.toolbar-drawer-control, .toolbar > .toolbar-right > a.toolbar-drawer-control {
   align-self: flex-start;
   width: 3.2em;
   display: grid;
@@ -1504,14 +1517,14 @@ hr {
   box-sizing: border-box;
   border-right: 2px solid var(--background-second-color);
 }
-.toolbar > a.toolbar-drawer-control:hover {
+.toolbar > .toolbar-left > a.toolbar-drawer-control:hover, .toolbar > .toolbar-right > a.toolbar-drawer-control:hover {
   opacity: 1;
   box-shadow: none;
   background: var(--color-primary-aux);
   color: var(--color-on-primary-text);
   border-radius: 0;
 }
-.toolbar > a.toolbar-brand {
+.toolbar > .toolbar-left > a.toolbar-brand, .toolbar > .toolbar-right > a.toolbar-brand {
   align-self: flex-start;
   opacity: 1;
   box-shadow: none;
@@ -1527,35 +1540,53 @@ hr {
   padding-right: 2.4vw;
 }
 @media (max-width: 48em) {
-  .toolbar > a.toolbar-brand {
+  .toolbar > .toolbar-left > a.toolbar-brand, .toolbar > .toolbar-right > a.toolbar-brand {
     width: 100px;
     font-size: 15px;
   }
 }
 @media (min-width: 49em) {
-  .toolbar > a.toolbar-brand {
-    width: 240px;
+  .toolbar > .toolbar-left > a.toolbar-brand, .toolbar > .toolbar-right > a.toolbar-brand {
+    width: calc(320px - 3.2em - 4.8vw - 2px);
+  }
+  body.with-drawer:not(.drawer-collapsed) > .toolbar > .toolbar-left > a.toolbar-brand, body.with-drawer:not(.drawer-collapsed) > .toolbar > .toolbar-right > a.toolbar-brand {
+    border-right: 2px solid var(--background-second-color);
   }
 }
-.toolbar > h1.toolbar-title {
+.toolbar > .toolbar-left > h1.toolbar-title, .toolbar > .toolbar-right > h1.toolbar-title {
   align-self: flex-start;
   justify-items: center;
   align-items: center;
   display: grid;
-  margin: 0 1.2em;
-  padding: 0;
   line-height: 1.2;
   font-weight: 500;
+  margin-left: 2.4vw;
+  margin-right: 2.4vw;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media (max-width: 48em) {
-  .toolbar > h1.toolbar-title {
+  .toolbar > .toolbar-left > h1.toolbar-title, .toolbar > .toolbar-right > h1.toolbar-title {
     font-size: 15px;
   }
 }
 @media (min-width: 49em) {
-  .toolbar > h1.toolbar-title {
+  .toolbar > .toolbar-left > h1.toolbar-title, .toolbar > .toolbar-right > h1.toolbar-title {
     font-size: 18px;
   }
+}
+.toolbar > .toolbar-right {
+  justify-content: flex-end;
+  padding: 4px;
+  padding-right: 14px;
+}
+.toolbar > .toolbar-right > img.avatar {
+  height: 32px;
+  width: 32px;
+}
+
+body.with-toolbar.with-drawer:not(.drawer-collapsed) .drawer {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 body.with-toolbar {

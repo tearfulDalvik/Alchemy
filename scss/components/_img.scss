@@ -5,4 +5,12 @@ img {
     &.original {
         border-radius: inherit;
     }
+
+    &.avatar {
+        border-radius: 50%;
+        border: 0;
+        display: block;
+        margin: 0px;
+        position: relative;
+    }
 }
