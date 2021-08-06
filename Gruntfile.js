@@ -58,7 +58,7 @@ module.exports = function (grunt) {
       backend: {
         options: {
           src: "./dist/",
-          dest: "../dalvik-club-backend/app/javascript/alchemy"
+          dest: "../dalvik-club-backend/app/packs/src/alchemy"
         }
       },
       passport: {
