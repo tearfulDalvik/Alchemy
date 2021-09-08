@@ -1030,24 +1030,27 @@ ol > li::marker {
 .list > .item:last-child {
   margin-bottom: 0;
 }
-.list > .item.active {
-  color: var(--color-primary);
-}
-.list > .item:active {
-  background: var(--color-primary);
-  color: var(--color-on-primary-text);
-}
 .list > .item:active.low-profile {
   background: var(--background-third-color);
   color: var(--on-background-text-color);
 }
-.list > .item:hover {
-  background: var(--color-primary-aux);
-  color: var(--color-on-primary-text);
+.list > .item:hover i {
+  color: var(--black-a60);
+}
+@media (prefers-color-scheme: dark) {
+  .list > .item:hover i {
+    color: var(--color-on-primary-text);
+  }
 }
 .list > .item:hover.low-profile {
   background: var(--background-second-color);
   color: var(--on-background-text-color);
+}
+.list > .item.active {
+  color: var(--color-primary);
+}
+.list > .item.active i {
+  color: var(--color-primary);
 }
 .drawer .list > .item {
   border-radius: 0;

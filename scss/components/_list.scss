@@ -86,14 +86,7 @@ ol {
             margin-bottom: 0;
         }
 
-        &.active {
-            color: var(--color-primary);
-        }
-
         &:active {
-            background: var(--color-primary);
-            color: var(--color-on-primary-text);
-
             &.low-profile {
                 background: var(--background-third-color);
                 color: var(--on-background-text-color);
@@ -101,12 +94,24 @@ ol {
         }
 
         &:hover {
-            background: var(--color-primary-aux);
-            color: var(--color-on-primary-text);
+            i {
+                color: var(--black-a60);
+
+                @include dark() {
+                    color: var(--color-on-primary-text);
+                }
+            }
 
             &.low-profile {
                 background: var(--background-second-color);
                 color: var(--on-background-text-color);
+            }
+        }
+
+        &.active {
+            color: var(--color-primary);
+            i {
+                color: var(--color-primary);
             }
         }
 
