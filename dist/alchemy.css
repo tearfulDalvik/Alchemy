@@ -1483,7 +1483,9 @@ hr {
 }
 
 .toolbar {
-  background-color: var(--background-color);
+  background-color: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   height: 60px;
   display: flex;
   align-items: center;
@@ -1496,6 +1498,11 @@ hr {
   bottom: 0;
   left: 0;
   z-index: 5000;
+}
+@media (prefers-color-scheme: dark) {
+  .toolbar {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 .toolbar > .toolbar-left, .toolbar > .toolbar-right {
   display: flex;
