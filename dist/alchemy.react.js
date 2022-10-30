@@ -166,7 +166,7 @@ var HoverableLink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     HoverableLink.prototype.render = function () {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", { className: (this.props.className || "") + " " + Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])().hoverable },
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", { className: "".concat(this.props.className || "", " ").concat(Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])().hoverable) },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", { href: this.props.href }, this.props.children));
     };
     return HoverableLink;
@@ -213,7 +213,7 @@ var Button = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Button.prototype.render = function () {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { onClick: this.props.onClick, className: Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])()[this.props.style] + " " + this.props.className, id: this.props.id }, this.props.children);
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { onClick: this.props.onClick, className: "".concat(Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])()[this.props.style], " ").concat(this.props.className), id: this.props.id }, this.props.children);
     };
     return Button;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
@@ -224,7 +224,7 @@ var LowProfileButton = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     LowProfileButton.prototype.render = function () {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { onClick: this.props.onClick, className: Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])()[this.props.style] + " " + Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])()['low-profile'] + " " + this.props.className, id: this.props.id }, this.props.children);
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { onClick: this.props.onClick, className: "".concat(Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])()[this.props.style], " ").concat(Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])()['low-profile'], " ").concat(this.props.className), id: this.props.id }, this.props.children);
     };
     return LowProfileButton;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
@@ -384,7 +384,7 @@ var Content = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Content.prototype.render = function () {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: (this.props.className || "") + " " + Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])().content }, this.props.children);
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "".concat(this.props.className || "", " ").concat(Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])().content) }, this.props.children);
     };
     return Content;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
@@ -395,7 +395,7 @@ var Copyright = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Copyright.prototype.render = function () {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: (this.props.className || "") + " " + Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])().copyright },
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "".concat(this.props.className || "", " ").concat(Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])().copyright) },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null,
                 "\u00A9 ",
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { id: "year" }, new Date().getFullYear()),
@@ -431,8 +431,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    Header: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Header"], Content: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Content"], StandardLink: _components_a__WEBPACK_IMPORTED_MODULE_1__["StandardLink"], HoverableLink: _components_a__WEBPACK_IMPORTED_MODULE_1__["HoverableLink"], Copyright: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Copyright"], Input: _components_input__WEBPACK_IMPORTED_MODULE_2__["Input"], Button: _components_button__WEBPACK_IMPORTED_MODULE_4__["Button"], LowProfileButton: _components_button__WEBPACK_IMPORTED_MODULE_4__["LowProfileButton"],
-    LowProfileHr: _components_hr__WEBPACK_IMPORTED_MODULE_3__["LowProfileHr"], Hr: _components_hr__WEBPACK_IMPORTED_MODULE_3__["Hr"],
+    Header: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Header"],
+    Content: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Content"],
+    StandardLink: _components_a__WEBPACK_IMPORTED_MODULE_1__["StandardLink"],
+    HoverableLink: _components_a__WEBPACK_IMPORTED_MODULE_1__["HoverableLink"],
+    Copyright: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Copyright"],
+    Input: _components_input__WEBPACK_IMPORTED_MODULE_2__["Input"],
+    Button: _components_button__WEBPACK_IMPORTED_MODULE_4__["Button"],
+    LowProfileButton: _components_button__WEBPACK_IMPORTED_MODULE_4__["LowProfileButton"],
+    LowProfileHr: _components_hr__WEBPACK_IMPORTED_MODULE_3__["LowProfileHr"],
+    Hr: _components_hr__WEBPACK_IMPORTED_MODULE_3__["Hr"],
     css: _reborn__WEBPACK_IMPORTED_MODULE_5__["setStyle"]
 });
 
@@ -571,7 +579,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v17.0.1
+/** @license React v17.0.2
  * react.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -589,7 +597,7 @@ if (true) {
 var _assign = __webpack_require__(/*! object-assign */ "./node_modules/object-assign/index.js");
 
 // TODO: this is special because it gets imported during build.
-var ReactVersion = '17.0.1';
+var ReactVersion = '17.0.2';
 
 // ATTENTION
 // When adding new symbols to this file,

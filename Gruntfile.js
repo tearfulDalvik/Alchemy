@@ -61,12 +61,6 @@ module.exports = function (grunt) {
           dest: "../dalvik-club-backend/app/packs/src/alchemy"
         }
       },
-      passport: {
-        options: {
-          src: "./dist/",
-          dest: "../passport-electron/frontend/public"
-        }
-      },
     },
     watch: {
       options: {
