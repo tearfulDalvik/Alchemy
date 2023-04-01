@@ -7,476 +7,17 @@
 		exports["AlchemyUI"] = factory();
 	else
 		root["AlchemyUI"] = factory();
-})(window, function() {
-return /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./js/index.react.ts");
-/******/ })
-/************************************************************************/
-/******/ ({
-
-/***/ "./js/index.react.ts":
-/*!***************************!*\
-  !*** ./js/index.react.ts ***!
-  \***************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./react */ "./js/react/index.ts");
-/*eslint-env es6*/
-/*!
- * Alchemy UI v1.0.0 (https://github.com/tearfulDalvik/Alchemy)
- * Copyright 2020 Gufeng Shen
- * Licensed under MIT (https://github.com/tearfulDalvik/Alchemy/blob/main/LICENSE)
- */
-
-/* harmony default export */ __webpack_exports__["default"] = (_react__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-
-/***/ }),
-
-/***/ "./js/react/components/a.tsx":
-/*!***********************************!*\
-  !*** ./js/react/components/a.tsx ***!
-  \***********************************/
-/*! exports provided: StandardLink, HoverableLink */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StandardLink", function() { return StandardLink; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HoverableLink", function() { return HoverableLink; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _reborn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reborn */ "./js/react/reborn.ts");
-var __extends = (undefined && undefined.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
-
-var StandardLink = /** @class */ (function (_super) {
-    __extends(StandardLink, _super);
-    function StandardLink() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    StandardLink.prototype.render = function () {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", { className: this.props.className || "", href: this.props.href }, this.props.children);
-    };
-    return StandardLink;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
-
-var HoverableLink = /** @class */ (function (_super) {
-    __extends(HoverableLink, _super);
-    function HoverableLink() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    HoverableLink.prototype.render = function () {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", { className: "".concat(this.props.className || "", " ").concat(Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])().hoverable) },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", { href: this.props.href }, this.props.children));
-    };
-    return HoverableLink;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
-
-
-
-/***/ }),
-
-/***/ "./js/react/components/button.tsx":
-/*!****************************************!*\
-  !*** ./js/react/components/button.tsx ***!
-  \****************************************/
-/*! exports provided: Button, LowProfileButton */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return Button; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LowProfileButton", function() { return LowProfileButton; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _reborn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reborn */ "./js/react/reborn.ts");
-var __extends = (undefined && undefined.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
-
-var Button = /** @class */ (function (_super) {
-    __extends(Button, _super);
-    function Button() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Button.prototype.render = function () {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { onClick: this.props.onClick, className: "".concat(Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])()[this.props.style], " ").concat(this.props.className), id: this.props.id }, this.props.children);
-    };
-    return Button;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
-
-var LowProfileButton = /** @class */ (function (_super) {
-    __extends(LowProfileButton, _super);
-    function LowProfileButton() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    LowProfileButton.prototype.render = function () {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { onClick: this.props.onClick, className: "".concat(Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])()[this.props.style], " ").concat(Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])()['low-profile'], " ").concat(this.props.className), id: this.props.id }, this.props.children);
-    };
-    return LowProfileButton;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
-
-
-
-/***/ }),
-
-/***/ "./js/react/components/hr.tsx":
-/*!************************************!*\
-  !*** ./js/react/components/hr.tsx ***!
-  \************************************/
-/*! exports provided: LowProfileHr, Hr */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LowProfileHr", function() { return LowProfileHr; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Hr", function() { return Hr; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _reborn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reborn */ "./js/react/reborn.ts");
-var __extends = (undefined && undefined.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
-
-var LowProfileHr = /** @class */ (function (_super) {
-    __extends(LowProfileHr, _super);
-    function LowProfileHr() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    LowProfileHr.prototype.render = function () {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", { className: Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])()['low-profile'], id: this.props.id }, this.props.children);
-    };
-    return LowProfileHr;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
-
-var Hr = /** @class */ (function (_super) {
-    __extends(Hr, _super);
-    function Hr() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Hr.prototype.render = function () {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", { id: this.props.id }, this.props.children);
-    };
-    return Hr;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
-
-
-
-/***/ }),
-
-/***/ "./js/react/components/input.tsx":
-/*!***************************************!*\
-  !*** ./js/react/components/input.tsx ***!
-  \***************************************/
-/*! exports provided: Input */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Input", function() { return Input; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var __extends = (undefined && undefined.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
-var Input = /** @class */ (function (_super) {
-    __extends(Input, _super);
-    function Input() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Input.prototype.render = function () {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", { placeholder: this.props.placeHolder, type: this.props.type, value: this.props.value, name: this.props.name, id: this.props.id });
-    };
-    return Input;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
-
-
-
-/***/ }),
-
-/***/ "./js/react/components/layout.tsx":
-/*!****************************************!*\
-  !*** ./js/react/components/layout.tsx ***!
-  \****************************************/
-/*! exports provided: Header, Content, Copyright */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Header", function() { return Header; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Content", function() { return Content; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Copyright", function() { return Copyright; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _reborn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reborn */ "./js/react/reborn.ts");
-var __extends = (undefined && undefined.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
-
-var Header = /** @class */ (function (_super) {
-    __extends(Header, _super);
-    function Header() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Header.prototype.render = function () {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])().header },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null,
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", { href: this.props.href }, this.props.children)));
-    };
-    return Header;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
-
-var Content = /** @class */ (function (_super) {
-    __extends(Content, _super);
-    function Content() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Content.prototype.render = function () {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "".concat(this.props.className || "", " ").concat(Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])().content) }, this.props.children);
-    };
-    return Content;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
-
-var Copyright = /** @class */ (function (_super) {
-    __extends(Copyright, _super);
-    function Copyright() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Copyright.prototype.render = function () {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "".concat(this.props.className || "", " ").concat(Object(_reborn__WEBPACK_IMPORTED_MODULE_1__["getStyle"])().copyright) },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null,
-                "\u00A9 ",
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { id: "year" }, new Date().getFullYear()),
-                " Gufeng Shen",
-                this.props.children));
-    };
-    return Copyright;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
-
-
-
-/***/ }),
-
-/***/ "./js/react/index.ts":
-/*!***************************!*\
-  !*** ./js/react/index.ts ***!
-  \***************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/layout */ "./js/react/components/layout.tsx");
-/* harmony import */ var _components_a__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/a */ "./js/react/components/a.tsx");
-/* harmony import */ var _components_input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/input */ "./js/react/components/input.tsx");
-/* harmony import */ var _components_hr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/hr */ "./js/react/components/hr.tsx");
-/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/button */ "./js/react/components/button.tsx");
-/* harmony import */ var _reborn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./reborn */ "./js/react/reborn.ts");
-
-
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    Header: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Header"],
-    Content: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Content"],
-    StandardLink: _components_a__WEBPACK_IMPORTED_MODULE_1__["StandardLink"],
-    HoverableLink: _components_a__WEBPACK_IMPORTED_MODULE_1__["HoverableLink"],
-    Copyright: _components_layout__WEBPACK_IMPORTED_MODULE_0__["Copyright"],
-    Input: _components_input__WEBPACK_IMPORTED_MODULE_2__["Input"],
-    Button: _components_button__WEBPACK_IMPORTED_MODULE_4__["Button"],
-    LowProfileButton: _components_button__WEBPACK_IMPORTED_MODULE_4__["LowProfileButton"],
-    LowProfileHr: _components_hr__WEBPACK_IMPORTED_MODULE_3__["LowProfileHr"],
-    Hr: _components_hr__WEBPACK_IMPORTED_MODULE_3__["Hr"],
-    css: _reborn__WEBPACK_IMPORTED_MODULE_5__["setStyle"]
-});
-
-
-/***/ }),
-
-/***/ "./js/react/reborn.ts":
-/*!****************************!*\
-  !*** ./js/react/reborn.ts ***!
-  \****************************/
-/*! exports provided: setStyle, getStyle */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setStyle", function() { return setStyle; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStyle", function() { return getStyle; });
-var $style = {};
-function setStyle(style) {
-    $style = style;
-}
-function getStyle() {
-    return $style;
-}
-
-
-/***/ }),
+})(self, () => {
+return /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/object-assign/index.js":
 /*!*********************************************!*\
   !*** ./node_modules/object-assign/index.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
-"use strict";
 /*
 object-assign
 (c) Sindre Sorhus
@@ -575,10 +116,8 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /*!*****************************************************!*\
   !*** ./node_modules/react/cjs/react.development.js ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 /** @license React v17.0.2
  * react.development.js
  *
@@ -2920,10 +2459,8 @@ exports.version = ReactVersion;
 /*!*************************************!*\
   !*** ./node_modules/react/index.js ***!
   \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 if (false) {} else {
@@ -2931,8 +2468,436 @@ if (false) {} else {
 }
 
 
+/***/ }),
+
+/***/ "./js/react/components/a.tsx":
+/*!***********************************!*\
+  !*** ./js/react/components/a.tsx ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "HoverableLink": () => (/* binding */ HoverableLink),
+/* harmony export */   "StandardLink": () => (/* binding */ StandardLink)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _reborn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reborn */ "./js/react/reborn.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+var StandardLink = /** @class */ (function (_super) {
+    __extends(StandardLink, _super);
+    function StandardLink() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    StandardLink.prototype.render = function () {
+        return react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", { className: this.props.className || "", href: this.props.href }, this.props.children);
+    };
+    return StandardLink;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component));
+
+var HoverableLink = /** @class */ (function (_super) {
+    __extends(HoverableLink, _super);
+    function HoverableLink() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    HoverableLink.prototype.render = function () {
+        return react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", { className: "".concat(this.props.className || "", " ").concat((0,_reborn__WEBPACK_IMPORTED_MODULE_1__.getStyle)().hoverable) },
+            react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", { href: this.props.href }, this.props.children));
+    };
+    return HoverableLink;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component));
+
+
+
+/***/ }),
+
+/***/ "./js/react/components/button.tsx":
+/*!****************************************!*\
+  !*** ./js/react/components/button.tsx ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Button": () => (/* binding */ Button),
+/* harmony export */   "LowProfileButton": () => (/* binding */ LowProfileButton)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _reborn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reborn */ "./js/react/reborn.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+var Button = /** @class */ (function (_super) {
+    __extends(Button, _super);
+    function Button() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Button.prototype.render = function () {
+        return react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", { onClick: this.props.onClick, className: "".concat((0,_reborn__WEBPACK_IMPORTED_MODULE_1__.getStyle)()[this.props.style], " ").concat(this.props.className), id: this.props.id }, this.props.children);
+    };
+    return Button;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component));
+
+var LowProfileButton = /** @class */ (function (_super) {
+    __extends(LowProfileButton, _super);
+    function LowProfileButton() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    LowProfileButton.prototype.render = function () {
+        return react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", { onClick: this.props.onClick, className: "".concat((0,_reborn__WEBPACK_IMPORTED_MODULE_1__.getStyle)()[this.props.style], " ").concat((0,_reborn__WEBPACK_IMPORTED_MODULE_1__.getStyle)()['low-profile'], " ").concat(this.props.className), id: this.props.id }, this.props.children);
+    };
+    return LowProfileButton;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component));
+
+
+
+/***/ }),
+
+/***/ "./js/react/components/hr.tsx":
+/*!************************************!*\
+  !*** ./js/react/components/hr.tsx ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Hr": () => (/* binding */ Hr),
+/* harmony export */   "LowProfileHr": () => (/* binding */ LowProfileHr)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _reborn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reborn */ "./js/react/reborn.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+var LowProfileHr = /** @class */ (function (_super) {
+    __extends(LowProfileHr, _super);
+    function LowProfileHr() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    LowProfileHr.prototype.render = function () {
+        return react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", { className: (0,_reborn__WEBPACK_IMPORTED_MODULE_1__.getStyle)()['low-profile'], id: this.props.id }, this.props.children);
+    };
+    return LowProfileHr;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component));
+
+var Hr = /** @class */ (function (_super) {
+    __extends(Hr, _super);
+    function Hr() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Hr.prototype.render = function () {
+        return react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", { id: this.props.id }, this.props.children);
+    };
+    return Hr;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component));
+
+
+
+/***/ }),
+
+/***/ "./js/react/components/input.tsx":
+/*!***************************************!*\
+  !*** ./js/react/components/input.tsx ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Input": () => (/* binding */ Input)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+var Input = /** @class */ (function (_super) {
+    __extends(Input, _super);
+    function Input() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Input.prototype.render = function () {
+        return react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", { placeholder: this.props.placeHolder, type: this.props.type, value: this.props.value, name: this.props.name, id: this.props.id });
+    };
+    return Input;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component));
+
+
+
+/***/ }),
+
+/***/ "./js/react/components/layout.tsx":
+/*!****************************************!*\
+  !*** ./js/react/components/layout.tsx ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Content": () => (/* binding */ Content),
+/* harmony export */   "Copyright": () => (/* binding */ Copyright),
+/* harmony export */   "Header": () => (/* binding */ Header)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _reborn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reborn */ "./js/react/reborn.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+var Header = /** @class */ (function (_super) {
+    __extends(Header, _super);
+    function Header() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Header.prototype.render = function () {
+        return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", { className: (0,_reborn__WEBPACK_IMPORTED_MODULE_1__.getStyle)().header },
+            react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null,
+                react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", { href: this.props.href }, this.props.children)));
+    };
+    return Header;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component));
+
+var Content = /** @class */ (function (_super) {
+    __extends(Content, _super);
+    function Content() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Content.prototype.render = function () {
+        return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", { className: "".concat(this.props.className || "", " ").concat((0,_reborn__WEBPACK_IMPORTED_MODULE_1__.getStyle)().content) }, this.props.children);
+    };
+    return Content;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component));
+
+var Copyright = /** @class */ (function (_super) {
+    __extends(Copyright, _super);
+    function Copyright() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Copyright.prototype.render = function () {
+        return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", { className: "".concat(this.props.className || "", " ").concat((0,_reborn__WEBPACK_IMPORTED_MODULE_1__.getStyle)().copyright) },
+            react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null,
+                "\u00A9 ",
+                react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", { id: "year" }, new Date().getFullYear()),
+                " Gufeng Shen",
+                this.props.children));
+    };
+    return Copyright;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component));
+
+
+
+/***/ }),
+
+/***/ "./js/react/index.ts":
+/*!***************************!*\
+  !*** ./js/react/index.ts ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/layout */ "./js/react/components/layout.tsx");
+/* harmony import */ var _components_a__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/a */ "./js/react/components/a.tsx");
+/* harmony import */ var _components_input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/input */ "./js/react/components/input.tsx");
+/* harmony import */ var _components_hr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/hr */ "./js/react/components/hr.tsx");
+/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/button */ "./js/react/components/button.tsx");
+/* harmony import */ var _reborn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./reborn */ "./js/react/reborn.ts");
+
+
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+    Header: _components_layout__WEBPACK_IMPORTED_MODULE_0__.Header,
+    Content: _components_layout__WEBPACK_IMPORTED_MODULE_0__.Content,
+    StandardLink: _components_a__WEBPACK_IMPORTED_MODULE_1__.StandardLink,
+    HoverableLink: _components_a__WEBPACK_IMPORTED_MODULE_1__.HoverableLink,
+    Copyright: _components_layout__WEBPACK_IMPORTED_MODULE_0__.Copyright,
+    Input: _components_input__WEBPACK_IMPORTED_MODULE_2__.Input,
+    Button: _components_button__WEBPACK_IMPORTED_MODULE_4__.Button,
+    LowProfileButton: _components_button__WEBPACK_IMPORTED_MODULE_4__.LowProfileButton,
+    LowProfileHr: _components_hr__WEBPACK_IMPORTED_MODULE_3__.LowProfileHr,
+    Hr: _components_hr__WEBPACK_IMPORTED_MODULE_3__.Hr,
+    css: _reborn__WEBPACK_IMPORTED_MODULE_5__.setStyle
+});
+
+
+/***/ }),
+
+/***/ "./js/react/reborn.ts":
+/*!****************************!*\
+  !*** ./js/react/reborn.ts ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getStyle": () => (/* binding */ getStyle),
+/* harmony export */   "setStyle": () => (/* binding */ setStyle)
+/* harmony export */ });
+var $style = {};
+function setStyle(style) {
+    $style = style;
+}
+function getStyle() {
+    return $style;
+}
+
+
 /***/ })
 
-/******/ })["default"];
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+/*!***************************!*\
+  !*** ./js/index.react.ts ***!
+  \***************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./react */ "./js/react/index.ts");
+/*eslint-env es6*/
+/*!
+ * Alchemy UI v1.0.0 (https://github.com/tearfulDalvik/Alchemy)
+ * Copyright 2020 Gufeng Shen
+ * Licensed under MIT (https://github.com/tearfulDalvik/Alchemy/blob/main/LICENSE)
+ */
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_react__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+})();
+
+__webpack_exports__ = __webpack_exports__["default"];
+/******/ 	return __webpack_exports__;
+/******/ })()
+;
 });
 //# sourceMappingURL=alchemy.react.js.map

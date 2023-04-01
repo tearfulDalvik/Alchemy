@@ -6,7 +6,7 @@
 */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
 :root {
-  --black: hsl(0deg, 0%, 0%);
+  --black: hsl(0, 0%, 0%);
   --black-a5: hsla(0, 0%, 0%, .05);
   --black-a10: hsla(0, 0%, 0%, .1);
   --black-a20: hsla(0, 0%, 0%, .2);
@@ -14,7 +14,7 @@
   --black-a50: hsla(0, 0%, 0%, .5);
   --black-a60: hsla(0, 0%, 0%, .6);
   --black-a80: hsla(0, 0%, 0%, .8);
-  --white: hsl(0deg, 100%, 100%);
+  --white: hsl(0, 100%, 100%);
   --white-a5: hsla(0, 100%, 100%, .05);
   --white-a10: hsla(0, 100%, 100%, .1);
   --white-a20: hsla(0, 100%, 100%, .2);
@@ -26,7 +26,7 @@
   --orange-200: #b5580d;
   --orange-300: #c8620e;
   --orange-400: #db6b0f;
-  --orange-500: hsl(27deg, 87%, 50%);
+  --orange-500: hsl(27, 87%, 50%);
   --orange-600: #f07f24;
   --orange-700: #f18b37;
   --orange-800: #f2964a;
@@ -35,7 +35,7 @@
   --green-200: #0a6e6c;
   --green-300: #0b7a78;
   --green-400: #0c8583;
-  --green-500: hsl(179deg, 83%, 31%);
+  --green-500: hsl(179, 83%, 31%);
   --green-600: #10aaa8;
   --green-700: #12c4c1;
   --green-800: #15dedb;
@@ -44,7 +44,7 @@
   --red-200: #b53a0d;
   --red-300: #c8400e;
   --red-400: #db460f;
-  --red-500: hsl(16deg, 87%, 50%);
+  --red-500: hsl(16, 87%, 50%);
   --red-600: #f05a24;
   --red-700: #f16837;
   --red-800: #f2774a;
@@ -53,7 +53,7 @@
   --blue-200: #0b548d;
   --blue-300: #0c5d9b;
   --blue-400: #0d66aa;
-  --blue-500: hsl(206deg, 86%, 39%);
+  --blue-500: hsl(206, 86%, 39%);
   --blue-600: #107dd0;
   --blue-700: #118be7;
   --blue-800: #2396ee;
@@ -930,7 +930,7 @@ body:not(.with-drawer-right) .drawer-right {
 }
 @media (max-width: 48em) {
   body:not(.with-drawer) .drawer,
-body:not(.with-drawer-right) .drawer-right {
+  body:not(.with-drawer-right) .drawer-right {
     transform: translateY(-100vh);
     -webkit-transform: translateY(-100vh);
   }
@@ -943,7 +943,7 @@ body:not(.with-drawer-right) .drawer-right {
 
 @media (max-width: 48em) {
   body:not(.drawer-collapsed) .drawer,
-body:not(.drawer-right-collapsed) .drawer-right {
+  body:not(.drawer-right-collapsed) .drawer-right {
     border-right: none;
     border-left: none;
     left: 0;
@@ -1526,7 +1526,7 @@ hr {
 }
 
 .toolbar {
-  background-color: hsla(0deg, 0%, 100%, 0.72);
+  background-color: hsla(0, 0%, 100%, 0.72);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   height: 60px;
@@ -1544,7 +1544,7 @@ hr {
 }
 @media (prefers-color-scheme: dark) {
   .toolbar {
-    background-color: hsla(0deg, 0%, 0%, 0.5);
+    background-color: hsla(0, 0%, 0%, 0.5);
   }
 }
 .toolbar > .toolbar-left, .toolbar > .toolbar-right {

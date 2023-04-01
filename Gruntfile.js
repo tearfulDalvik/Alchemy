@@ -54,13 +54,7 @@ module.exports = function (grunt) {
           src: "./dist/",
           dest: "../dalvik-club-frontend/dist/"
         }
-      },
-      backend: {
-        options: {
-          src: "./dist/",
-          dest: "../dalvik-club-backend/app/packs/src/alchemy"
-        }
-      },
+      }
     },
     watch: {
       options: {

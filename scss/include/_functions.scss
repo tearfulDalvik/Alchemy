@@ -1,5 +1,5 @@
 @function tint-color($base-color, $level) {
-    $level: $level / 100 - 5;
+    $level: calc($level / 100) - 5;
     @return scale-color($base-color, $lightness: $level * $theme-color-interval);
 }
 
